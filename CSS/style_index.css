@@ -10,14 +10,11 @@ body{
 }
 
 header{
-	background-image: url(../images/fresque.jpg)no-repeat fixed;
-
-
-	
-		background-size:100% 110%;
-		height: 799px;
-		object-position: top ;
-		
+	background-image: url(../images/fresque.png);
+	background-size: cover;
+	height: 12%;
+	width: 100%;
+	display: flex;	
 }
 
 .img-death-note {
