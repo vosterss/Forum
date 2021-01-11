@@ -1,0 +1,247 @@
+html{
+	margin: 0;
+	height: 100%;
+}
+
+body{
+	background-color: white;
+	margin: 0;
+	height: 100%;
+}
+
+/* HEADER */
+
+.header{
+	background-image: url(../images/fresque.jpg);
+	background-size: cover;
+	height: 12%;
+	display: flex;
+}
+
+.img-death-note {
+	width: 19%;
+	height: auto;
+}
+
+.img-logo-death-note{
+	width: 80%;
+	height: auto;
+}
+
+.titre{
+	margin-right: 50px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	width: 30%;
+	margin: 5px;
+}
+
+/* BOUTON */
+
+.img-accueil{
+	width: 25px;
+}
+
+/* BOUTON RESUME */
+
+.bouton-R{
+	border: 0;
+	background-color: rgb(234, 237, 237);
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-right: 1px solid;
+}
+
+.bouton-R:hover{
+	background-color: rgb(219, 219, 219);
+}
+
+#lien-R{
+	text-decoration: none; 
+}
+
+/* FIN BOUTON RESUME */
+
+/* BOUTON PERSONNAGE */
+
+.bouton-P{
+	border: 0;
+	background-color: rgb(234, 237, 237);
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-right: 1px solid;
+}
+
+.bouton-P:hover{
+	background-color: rgb(219, 219, 219);
+}
+
+#lien-P{
+	text-decoration: none; 
+}
+
+/* FIN BOUTON PERSONNAGE */
+
+/* BOUTON LIEUX */
+
+.bouton-L{
+	border: 0;
+	background-color: rgb(234, 237, 237);
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-right: 1px solid;
+}
+
+.bouton-L:hover{
+	background-color: rgb(219, 219, 219);
+}
+
+#lien-L{
+	text-decoration: none; 
+}
+
+/* FIN BOUTON LIEUX */
+
+/* BOUTON QUIZZ */
+
+.bouton-Q{
+	border: 0;
+	background-color: rgb(234, 237, 237);
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-right: 1px solid;
+}
+
+.bouton-Q:hover{
+	background-color: rgb(219, 219, 219);
+}
+
+#lien-Q{
+	text-decoration: none; 
+}
+
+/* FIN BOUTON QUIZZ */
+
+/* FIN BOUTON */
+
+/* FIN HEADER */
+
+
+/* MAIN */
+
+.main{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 88%;
+}
+
+.left-pic{
+	width: 15%;
+	height: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: rgb(234, 237, 237);
+	align-items: center;
+}
+
+.img-light{
+	height: 70%;
+	width: auto;
+}
+
+.logo-kira{
+	height: 25%;
+	width: auto;
+}
+
+.container{
+	width: 70%;
+	height: 100%;
+	overflow-y: scroll;	
+	background-color: rgb(234, 237, 237);
+	border-right: 2px solid;
+	border-left: 2px solid;
+}
+
+.navigation{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	background-color: rgb(234, 237, 237);
+	border-bottom: 1px solid;
+}
+
+.right-pic{
+	width: 15%;
+	height: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: rgb(234, 237, 237);
+	align-items: center;
+}
+
+.text-container{
+	margin: 10px;
+}
+
+.img-L{
+	height: 70%;
+	width: auto;
+}
+
+.logo-L{
+	height: 25%;
+	width: auto;
+}
+
+.img-resume
+{
+	width:30%;
+	margin-right: 2% ;
+	margin-left: 2%;
+}
+
+/*Paragraphe du résumer */
+
+.align-g
+{
+    margin-top: 2%;
+    display: flex ;
+    align-items: center ;
+    padding-bottom: 2%;
+    border-bottom: solid 1px;
+}
+
+.align-d
+{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+   	padding-bottom: 2%;
+    border-bottom: solid 1px;
+}
+.p-resume
+{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+/* Fin paragraphe du résumer */
+
+/* FIN MAIN */
