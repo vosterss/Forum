@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="style_index.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="CSS/style_index.css" media="all"/>
     <title> Forum </title>
   </head>
   	<body>

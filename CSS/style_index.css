@@ -9,12 +9,11 @@ body{
 	height: 100%;
 }
 
-/* HEADER */
-
-.header{
+header{
 	background-image: url(../images/fresque.jpg);
 	background-size: cover;
 	height: 12%;
+	width: 100%;
 	display: flex;
 }
 
