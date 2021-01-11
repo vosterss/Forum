@@ -244,8 +244,9 @@ header{
 
 /* FIN MAIN */
 
-footer{
-	width: 100%;
-	height: 30%;
-	background-color: blue;
+footer {
+	padding:20px 0 10px 0;
+	background-color : gray; 
+	color: #FFFAE1;
+	text-align : center;
 }
