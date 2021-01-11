@@ -6,25 +6,18 @@
 	            	<h2> Acceuil </h2>
 	    		</button>
 			</a>
-		</div>
-	    <div class="bouton-personnage">
-	    	<a id="lien-P" href="character.html">
-	    		<button class="bouton-P" type="button">		                		
-	            	<h2> Profil </h2>
-	    		</button>
-			</a>
-	    </div>
-	    <div class="bouton-lieux">
-			<a id="lien-L" href="lieux.html">
+		</div>  
+	    <div class="bouton-forum">
+			<a id="lien-L" href="forum.php">
 	    		<button class="bouton-L" type="button">		                		
 	            	<h2> Forum </h2>
 	    		</button>
 			</a>			   
 	    </div>
-	    <div class="bouton-quiz">
-	    	<a id="lien-Q" href="quizz.html"> 
-	    		<button class="bouton-Q" type="button">		                		
-	            	<h2> Quizz </h2>
+	    <div class="bouton-profil">
+	    	<a id="lien-P" href="profil.php">
+	    		<button class="bouton-P" type="button">		                		
+	            	<h2> Profil </h2>
 	    		</button>
 			</a>
 	    </div>

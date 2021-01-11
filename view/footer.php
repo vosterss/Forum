@@ -1,5 +1,5 @@
-	<footer>
-		<p>page crée par Loris Le Beau Gosse</p>
-	</footer>
+		<footer>
+			
+		</footer>
 	</body>
 </html>

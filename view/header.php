@@ -8,7 +8,7 @@
   	<body>
   		<header>
 		  	<div class="titre">
-		  		<h1> Forum </h1>
+          <img src="images/Pacman.svg.png" class="logo-pacman" alt='image logo pacman'>
+          <h1 class="txt-titre"> Forum </h1>
 		  	</div>
-		</div>
   		</header>
