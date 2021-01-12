@@ -10,9 +10,7 @@ body{
 }
 
 header{
-	background-image: url(../images/fresque.jpg);
-	background-size: cover;
-	height: 30%;
+	height: 10%;
 	width: 100%;
 	display: flex;	
 }
