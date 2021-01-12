@@ -16,7 +16,12 @@
 					<p class="txt-log"> S'inscrire </p>
 				</a>
 			  	<a id="connect" href="connection.php">		                		
-					<p class="txt-log"> Se connecter </p>
+		  	<div class="connection">
+		  		<a id="connect" href="inscription.php">		                		
+					<p class="txt-log"> Register </p>
+				</a>
+			  	<a id="connect" href="connection.php">		                		
+					<p class="txt-log"> Log In </p>
 				</a>
 			</div>
 		</header>
