@@ -13,36 +13,33 @@
 		  	</div>
 		  	<div class="connection ">
 		  		<a id="connect" href="connection.php">		                		
-						<p class="txt-log"> S'inscrire </p>
+					<p class="txt-log"> S'inscrire </p>
 				</a>
 			  	<a id="connect" href="connection.php">		                		
-						<p class="txt-log"> Se connecter </p>
+					<p class="txt-log"> Se connecter </p>
 				</a>
-
 			</div>
 		</header>
-		  <nav>
 			<div class="navigation">
-				<div class="bouton-resume">
-					<a id="lien-R" href="index.php"> 
-						<button class="bouton-R" type="button">
+				<div class="bouton-accueil">
+					<a id="lien-A" href="index.php"> 
+						<button class="bouton-A" type="button">
 							<h2> Acceuil </h2>
 						</button>
 					</a>
 				</div>  
 				<div class="bouton-forum">
-					<a id="lien-L" href="forum.php">
-						<button class="bouton-L" type="button">		                		
+					<a id="lien-F" href="forum.php">
+						<button class="bouton-F" type="button">		               	
 							<h2> Forum </h2>
 						</button>
 					</a>			   
 				</div>
 				<div class="bouton-profil">
 					<a id="lien-P" href="profil.php">
-						<button class="bouton-P" type="button">		                		
+						<button class="bouton-P" type="button">		              
 							<h2> Profil </h2>
 						</button>
 					</a>
 				</div>
-			</div>	
-</nav>
+			</div>

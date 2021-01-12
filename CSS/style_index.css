@@ -35,13 +35,7 @@ header{
 
 /* BOUTON */
 
-.img-accueil{
-	width: 25px;
-}
-
-/* BOUTON RESUME */
-
-.bouton-R{
+.bouton-A{
 	border: 0;
 	background-color: rgb(234, 237, 237);
 	display: flex;
@@ -52,17 +46,13 @@ header{
 	border-right: 1px solid;
 }
 
-.bouton-R:hover{
+.bouton-A:hover{
 	background-color: rgb(219, 219, 219);
 }
 
-#lien-R{
+#lien-A{
 	text-decoration: none; 
 }
-
-/* FIN BOUTON RESUME */
-
-/* BOUTON PERSONNAGE */
 
 .bouton-P{
 	border: 0;
@@ -83,11 +73,7 @@ header{
 	text-decoration: none; 
 }
 
-/* FIN BOUTON PERSONNAGE */
-
-/* BOUTON LIEUX */
-
-.bouton-L{
+.bouton-F{
 	border: 0;
 	background-color: rgb(234, 237, 237);
 	display: flex;
@@ -98,38 +84,13 @@ header{
 	border-right: 1px solid;
 }
 
-.bouton-L:hover{
+.bouton-F:hover{
 	background-color: rgb(219, 219, 219);
 }
 
-#lien-L{
+#lien-F{
 	text-decoration: none; 
 }
-
-/* FIN BOUTON LIEUX */
-
-/* BOUTON QUIZZ */
-
-.bouton-Q{
-	border: 0;
-	background-color: rgb(234, 237, 237);
-	display: flex;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	border-right: 1px solid;
-}
-
-.bouton-Q:hover{
-	background-color: rgb(219, 219, 219);
-}
-
-#lien-Q{
-	text-decoration: none; 
-}
-
-/* FIN BOUTON QUIZZ */
 
 /* FIN BOUTON */
 
@@ -143,25 +104,6 @@ header{
 	flex-direction: row;
 	width: 100%;
 	height: 88%;
-}
-
-.left-pic{
-	width: 15%;
-	height: 100%;
-	display: flex;
-	flex-direction: column-reverse;
-	background-color: rgb(234, 237, 237);
-	align-items: center;
-}
-
-.img-light{
-	height: 70%;
-	width: auto;
-}
-
-.logo-kira{
-	height: 25%;
-	width: auto;
 }
 
 .container{
@@ -182,27 +124,8 @@ header{
 	border-bottom: 1px solid;
 }
 
-.right-pic{
-	width: 15%;
-	height: 100%;
-	display: flex;
-	flex-direction: column-reverse;
-	background-color: rgb(234, 237, 237);
-	align-items: center;
-}
-
 .text-container{
 	margin: 10px;
-}
-
-.img-L{
-	height: 70%;
-	width: auto;
-}
-
-.logo-L{
-	height: 25%;
-	width: auto;
 }
 
 .img-resume
