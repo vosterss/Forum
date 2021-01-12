@@ -12,7 +12,7 @@ body{
 header{
 	background-image: url(../images/fresque.jpg);
 	background-size: cover;
-	height: 16%;
+	height: 30%;
 	width: 100%;
 	display: flex;	
 }
@@ -244,8 +244,9 @@ header{
 
 /* FIN MAIN */
 
-footer{
-	width: 100%;
-	height: 30%;
-	background-color: blue;
+footer {
+	padding:20px 0 10px 0;
+	background-color : gray; 
+	color: #FFFAE1;
+	text-align : center;
 }
