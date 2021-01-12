@@ -13,10 +13,10 @@
 		  	</div>
 		  	<div class="connection">
 		  		<a id="connect" href="inscription.php">		                		
-						<p class="txt-log"> Register </p>
+					<p class="txt-log"> Register </p>
 				</a>
 			  	<a id="connect" href="connection.php">		                		
-						<p class="txt-log"> Log In </p>
+					<p class="txt-log"> Log In </p>
 				</a>
 			</div>
 		</header>
@@ -43,5 +43,20 @@
 						</button>
 					</a>
 				</div>
-			</div>	
+				<div class="bouton-profil">
+					<a id="lien-P" href="profil.php">		                		
+						<button class="bouton-P" type="button">		                		
+						<h2> S'incrire </h2>
+						</button>
+					</a>
+				</div>
+				<div class="bouton-profil">
+					<a id="lien-P" href="profil.php">		                		
+						<button class="bouton-P" type="button">		                		
+						<h2> Connection </h2>
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>	
 </nav>
