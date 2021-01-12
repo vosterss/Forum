@@ -11,14 +11,13 @@
 				<img src="images/Pacman.svg.png" class="logo-pacman" alt='image logo pacman'>
 				<h1 class="txt-titre"> Forum </h1>
 		  	</div>
-		  	<div class="connection ">
-		  		<a id="connect" href="connection.php">		                		
-						<p class="txt-log"> S'inscrire </p>
+		  	<div class="connection">
+		  		<a id="connect" href="inscription.php">		                		
+						<p class="txt-log"> Register </p>
 				</a>
 			  	<a id="connect" href="connection.php">		                		
-						<p class="txt-log"> Se connecter </p>
+						<p class="txt-log"> Log In </p>
 				</a>
-
 			</div>
 		</header>
 		  <nav>
