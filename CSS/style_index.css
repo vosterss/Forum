@@ -10,6 +10,8 @@ body{
 }
 
 header{
+	background-image: url(../images/fresque.jpg);
+	background-size: cover;
 	height: 10%;
 	width: 100%;
 	display: flex;	
@@ -170,4 +172,8 @@ footer {
 	background-color : gray; 
 	color: #FFFAE1;
 	text-align : center;
+}
+.txt-log
+{
+	text-decoration: none ;
 }

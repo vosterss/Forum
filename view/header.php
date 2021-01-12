@@ -42,4 +42,18 @@
 						</button>
 					</a>
 				</div>
-			</div>
+				<div class="bouton-profil">
+					<a id="lien-P" href="profil.php">		                		
+						<button class="bouton-P" type="button">		              	
+							<h2> S'incrire </h2>
+						</button>
+					</a>
+				</div>
+				<div class="bouton-profil">
+					<a id="lien-P" href="profil.php">		                		
+						<button class="bouton-P" type="button">		               	
+							<h2> Connection </h2>
+						</button>
+					</a>
+				</div>
+			</div>	
