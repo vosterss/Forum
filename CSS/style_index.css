@@ -12,7 +12,7 @@ body{
 header{
 	background-image: url(../images/fresque.jpg);
 	background-size: cover;
-	height: 16%;
+	height: 30%;
 	width: 100%;
 	display: flex;	
 }

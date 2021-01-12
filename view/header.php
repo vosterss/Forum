@@ -15,7 +15,7 @@
 		  <nav>
 			<div class="navigation">
 				<div class="bouton-resume">
-					<a id="lien-R" href="index.html"> 
+					<a id="lien-R" href="index.php"> 
 						<button class="bouton-R" type="button">
 							<h2> Acceuil </h2>
 						</button>
