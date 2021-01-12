@@ -11,15 +11,6 @@
 				<img src="images/Pacman.svg.png" class="logo-pacman" alt='image logo pacman'>
 				<h1 class="txt-titre"> Forum </h1>
 		  	</div>
-		  	<div class="connection ">
-		  		<a id="connect" href="connection.php">		                		
-						<p class="txt-log"> S'inscrire </p>
-				</a>
-			  	<a id="connect" href="connection.php">		                		
-						<p class="txt-log"> Se connecter </p>
-				</a>
-
-			</div>
 		</header>
 		  <nav>
 			<div class="navigation">
@@ -44,5 +35,20 @@
 						</button>
 					</a>
 				</div>
-			</div>	
+				<div class="bouton-profil">
+					<a id="lien-P" href="profil.php">		                		
+						<button class="bouton-P" type="button">		                		
+						<h2> S'incrire </h2>
+						</button>
+					</a>
+				</div>
+				<div class="bouton-profil">
+					<a id="lien-P" href="profil.php">		                		
+						<button class="bouton-P" type="button">		                		
+						<h2> Connection </h2>
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>	
 </nav>
