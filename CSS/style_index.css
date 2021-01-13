@@ -15,7 +15,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
-	border-bottom: 2px solid rgb(231, 76, 60);	
+	border-bottom: 2px solid rgb(93, 173, 226);	
 }
 
 .logo{
@@ -33,7 +33,7 @@ header{
 }
 
 .txt-titre{
-	color: rgb(231, 76, 60);
+	color: rgb(93, 173, 226);
 }
 
 .txt-log{

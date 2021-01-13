@@ -15,7 +15,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
-	border-bottom: 2px solid rgb(231, 76, 60);	
+	border-bottom: 2px solid rgb(93, 173, 226);	
 }
 
 .logo{
@@ -33,7 +33,7 @@ header{
 }
 
 .txt-titre{
-	color: rgb(231, 76, 60);
+	color: rgb(93, 173, 226);
 }
 
 main{
@@ -48,7 +48,8 @@ main{
 }
 
 .titre_register{
-	color: blue;
+	color: rgb(93, 173, 226);
+	font-size: 25px;
 }
 
 .register{
@@ -57,30 +58,47 @@ main{
 	height: 80%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+
 }
 
 .form_birthday{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 }
 
 .form{
 	width: 100%;
-}
-
-input[type=text], input[type=email], input[type=password], input[type=date], input[type=submit]{
-	border: none;
-	border-bottom: 2px solid blue;
-	background-color: white;
-	width: 80%;
-}
-
-input.placeholder{
 	display: flex;
 	justify-content: center;
+	padding-bottom: 50px; 
+}
+
+.form_birthday_date{
+	width: 100%;
+}
+
+.form_birthday_titre{
+	width: 100%;
+	text-align: center;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=submit]{
+	border: none;
+	border-bottom: 2px solid rgb(93, 173, 226);
+	background-color: white;
+	width: 100%;
+	font-size: 25px;
+}
+
+input[type=date]{
+	border: none;
+	border-bottom: 2px solid rgb(93, 173, 226);
+	background-color: white;
+	width: 100%;
 }
 
 .form_submit{
