@@ -1,0 +1,97 @@
+html{
+	margin: 0;
+	height: 100%;
+}
+
+body{
+	background-color: white;
+	margin: 0;
+	height: 100%;
+}
+
+header{
+	height: 10%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	border-bottom: 2px solid rgb(231, 76, 60);	
+}
+
+.logo{
+	width: 20%;
+	height: auto;
+}
+
+.titre{
+	margin-right: 50px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	width: 30%;
+	margin: 5px;
+}
+
+.txt-titre{
+	color: rgb(231, 76, 60);
+}
+
+main{
+	background-image: url(../images/fresque.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 80%;
+	opacity: 0.5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.titre_register{
+	color: blue;
+}
+
+.register{
+	background-color: white;
+	width: 30%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form_birthday{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form{
+	width: 100%;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=date], input[type=submit]{
+	border: none;
+	border-bottom: 2px solid blue;
+	background-color: white;
+	width: 80%;
+}
+
+input.placeholder{
+	display: flex;
+	justify-content: center;
+}
+
+.form_submit{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+footer{
+	padding: 20px 0 10px 0;
+	background-color : gray; 
+	color: #FFFAE1;
+	text-align : center;
+}
