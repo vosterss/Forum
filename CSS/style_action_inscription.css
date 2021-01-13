@@ -71,12 +71,7 @@ main{
 	width: 100%;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=date], input[type=submit]{
-	border: none;
-	border-bottom: 2px solid blue;
-	background-color: white;
-	width: 80%;
-}
+
 
 input.placeholder{
 	display: flex;
