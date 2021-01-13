@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="CSS/style_action_inscription.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="CSS/style_action_register.css" media="all"/>
 		<title> Register </title>
 	</head>
 	<body>
