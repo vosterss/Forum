@@ -36,34 +36,24 @@ header{
 	color: rgb(231, 76, 60);
 }
 
-.txt-log{
-	text-decoration: none;
-}
-
-.connection{
+main{
+	background-image: url(../images/fresque.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 80%;
+	opacity: 0.5;
 	display: flex;
-	justify-content: space-around;
-	width: 16%;
+	justify-content: center;
 	align-items: center;
 }
 
-.bouton-R{
-	background-color: white;
-	color: rgb(231, 76, 60);
-	border-radius: 10px;
-	border: none;
-	width: 80px;
-	border: 2px solid rgb(231, 76, 60);
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2), 0 2px 8px 0 rgba(0,0,0,0.19);
-}
-
-.bouton-L{
-	background-color: rgb(231, 76, 60);
-	border-radius: 10px;
-	border: none;
-	width: 80px;
-	border: 2px solid rgb(231, 76, 60);
-	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2), 0 2px 8px 0 rgba(0,0,0,0.19);
+.register{
+	background-color: red;
+	width: 40%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 footer{
