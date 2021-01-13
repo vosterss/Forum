@@ -34,147 +34,26 @@ header{
 	color: white;
 }
 
-/* BOUTON */
+.txt-log{
+	text-decoration: none;
+}
 
-.bouton-A{
-	border: 0;
-	background-color: rgb(234, 237, 237);
+.connection{
 	display: flex;
+	justify-content: space-around;
+	width: 16%;
+	background-color: blue;
 	align-items: center;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	border-right: 1px solid;
 }
 
-.bouton-A:hover{
-	background-color: rgb(219, 219, 219);
+.bouton-R{
+	background-color: rgb(231, 76, 60);
+	border-radius: 2px;
 }
-
-#lien-A{
-	text-decoration: none; 
-}
-
-.bouton-P{
-	border: 0;
-	background-color: rgb(234, 237, 237);
-	display: flex;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	border-right: 1px solid;
-}
-
-.bouton-P:hover{
-	background-color: rgb(219, 219, 219);
-}
-
-#lien-P{
-	text-decoration: none; 
-}
-
-.bouton-F{
-	border: 0;
-	background-color: rgb(234, 237, 237);
-	display: flex;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	border-right: 1px solid;
-}
-
-.bouton-F:hover{
-	background-color: rgb(219, 219, 219);
-}
-
-#lien-F{
-	text-decoration: none; 
-}
-
-/* FIN BOUTON */
-
-/* FIN HEADER */
-
-
-/* MAIN */
-
-.main{
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: 88%;
-}
-
-.container{
-	width: 70%;
-	height: 100%;
-	overflow-y: scroll;	
-	background-color: rgb(234, 237, 237);
-	border-right: 2px solid;
-	border-left: 2px solid;
-}
-
-.navigation{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
-	background-color: rgb(234, 237, 237);
-	border-bottom: 1px solid;
-}
-
-.text-container{
-	margin: 10px;
-}
-
-.img-resume{
-	width:30%;
-	margin-right: 2% ;
-	margin-left: 2%;
-}
-
-/*Paragraphe du résumer */
-
-.align-g{
-    margin-top: 2%;
-    display: flex ;
-    align-items: center ;
-    padding-bottom: 2%;
-    border-bottom: solid 1px;
-}
-
-.align-d{
-    margin-top: 2%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-   	padding-bottom: 2%;
-    border-bottom: solid 1px;
-}
-.p-resume{
-    padding-right: 5%;
-    padding-left: 5%;
-}
-
-/* Fin paragraphe du résumer */
-
-/* FIN MAIN */
 
 footer{
 	padding: 20px 0 10px 0;
 	background-color : gray; 
 	color: #FFFAE1;
 	text-align : center;
-}
-.txt-log{
-	text-decoration: none;
-}
-.connection{
-	display: flex;
-	justify-content: space-around;
-	width: 16%;
-	background-color: red;
-	align-items: center;
 }

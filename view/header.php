@@ -12,12 +12,20 @@
 				<h1 class="txt-titre"> Forum </h1>
 		  	</div>		                		
 		  	<div class="connection">
-		  		<a id="connect" href="inscription.php">		                		
-					<p class="txt-log"> Register </p>
-				</a>
-			  	<a id="connect" href="connection.php">		                		
-					<p class="txt-log"> Log In </p>
-				</a>
+		  		<div class="bouton-register">
+			  		<a id="connect" href="inscription.php">		                	
+						<button class="bouton-R" type="button">
+							<p class="txt-bouton-connection"> Register </p>
+						</button>
+					</a>
+				</div>
+				<div class="bouton-login">
+				  	<a id="connect" href="connection.php">		                
+						<button class="bouton-L" type="button">
+							<p class="txt-bouton-connection"> Log In </p>
+						</button>
+					</a>
+				</div>	
 			</div>
 		</header>
 			<div class="navigation">
