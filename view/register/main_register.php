@@ -28,9 +28,9 @@
 						<input type="date" name="birthday"/>
 					</div>	
 				</div>
-				<p>
+				<div class="form_submit">
 					<input type="submit" value="S'inscrire"/>
-				</p>
+				</div>
 			</form>
 		</div>	
 	</div>
