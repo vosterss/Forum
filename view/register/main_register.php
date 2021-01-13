@@ -21,10 +21,12 @@
 					<input type="password" name="password" placeholder="Mot de passe" required minlength="8"/>
 				</p>
 				<div class="form_birthday">
-					<p> 
+					<div class="form_birthday_titre">
 						<label> Date de naissance </label>
+					</div>
+					<div class="form_birthday_date">
 						<input type="date" name="birthday"/>
-					</p>
+					</div>	
 				</div>
 				<p>
 					<input type="submit" value="S'inscrire"/>
