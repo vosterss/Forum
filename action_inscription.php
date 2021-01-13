@@ -14,13 +14,14 @@
 				<div class="titre_register">
 					<h1 class="titre">Félicitation</h1>
 				</div>
-				<?php
 
+				<?php
+					$erreur=0;
 					$surname = htmlspecialchars($_POST['surname']);
 					$name = htmlspecialchars($_POST['name']);
 					$username = htmlspecialchars($_POST['username']);
 					$mail = htmlspecialchars($_POST['mail']);
-					$mdp = md5 ($_POST['password']);
+					$mdp = password_hash($_POST['password'], PASSWORD_DEFAULT);
 					$birthday = htmlspecialchars($_POST['birthday']);
 
 					if (empty($surname)){
@@ -48,9 +49,9 @@
 						$erreur ++;
 					}
 					$dsn='mysql:host=localhost;dbname=forum';
-					$user='root' ;
+					$user='root';
 					$password='' ;
-					if($erreur < 0){
+					if($erreur <= 0){
 						try{
 							$bdd = new PDO($dsn, $user, $password);
 						}
@@ -61,10 +62,12 @@
 						$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
 						echo '<p class="test">Bonjour</p> '.$surname. ' '. $name.' vous êtes désormais inscrit';
 					}
-					else{
+					else if ($erreur > 0){
 						echo "Des champs n'ont pas été saisis";
 					}
+
 				?>
+
 				<a href="index.php">
 					<button class="form_input">
 						Retourner à l'accueil
