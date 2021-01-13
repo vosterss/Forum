@@ -1,4 +1,13 @@
 <?php
+$dsn='mysql:host=localhost;dbname=forum';
+$user='root';
+$password='' ;
+try{
+    $bdd = new PDO($dsn, $user, $password);
+}
+catch(PDOException $e){
+    die ('erreur :' .$e->getMessage());
+}
 $req = $bdd->prepare('SELECT id, pass FROM utilisateur WHERE username = :username');
 $req->execute(array('username' => $username));
 $resultat = $req->fetch();

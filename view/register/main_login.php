@@ -4,7 +4,7 @@
 			<h1> Connexion </h1>
 		</div>
 		<div class="form_login">
-			<form action="action_inscription.php" method="post">
+			<form action="action_login.php" method="post">
 				<p> 
 					<input class="form_input" type="text" name="username" placeholder="Nom d'utilisateur" required minlength="3" maxlength="30"/>
 				</p>
@@ -17,7 +17,7 @@
 			</form>
 		</div>
 		<div class="form_login">
-			<p> Vous n'avez pas encore de compte ?  <a class="lien_form_login" href="login.php"> Inscrivez-vous gratuitement </a> </p>
+			<p> Vous n'avez pas encore de compte ?  <a class="lien_form_login" href="register.php"> Inscrivez-vous gratuitement </a> </p>
 		</div>	
 	</div>
 </main>
