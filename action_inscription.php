@@ -3,7 +3,7 @@
 $surname = htmlspecialchars($_POST['surname']);
 $name = htmlspecialchars($_POST['name']);
 $username = htmlspecialchars($_POST['username']);
-$mail = htmlspecialchars($_POST['email']);
+$mail = htmlspecialchars($_POST['mail']);
 $password = htmlspecialchars($_POST['password']);
 $birthday = htmlspecialchars($_POST['birthday']);
 
@@ -25,14 +25,14 @@ else if (empty($password)){
 else if (empty($birthday)){
 	echo "La Date de naissance est obligatoire.";
 }
-$dsn='mysql:host=localhost;dbname=utilisateur';
+$dsn='mysql:host=localhost;dbname=forum';
 $user='root' ;
 $password='' ;
 try{
 	$bdd = new PDO($dsn, $user, $password);
 }
 catch(PDOException $e){
-	die ('erreur :' .$e->getMessage())
+	die ('erreur :' .$e->getMessage());
 }
 $reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
 $reponse->execute(array($surname,$name,$username,$mail,$password,$birthday));
