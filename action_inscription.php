@@ -48,7 +48,7 @@
 			echo '<p>Bonjour</p> '.$surname. ' '. $name.' vous êtes désormais inscrit';
 
 		?>
-		<a href="forum/index.php">
+		<a href="index.php">
 			<button>
 				Retourner à l'accueil
 			</button>
