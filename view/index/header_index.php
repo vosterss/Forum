@@ -13,14 +13,14 @@
 		  	</div>		                		
 		  	<div class="connection">
 		  		<div class="bouton-register">
-			  		<a id="connect" href="inscription.php">		                	
+			  		<a id="connect" href="register.php">		                	
 						<button class="bouton-R" type="button">
 							<p class="txt-bouton-connection"> Register </p>
 						</button>
 					</a>
 				</div>
 				<div class="bouton-login">
-				  	<a id="connect" href="connection.php">		                
+				  	<a id="connect" href="login.php">		                
 						<button class="bouton-L" type="button">
 							<p class="txt-bouton-connection"> Log In </p>
 						</button>
