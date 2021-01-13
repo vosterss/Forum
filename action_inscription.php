@@ -4,7 +4,7 @@ $surname = htmlspecialchars($_POST['surname']);
 $name = htmlspecialchars($_POST['name']);
 $username = htmlspecialchars($_POST['username']);
 $mail = htmlspecialchars($_POST['mail']);
-$password = htmlspecialchars($_POST['password']);
+$mdp = md5 ($_POST['password']);
 $birthday = htmlspecialchars($_POST['birthday']);
 
 if (empty($surname)){
@@ -19,7 +19,7 @@ else if (empty($username)){
 else if (empty($mail)){
 	echo "Le mail est obligatoire.";
 }
-else if (empty($password)){
+else if (empty($mdp)){
 	"Le mot de passe est obligatoire."
 }
 else if (empty($birthday)){
