@@ -24,30 +24,6 @@
 					$mdp = password_hash($_POST['password'], PASSWORD_DEFAULT);
 					$birthday = htmlspecialchars($_POST['birthday']);
 
-					if (empty($surname)){
-						echo "Le Prenom est obligatoire.";
-						$erreur ++;
-					}
-					else if (empty($name)){
-						echo "Le Nom de famille est obligatoire.";
-						$erreur ++;
-					}
-					else if (empty($username)){
-						echo "Le nom d'usage est obligatoire.";
-						$erreur ++;
-					}
-					else if (empty($mail)){
-						echo "Le mail est obligatoire.";
-						$erreur ++;
-					}
-					else if (empty($mdp)){
-						echo "Le mot de passe est obligatoire.";
-						$erreur ++;
-					}
-					else if (empty($birthday)){
-						echo "La Date de naissance est obligatoire.";
-						$erreur ++;
-					}
 					$dsn='mysql:host=localhost;dbname=forum';
 					$user='root';
 					$password='' ;
@@ -62,10 +38,22 @@
 						$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
 						echo '<p class="test">Bonjour</p> '.$surname. ' '. $name.' vous êtes désormais inscrit';
 					}
-					else if ($erreur > 0){
+					else if ($erreur >= 0){
 						echo "Des champs n'ont pas été saisis";
 					}
 
+					$user='root' ;
+					$password='' ;
+					
+					try{
+						$bdd = new PDO($dsn, $user, $password);
+					}
+					catch(PDOException $e){
+						die ('erreur :' .$e->getMessage());
+					}
+					$reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
+					$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
+					echo '<p class="test">Bonjour</p> '.$surname. ' '. $name.' vous êtes désormais inscrit';
 				?>
 
 				<a href="index.php">
