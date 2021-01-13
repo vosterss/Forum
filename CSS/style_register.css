@@ -49,7 +49,7 @@ main{
 
 .titre_register{
 	color: rgb(93, 173, 226);
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .register{
@@ -74,7 +74,7 @@ main{
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding-bottom: 50px; 
+	padding-bottom: 30px; 
 }
 
 .form_birthday_date{
@@ -91,7 +91,7 @@ input[type=text], input[type=email], input[type=password], input[type=submit]{
 	border-bottom: 2px solid rgb(93, 173, 226);
 	background-color: white;
 	width: 100%;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 input[type=date]{
@@ -112,4 +112,9 @@ footer{
 	background-color : gray; 
 	color: #FFFAE1;
 	text-align : center;
+}
+
+.lien_form_login{
+	text-decoration: none underline;
+	color: black;
 }

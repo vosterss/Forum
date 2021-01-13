@@ -32,6 +32,9 @@
 					<input class="form_input" type="submit" value="S'inscrire"/>
 				</div>
 			</form>
+		</div>
+		<div class="form_login">
+			<p> Vous avez deja un compte ? <a class="lien_form_login" href="login.php"> Connectez-vous </a> </p>
 		</div>	
 	</div>
 </main>
