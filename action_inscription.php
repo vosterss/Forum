@@ -72,5 +72,8 @@
 				</a>
 			</div>
 		</main>
+		<?php
+			require 'view/register/footer_register.php';
+		?>
 	</body>
 </html>
