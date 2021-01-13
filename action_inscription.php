@@ -43,11 +43,9 @@
 			catch(PDOException $e){
 				die ('erreur :' .$e->getMessage());
 			}
-			$reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
+			$reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)');
 			$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
 			echo '<p>Bonjour</p> '.$surname. ' '. $name.' vous êtes désormais inscrit';
-			$reponse2=$bdd->execute('CREATE USER ' .$username. "@'localhost' IDENTIFIED BY " .$mdp. ';') ;
-
 
 		?>
 		<a href="index.php">
