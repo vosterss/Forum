@@ -8,19 +8,19 @@ $mdp = md5 ($_POST['password']);
 $birthday = htmlspecialchars($_POST['birthday']);
 
 if (empty($surname)){
-	echo "Le Prenom est obligatoire."
+	echo "Le Prenom est obligatoire.";
 }
 else if (empty($name)){
 	echo "Le Nom de famille est obligatoire.";
 }
 else if (empty($username)){
-	echo "Le nom d'usage est obligatoire."
+	echo "Le nom d'usage est obligatoire.";
 }
 else if (empty($mail)){
 	echo "Le mail est obligatoire.";
 }
 else if (empty($mdp)){
-	"Le mot de passe est obligatoire."
+	"Le mot de passe est obligatoire.";
 }
 else if (empty($birthday)){
 	echo "La Date de naissance est obligatoire.";
@@ -35,6 +35,6 @@ catch(PDOException $e){
 	die ('erreur :' .$e->getMessage());
 }
 $reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
-$reponse->execute(array($surname,$name,$username,$mail,$password,$birthday));
+$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
 
 ?>
