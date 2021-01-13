@@ -41,19 +41,6 @@
 					else if ($erreur >= 0){
 						echo "Des champs n'ont pas été saisis";
 					}
-
-					$user='root' ;
-					$password='' ;
-					
-					try{
-						$bdd = new PDO($dsn, $user, $password);
-					}
-					catch(PDOException $e){
-						die ('erreur :' .$e->getMessage());
-					}
-					$reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
-					$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
-					echo '<p class="test">Bonjour</p> '.$surname. ' '. $name.' vous êtes désormais inscrit';
 				?>
 
 				<a href="index.php">
