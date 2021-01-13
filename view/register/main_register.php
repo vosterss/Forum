@@ -23,7 +23,7 @@
 				</p>
 				<p> 
 					<label> Mot de passe (8 caractères minimum) </label>
-					<input type="text" name="password" required minlength="8"/>
+					<input type="password" name="password" required minlength="8"/>
 				</p>
 				<p> 
 					<label> Date de naissance </label>
