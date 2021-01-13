@@ -66,7 +66,7 @@
 					}
 				?>
 				<a href="index.php">
-					<button>
+					<button class="form_input">
 						Retourner à l'accueil
 					</button>
 				</a>
