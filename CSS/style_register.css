@@ -57,6 +57,11 @@ main{
 	align-items: center;
 }
 
+.form_birthday{
+	display: flex;
+	flex-direction: column;
+}
+
 footer{
 	padding: 20px 0 10px 0;
 	background-color : gray; 
