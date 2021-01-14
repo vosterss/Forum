@@ -21,9 +21,8 @@
 					$name = htmlspecialchars($_POST['name']);
 					$username = htmlspecialchars($_POST['username']);
 					$mail = htmlspecialchars($_POST['mail']);
-					$mdp = password_hash($_POST['password'], PASSWORD_DEFAULT);
+					$mdp = htmlspecialchars($_POST['password']); 
 					$birthday = htmlspecialchars($_POST['birthday']);
-
 					$dsn='mysql:host=localhost;dbname=forum';
 					$user='root';
 					$password='' ;
@@ -36,7 +35,7 @@
 						}
 						$reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
 						$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
-						echo '<p class="test">Bonjour</p> '.$surname. ' '. $name.' vous êtes désormais inscrit';
+						echo '<p class="test">Bienvenue, '.$surname. ' '. $name.' vous êtes désormais inscrit.</p>';
 					}
 					else if ($erreur >= 0){
 						echo "Des champs n'ont pas été saisis";
