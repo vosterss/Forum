@@ -17,9 +17,9 @@
                 <?php
                 $dsn='mysql:host=localhost;dbname=forum';
                 $user='root';
-                $pass='' ;
+                $pass='root' ;
                 $username = htmlspecialchars($_POST['username']);
-                $mdp_hash =sha1(htmlspecialchars($_POST['password']));
+                $mdp_hash = sha1(htmlspecialchars($_POST['password']));
                 try{
                     $bdd = new PDO($dsn, $user, $pass);
                 }

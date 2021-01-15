@@ -36,6 +36,15 @@ header{
 	color: rgb(93, 173, 226);
 }
 
+.connection{
+	background-color: red;
+	width: 20%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
 main{
 	background-image: url(../images/fresque.png);
 	background-size: cover;
