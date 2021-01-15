@@ -8,8 +8,12 @@
   	<body>
   		<header>
 		  	<div class="titre">
-				<img src="images/dessin.svg" class="logo" alt='image logo'>
-				<h1 class="txt-titre"> Forum </h1>
+				<a href="index.php">
+					<img src="images/dessin.svg" class="logo" alt='image logo'>
+				</a>	
+				<a href="index.php" class="lien-titre">
+					<h1 class="txt-titre"> Forum </h1>
+				</a>	
 		  	</div>		                		
 		  	<div class="connection">
 		  		<div class="bouton-register">
