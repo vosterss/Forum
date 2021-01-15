@@ -21,11 +21,14 @@
 					$name = htmlspecialchars($_POST['name']);
 					$username = htmlspecialchars($_POST['username']);
 					$mail = htmlspecialchars($_POST['mail']);
-					$mdp = htmlspecialchars($_POST['password']); 
+					$mdp = sha1(htmlspecialchars($_POST['password'])); 
 					$birthday = htmlspecialchars($_POST['birthday']);
+<<<<<<< Updated upstream
 					$date = date('d-m-y h:i:s');
 					$mdp = $mdp.$date;
 					$mdp = password_hash($mdp, PASSWORD_DEFAULT);
+=======
+>>>>>>> Stashed changes
 					$dsn='mysql:host=localhost;dbname=forum';
 					$user='root';
 					$password='' ;

@@ -19,6 +19,7 @@
                 $user='root';
                 $pass='' ;
                 $username = htmlspecialchars($_POST['username']);
+                $mdp_hash =sha1(htmlspecialchars($_POST['password']));
                 try{
                     $bdd = new PDO($dsn, $user, $pass);
                 }
@@ -30,14 +31,12 @@
                 $resultat = $req->fetch();
                 if($resultat){
                     // Comparaison du pass envoyé via le formulaire avec la base
-                    $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
                     if (!$resultat)
                     {
                         echo "Nom d'utilsateur ou mot de passe incorect";
                     }
-                    else
-                    {
-                        if ($isPasswordCorrect) {
+                    else{
+                        if ($mdp_hash == $resultat['password']){
                             session_start();
                             $_SESSION['id'] = $resultat['id'];
                             $_SESSION['username'] = $username;
