@@ -37,11 +37,8 @@ header{
 }
 
 main{
-	background-image: url(../images/fresque.jpg);
-	background-size: cover;
 	width: 100%;
 	height: 80%;
-	opacity: 0.5;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -112,6 +109,10 @@ input[type=date]{
 	border-bottom: 2px solid rgb(93, 173, 226);
 	background-color: white;
 	width: 100%;
+}
+
+::placeholder{
+	text-align: center;
 }
 
 .form_submit{
