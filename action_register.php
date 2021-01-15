@@ -24,8 +24,8 @@
 					$mdp = htmlspecialchars($_POST['password']); 
 					$birthday = htmlspecialchars($_POST['birthday']);
 					$date = date('d-m-y h:i:s');
-					$mdp = $mdp.$date;
-					$mdp = password_hash($mdp, PASSWORD_DEFAULT);
+					$mdp_date = $mdp.$date;
+					$mdp_hash = password_hash($mdp_date, PASSWORD_DEFAULT);
 					$dsn='mysql:host=localhost;dbname=forum';
 					$user='root';
 					$password='' ;
@@ -37,7 +37,7 @@
 							die ('erreur :' .$e->getMessage());
 						}
 						$reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
-						$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
+						$reponse->execute(array($surname,$name,$username,$mail,$mdp_hash,$birthday));
 						echo '<p class="test">Bienvenue, '.$surname. ' '. $name.' vous êtes désormais inscrit.</p>';
 					}
 					else if ($erreur >= 0){
