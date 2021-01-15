@@ -10,12 +10,14 @@ body{
 }
 
 header{
+	position: fixed;
 	height: 10%;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
 	border-bottom: 2px solid rgb(93, 173, 226);	
+	background-color: white;
 }
 
 .logo{
@@ -44,6 +46,8 @@ main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: fixed;
+	padding-top: 10%;
 }
 
 .titre_register{
@@ -121,7 +125,7 @@ input[type=date]{
 
 footer{
 	padding: 20px 0 10px 0;
-	background-color : gray; 
+	background-color : rgb(159, 190, 231); 
 	color: #FFFAE1;
 	text-align : center;
 }
