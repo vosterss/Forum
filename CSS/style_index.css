@@ -10,12 +10,14 @@ body{
 }
 
 header{
+	position: fixed;
 	height: 10%;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
 	border-bottom: 2px solid rgb(93, 173, 226);	
+	background-color: white;
 }
 
 .logo{
@@ -68,7 +70,18 @@ header{
 
 footer{
 	padding: 20px 0 10px 0;
-	background-color : gray; 
+	background-color : rgb(159, 190, 231); 
 	color: #FFFAE1;
 	text-align : center;
+}
+main{
+	background-image: url(../images/fresque.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 80%;
+	opacity: 0.5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10%;
 }
