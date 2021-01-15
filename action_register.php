@@ -25,6 +25,7 @@
 					$birthday = htmlspecialchars($_POST['birthday']);
 					$date = date('d-m-y h:i:s');
 					$mdp = $mdp.$date;
+					$mdp = password_hash($mdp, PASSWORD_DEFAULT);
 					$dsn='mysql:host=localhost;dbname=forum';
 					$user='root';
 					$password='' ;
