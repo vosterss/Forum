@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 15 jan. 2021 à 13:13
+-- Généré le : ven. 15 jan. 2021 à 13:17
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.10
 
@@ -20,6 +20,38 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `forum`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categorie`
+--
+
+CREATE TABLE `categorie` (
+  `id` bigint(20) NOT NULL,
+  `nom` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `post`
+--
+
+CREATE TABLE `post` (
+  `id` bigint(20) NOT NULL,
+  `titre` varchar(70) NOT NULL,
+  `contenu` longtext NOT NULL,
+  `id_utilisateur` bigint(20) NOT NULL,
+  `date_publication` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `post`
+--
+
+INSERT INTO `post` (`id`, `titre`, `contenu`, `id_utilisateur`, `date_publication`) VALUES
+(1, 'Titre', 'Bonjour, voici mon post ', 0, '2015-01-21 09:07:08');
 
 -- --------------------------------------------------------
 
@@ -42,6 +74,13 @@ CREATE TABLE `utilisateur` (
 --
 
 --
+-- Index pour la table `post`
+--
+ALTER TABLE `post`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_utilisateur` (`id_utilisateur`);
+
+--
 -- Index pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
@@ -50,6 +89,12 @@ ALTER TABLE `utilisateur`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `post`
+--
+ALTER TABLE `post`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
