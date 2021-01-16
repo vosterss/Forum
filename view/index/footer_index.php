@@ -13,24 +13,24 @@
 					<ul id="navigation">
 						<li><a href="" title="">Présentation</a></li>
 						<li><a href="" title="">Warzone</a></li>
-						<li><a href="" title="">fortine</a></li>
-						<li><a href="" title="">pubg</a></li>
+						<li><a href="" title="">Fortnite</a></li>
+						<li><a href="" title="">Pubg</a></li>
 					</ul>
 				</div>
 				<div id="bouton1">
 					<ul id="navigation">
 						<li><a href="" title="">Présentation</a></li>
 						<li><a href="" title="">Warzone</a></li>
-						<li><a href="" title="">fortine</a></li>
-						<li><a href="" title="">pubg</a></li>
+						<li><a href="" title="">Fortnite</a></li>
+						<li><a href="" title="">Pubg</a></li>
 					</ul>
 				</div>
 				<div id="bouton2">
 					<ul id="navigation">
 						<li><a href="" title="">Présentation</a></li>
 						<li><a href="" title="">Warzone</a></li>
-						<li><a href="" title="">fortine</a></li>
-						<li><a href="" title="">pubg</a></li>
+						<li><a href="" title="">Fortnite</a></li>
+						<li><a href="" title="">Pubg</a></li>
 					</ul>
 				</div>
 			</div>		
