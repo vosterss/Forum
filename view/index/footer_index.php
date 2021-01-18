@@ -1,11 +1,13 @@
-	
+<?php include 'models\sendemail.php'; ?>
+
+<?php echo $alert; ?>
 		<footer>
 			<h2>Contactez-nous</h2>
-			<form>
-				<input placeholder='nom'>									
-				<input placeholder='E-mail'>									
-				<textarea placeholder='Votre message ici...'></textarea>
-				<button>Envoyer</button>								
+			<form id= 'connect' action="" method="post">
+				<input name="name" class="text-box" placeholder='nom' required>									
+				<input name="name" class="text-box" placeholder='E-mail'required>									
+				<textarea placeholder='Votre message ici...' required></textarea>
+				<input type="submit" name="submit" class="send-btn" value="envoyé" required>								
 			</form>
 			<div id='trait2'></div>	
 			<div id='lien'>
