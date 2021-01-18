@@ -5,8 +5,8 @@
 			<h2>Contactez-nous</h2>
 			<form id= 'connect' action="" method="post">
 				<input name="name" class="text-box" placeholder='nom' required>									
-				<input name="name" class="text-box" placeholder='E-mail'required>									
-				<textarea placeholder='Votre message ici...' required></textarea>
+				<input name="email" class="text-box" placeholder='E-mail'required>									
+				<textarea name='message'placeholder='Votre message ici...' required></textarea>
 				<input type="submit" name="submit" class="send-btn" value="envoyé" required>								
 			</form>
 			<div id='trait2'></div>	

@@ -23,8 +23,8 @@ if(isset($_POST['submit'])){
 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 		$mail->Port = '587';
 		
-		$mail->setFrom('forumbr63@gmail.com');
-		$mail->addAddress('forumbr63@gmail.com');
+		$mail->setFrom("forumbr63@gmail.com");
+		$mail->addAddress("forumbr63@gmail.com");
 	
 		$mail->isHTML(true);
 		$mail->Subject = 'Message Received (Contact Page)';
