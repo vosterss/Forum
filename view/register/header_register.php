@@ -12,7 +12,7 @@
 				<a href="index.php">
 					<img src="images/dessin.svg" class="logo" alt='image logo'>
 				</a>	
-				<a href="index.php">
+				<a href="index.php" class="lien-titre">
 					<h1 class="txt-titre"> Forum </h1>
 				</a>
 		  	</div>		                		
