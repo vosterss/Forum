@@ -350,17 +350,16 @@ footer button:hover{
 
 #bouton{
 	width: 33%;
-	box-shadow:inset 5px 0px 1px -1px #fffae1;	
 }
 
 #bouton1{
 	width: 33%;
-	box-shadow:inset 5px 0px 1px -1px #fffae1;
+	box-shadow: inset 5px 0px 1px -1px #fffae1;
 }
 
 #bouton2{
 	width: 33%;
-	box-shadow:inset 5px 0px 1px -1px #fffae1;
+	box-shadow: inset 5px 0px 1px -1px #fffae1;
 }
 
 footer li{
