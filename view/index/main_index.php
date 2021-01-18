@@ -6,7 +6,7 @@
 				<?php
 					$dsn='mysql:host=localhost;dbname=forum';
 					$user='root';
-					$pass='' ;
+					$pass='root' ;
 					$_SESSION='';
 					try{
 						$bdd = new PDO($dsn, $user, $pass);

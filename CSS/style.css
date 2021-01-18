@@ -343,23 +343,27 @@ footer button:hover{
 	transition: 0.1;
 }
 
-#lien {
+#lien{
 	display: flex;
+	justify-content: center;
 	margin: 60px auto;
 }
 
 #bouton{
-	width: 33%;
+	background-color: red;
+	width: 30%;
 }
 
 #bouton1{
-	width: 33%;
-	box-shadow: inset 5px 0px 1px -1px #fffae1;
+	background-color: blue;
+	width: 30%;
+	border-left: 5px solid #fffae1;
+	border-right: 5px solid #fffae1
 }
 
 #bouton2{
-	width: 33%;
-	box-shadow: inset 5px 0px 1px -1px #fffae1;
+	background-color: purple;
+	width: 30%;
 }
 
 footer li{
