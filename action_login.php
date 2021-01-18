@@ -17,7 +17,7 @@
                 <?php
                 $dsn='mysql:host=localhost;dbname=forum';
                 $user='root';
-                $pass='root' ;
+                $pass='' ;
                 $username = htmlspecialchars($_POST['username']);
                 $mdp_hash = sha1(htmlspecialchars($_POST['password']));
                 try{

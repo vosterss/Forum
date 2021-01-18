@@ -25,7 +25,7 @@
 					$birthday = htmlspecialchars($_POST['birthday']);
 					$dsn='mysql:host=localhost;dbname=forum';
 					$user='root';
-					$password='root';
+					$password='';
 					if($erreur <= 0){
 						try{
 							$bdd = new PDO($dsn, $user, $password);
