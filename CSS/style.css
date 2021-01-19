@@ -345,23 +345,30 @@ footer button:hover{
 	display: flex;
 	justify-content: center;
 	margin: 60px auto;
+	height: 100%;
 }
 
 #bouton{
-	background-color: red;
 	width: 30%;
+	padding: 15px;
 }
 
 #bouton1{
-	background-color: blue;
 	width: 30%;
-	border-left: 5px solid #fffae1;
-	border-right: 5px solid #fffae1
+	border-left: solid 5px #FFFAE1;
+	border-right: solid 5px #FFFAE1;
+	padding: 15px;
 }
 
 #bouton2{
-	background-color: purple;
 	width: 30%;
+	padding: 15px;
+}
+
+footer ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 footer li{
