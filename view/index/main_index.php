@@ -5,7 +5,7 @@
 			<div>
 				<div class="top">
 					<h1 style="font-size:3em;">Warzone</h1>
-					<h3> Dernier Post</h3>
+					<h1> Dernier Post</h3>
 				</div>
 				<?php
 					$dsn='mysql:host=localhost;dbname=forum';
