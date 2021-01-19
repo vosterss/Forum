@@ -219,6 +219,10 @@ input[type=date]{
 	text-decoration: none underline;
 	color: black;
 }
+
+.form_login{
+	text-align: center;
+}
 /***************************************main*****************************************/
 
 @font-face {
