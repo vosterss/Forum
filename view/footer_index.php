@@ -1,6 +1,3 @@
-<?php include 'models\sendemail.php'; ?>
-
-<?php echo $alert; ?>
 		<footer>
 			<h2>Contactez-nous</h2>
 			<form id= 'connect' action="" method="post">
