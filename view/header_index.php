@@ -33,27 +33,46 @@
 				</div>	
 			</div>				
 		</header>
-		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="#">Topics</a>
-			<a href="#">Warzone</a>
-			<a href="#">Fortnite</a>
-			<a href="#">Apex Legends</a>
-			<a href="#">PUBG</a>
-		</div>
-		<div id="main">
-			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-		</div>		
-		<script>
-			function openNav() {
-			  document.getElementById("mySidenav").style.width = "250px";
-			  document.getElementById("main").style.marginLeft = "250px";
-			  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-			}
+		<main>
+			<div class="header-bot">
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="#">Topics</a>
+					<a href="#">Warzone</a>
+					<a href="#">Fortnite</a>
+					<a href="#">Apex Legends</a>
+					<a href="#">PUBG</a>
+				</div>
+				<div id="main">
+					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+				</div>		
+				<script>
+					function openNav() {
+					  document.getElementById("mySidenav").style.width = "250px";
+					  document.getElementById("main").style.marginLeft = "250px";
+					  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+					}
 
-			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			  document.getElementById("main").style.marginLeft= "0";
-			  document.body.style.backgroundColor = "white";
-			}
-		</script>		
+					function closeNav() {
+					  document.getElementById("mySidenav").style.width = "0";
+					  document.getElementById("main").style.marginLeft= "0";
+					  document.body.style.backgroundColor = "white";
+					}
+				</script>
+				<div class="search-et-theme">
+					<div class="search">
+						<form action="action_search_post.php" method="post">
+							<p> 
+								<input class="form_input" type="search" name="search_post" placeholder="Rechercher" required minlength="1" maxlength="1000"/>
+							</p>
+						</form>			
+					</div>
+					<div class="bouton-theme">
+				  		<a id="theme" href="#">		                	
+							<button class="bouton-T" type="button">
+								<p class="txt-bouton-theme"> # </p>
+							</button>
+						</a>
+					</div>
+				</div>		
+			</div>	
