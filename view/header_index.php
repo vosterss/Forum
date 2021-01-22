@@ -61,7 +61,9 @@
 				</script>
 				<div class="search-et-theme">
 					<div class="search">
-						<form action="action_search_post.php" method="post">
+						<div class="fa fa-search">
+						</div>	
+						<form method="get">
 							<p> 
 								<input class="form_input" type="search" name="search_post" placeholder="Rechercher" required minlength="1" maxlength="1000"/>
 							</p>
@@ -70,7 +72,8 @@
 					<div class="bouton-theme">
 				  		<a id="theme" href="#">		                	
 							<button class="bouton-T" type="button">
-								<p class="txt-bouton-theme"> # </p>
+								<div class="fa fa-moon-o">
+								</div>	
 							</button>
 						</a>
 					</div>
