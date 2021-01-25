@@ -63,10 +63,25 @@
 					<div class="search">
 						<div class="fa fa-search">
 						</div>	
-						<form method="get">
-							<p> 
-								<input class="form_input" type="search" name="search_post" placeholder="Rechercher" required minlength="1" maxlength="1000"/>
+						<form method="get"> 
+							<p>
+								<input class="form_input" type="search" name="q" placeholder="Rechercher" required minlength="1" maxlength="1000"/>
 							</p>
+							<?php
+									if(isset($_GET['q'])){
+									    $q = htmlspecialchars($_GET['q']);
+									    $articles = $bdd->query('SELECT titre FROM post WHERE titre LIKE "%'.$q.'%" ORDER BY id DESC');
+									
+								if($articles->rowCount() > 0) { 
+							?>
+								   <ul>
+								   <?php while($a = $articles->fetch()) { ?>
+								      <li><?= $a['titre'] ?></li>
+								   <?php } ?>
+								   </ul>
+								<?php } else { ?>
+									Aucun résultat pour: <?= $q ?>...
+								<?php } }?>
 						</form>			
 					</div>
 					<div class="bouton-theme">
