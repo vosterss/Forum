@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../CSS/style.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="../CSS/style_clair.css" media="all" id="theme-link" >
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">	
 		<title> Forum </title>
 	</head>
@@ -70,12 +70,15 @@
 						</form>			
 					</div>
 					<div class="bouton-theme">
-				  		<a id="theme" href="#">		                	
+						<span id="theme">		                	
 							<button class="bouton-T" type="button">
 								<div class="fa fa-moon-o">
 								</div>	
 							</button>
-						</a>
+						</span>
 					</div>
 				</div>		
 			</div>	
+			
+				
+					

@@ -50,4 +50,7 @@
 			</div>
 		</footer>
 	</body>
+	
+        					<!--Fichiers JS-->
+        					<script src="../js/scripts.js"></script>
 </html>
