@@ -21,14 +21,14 @@
 		  	?>		                		
 				  	<div class="connection">
 				  		<div class="bouton-register">
-					  		<a id="connect" href="index.php?p=register">		                	
+					  		<a id="connect" href="index.php?p=register">           	
 								<button class="bouton-R" type="button">
 									<p class="txt-bouton-connection"> Register </p>
 								</button>
 							</a>
 						</div>
 						<div class="bouton-login">
-						  	<a id="connect" href="index.php?p=login">		                
+						  	<a id="connect" href="index.php?p=login">         
 								<button class="bouton-L" type="button">
 									<p class="txt-bouton-connection"> Log In </p>
 								</button>
@@ -40,7 +40,7 @@
 				else{
 			?>
 					<div class="bouton-theme">		                	
-						<a id="connect" href="index.php?p=deco">		                
+						<a id="connect" href="index.php?p=deco">         
 							<button class="bouton-L" type="button">
 								<p class="txt-bouton-connection"> Déconnection </p>
 							</button>
@@ -55,10 +55,10 @@
 				<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<a href="#">Topics</a>
-					<a href="#">Warzone</a>
-					<a href="#">Fortnite</a>
-					<a href="#">Apex Legends</a>
-					<a href="#">PUBG</a>
+					<a href="index.php?p=warzone">Warzone</a>
+					<a href="index.php?p=fortnite">Fortnite</a>
+					<a href="index.php?p=APEX">Apex Legends</a>
+					<a href="index.php?p=PUBG">PUBG</a>
 				</div>
 				<div id="main">
 					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
