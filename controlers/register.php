@@ -1,5 +1,5 @@
 <?php
-	require 'view/register/header_register.php';
-	require 'view/register/main_register.php';
-	require 'view/register/footer_register.php';
+	require '../view/header_index.php';
+	require '../view/main_register.php';
+	require '../view/footer_index.php';
 ?>

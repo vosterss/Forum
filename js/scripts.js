@@ -12,8 +12,6 @@ window.onload = () => {
 
     // Ecouteur d'évènement "click" sur la span
     theme.addEventListener("click", function(){
-        console.log(localStorage.theme)
-        console.log(theme.firstElementChild);
         if (localStorage.theme == "clair") {
             localStorage.theme = "sombre"
             theme.firstElementChild.innerHTML = "<div class='fa fa-sun-o'></div>"
