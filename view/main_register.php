@@ -5,7 +5,7 @@
 				<h1> Inscription </h1>
 			</div>
 			<div class="form">
-				<form action="models/action_register.php" method="post">
+				<form action="index.php?p=a_register" method="post">
 					<p> 
 						<input class="form_input" type="text" name="surname" placeholder="Prénom" required minlength="3" maxlength="30"/>
 					</p>
