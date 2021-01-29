@@ -5,7 +5,7 @@
 				<h1> Connexion </h1>
 			</div>
 			<div class="form_login">
-				<form action="action_login.php" method="post">
+				<form action="#" method="post">
 					<p> 
 						<input class="form_input" type="text" name="username" placeholder="Nom d'utilisateur" required minlength="3" maxlength="30"/>
 					</p>
