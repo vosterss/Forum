@@ -8,7 +8,7 @@
 		    <ul>
 		   <?php while($a = $articles->fetch()) { ?>
 		      		<li>
-		      			<?= $a['titre']. ' - ' .$a['username'].'<br>' .$a['contenu'] ?>
+		      			<?='<h2>' .$a['titre']. ' - ' .$a['username'].'<br><br>' .$a['contenu']. '</h2>' ?>
 		      		</li>
 		    <?php } ?>
 		    </ul>
