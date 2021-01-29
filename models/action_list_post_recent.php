@@ -1,10 +1,10 @@
 <?php
-function postR (){
-	$reponse = $bdd->prepare('select uti.username, pos.catégorie, max(pos.id), pos.titre, pos.contenu from utilisateur as uti inner join post as pos on uti.id = pos.id_utilisateur where pos.catégorie');
-	$reponse->execute(array());
-	$result = $reponse->fetchAll();
-return $result
-}
+	function postR (){
+		$reponse = $bdd->prepare('select uti.username, pos.catégorie, max(pos.id), pos.titre, pos.contenu from utilisateur as uti inner join post as pos on uti.id = pos.id_utilisateur where pos.categorie=?');
+		$reponse->execute(array());
+		$result = $reponse->fetchAll();
+	return $result;
+	}
 	##foreach ($results as $result) {
 		##echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'];
 		##if($_SESSION!==''){

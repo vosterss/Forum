@@ -23,4 +23,16 @@ session_start();
 	if($page == 'deco'){
 		include 'models/action_deco.php';
 	}
+	if($page == 'warzone'){
+		include 'controlers/warzone.php';
+	}
+	if($page == 'fortnite'){
+		include 'controlers/fortnite.php';
+	}
+	if($page == 'APEX'){
+		include 'controlers/APEX.php';
+	}
+	if($page == 'PUBG'){
+		include 'controlers/PUBG.php';
+	}
 ?>
