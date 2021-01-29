@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="CSS/style_post.css" media="all"/>
-		<title> Register </title>
-	</head>
-	<body>
-		<?php
-		require 'view/index/header_index.php'
-		?>
+<main>
 		<div class="container">
 			<h1 class="titre">Création d'un nouveau post</h1>
 			<div class="formulaire">
@@ -27,5 +17,4 @@
 				</form>
 			</div>
 		</div>
-	</body>
-</html>
+<main>
