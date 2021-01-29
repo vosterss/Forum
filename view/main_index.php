@@ -8,7 +8,7 @@
 		    <ul>
 		   <?php while($a = $articles->fetch()) { ?>
 		      		<li>
-		      			<?= $a['titre']. ' - ' .$a['username'].'<br>' .$a['contenu'] ?>
+		      			<?='<h2>' .$a['titre']. ' - ' .$a['username'].'<br><br>' .$a['contenu']. '</h2>' ?>
 		      		</li>
 		    <?php } ?>
 		    </ul>
@@ -32,6 +32,15 @@
 	<div class="main-container">
 		<div class="plus-recent">
 			<h1> Post le plus récent </h1>
+			<?php
+				require 'models/action_list_post_recent.php';
+				foreach ($results as $result) {
+					echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'];
+					if($_SESSION!==''){
+					echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
+					}
+				}
+			?>
 		</div>
 		<div class="plus-like">
 			<h1> Post le plus liké </h1>
