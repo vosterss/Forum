@@ -8,7 +8,7 @@ session_start();
 	if($page == 'accueil'){
 		include 'controlers/index.php';
 	}
-	if($_GET['p'] == 'register'){
+	if($page == 'register'){
 		include 'controlers/register.php';
 	}
 	if($page == 'login'){
@@ -16,6 +16,9 @@ session_start();
 	}
 	if($page == 'a_login'){
 		include 'models/action_login.php';
+	}
+	if($page == 'a_register'){
+		include 'models/action_register.php';
 	}
 	if($page == 'deco'){
 		include 'models/action_deco.php';
