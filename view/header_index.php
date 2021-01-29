@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../CSS/style_clair.css" media="all" id="theme-link" >
+		<link rel="stylesheet" type="text/css" href="CSS/style_clair.css" media="all" id="theme-link" >
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">	
 		<title> Forum </title>
 	</head>
@@ -10,7 +10,7 @@
   		<header>
 		  	<div class="titre">
 				<a href="index.php">
-					<img src="../images/dessin.svg" class="logo" alt='image logo'>
+					<img src="images/dessin.svg" class="logo" alt='image logo'>
 				</a>	
 				<a href="index.php" class="lien-titre">
 					<h1 class="txt-titre"> Forum </h1>
@@ -21,14 +21,14 @@
 		  	?>		                		
 				  	<div class="connection">
 				  		<div class="bouton-register">
-					  		<a id="connect" href="register.php">		                	
+					  		<a id="connect" href="index.php?p=register">		                	
 								<button class="bouton-R" type="button">
 									<p class="txt-bouton-connection"> Register </p>
 								</button>
 							</a>
 						</div>
 						<div class="bouton-login">
-						  	<a id="connect" href="login.php">		                
+						  	<a id="connect" href="index.php?p=login">		                
 								<button class="bouton-L" type="button">
 									<p class="txt-bouton-connection"> Log In </p>
 								</button>
@@ -40,10 +40,11 @@
 				else{
 			?>
 					<div class="bouton-theme">		                	
-						<button class="bouton-T" type="button">
-							<div class="fa fa-moon-o">
-							</div>	
-						</button>
+						<a id="connect" href="index.php?p=deco">		                
+							<button class="bouton-L" type="button">
+								<p class="txt-bouton-connection"> Déconnection </p>
+							</button>
+						</a>
 					</div>		
 			<?php
 				}

@@ -4,9 +4,9 @@ window.onload = () => {
     let theme = document.getElementById("theme")
     // Y a-t-il un thème stocké dans le localStorage
     if(localStorage.theme != null){
-        themeLink.href = `../CSS/style_${localStorage.theme}.css`
+        themeLink.href = `CSS/style_${localStorage.theme}.css`
     }else{
-        themeLink.href = "../CSS/style_clair.css"
+        themeLink.href = "CSS/style_clair.css"
         localStorage.theme = "clair"
     }
 
@@ -19,6 +19,6 @@ window.onload = () => {
             localStorage.theme = "clair"
             theme.firstElementChild.innerHTML = "<div class='fa fa-moon-o'></div>"
         }				
-        themeLink.href = `../CSS/style_${localStorage.theme}.css`
+        themeLink.href = `CSS/style_${localStorage.theme}.css`
     })
 }
