@@ -36,7 +36,7 @@
 				require 'models/action_list_post_recent.php';
 				foreach ($results as $result) {
 					echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'];
-					if($_SESSION!==''){
+					if(isset($_SESSION['id'])){
 					echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
 					}
 				}
