@@ -44,27 +44,9 @@
 		</div>
 		<div class="plus-like">
 			<h1> Post le plus liké </h1>
-			<?php
-				require 'models/action_post_like.php';
-				foreach ($res as $results) {
-					echo $results['username'].' - '.$results['titre'].' - '.$results['contenu'].' - '.$results['nb_like'];
-					if(isset($_SESSION['id'])){
-					echo '<a style="padding-left:15px;" href="delete.php?id='.$results['id'].'">delete</a><br>';
-					}
-				}
-			?>
 		</div>
 		<div class="plus-reponse">
 			<h1> Post le plus populaire </h1>
-			<?php
-				require 'models/action_post_populaire.php';
-				foreach ($resuls as $result) {
-					echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_mess'];
-					if(isset($_SESSION['id'])){
-					echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
-					}
-				}
-			?>
 		</div>	
 	</div>
 	<?php } ?>
