@@ -5,6 +5,10 @@ session_start();
 	if(isset($_GET['p'])){
 		$page = $_GET['p'];
 	}
+	$categorie = '';
+	if(isset($_GET['c'])){
+		$categorie = $_GET['c'];
+	}
 	if($page == 'accueil'){
 		include 'controlers/index.php';
 	}
