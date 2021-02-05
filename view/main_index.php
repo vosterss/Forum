@@ -65,10 +65,10 @@
 					<div class="plus-recent">
 						<h1> Post le plus récent </h1>
 						<?php
-							foreach ($results as $result) {
-								echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'];
+							foreach ($result_R as $result1){
+								echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu'];
 								if(isset($_SESSION['id'])){
-									echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
+									echo '<a style="padding-left:15px;" href="delete.php?id='.$result1['id'].'">delete</a><br>';
 								}
 							}
 						?>
@@ -76,10 +76,10 @@
 					<div class="plus-like">
 						<h1> Post le plus liké </h1>
 						<?php
-							foreach ($res as $results) {
-								echo $results['username'].' - '.$results['titre'].' - '.$results['contenu'].' - '.$results['nb_like'];
+							foreach ($result_L as $result2){
+								echo $result2['username'].' - '.$result2['titre'].' - '.$result2['contenu'].' - '.$result2['nb_like'];
 								if(isset($_SESSION['id'])){
-									echo '<a style="padding-left:15px;" href="delete.php?id='.$results['id'].'">delete</a><br>';
+									echo '<a style="padding-left:15px;" href="delete.php?id='.$result2['id'].'">delete</a><br>';
 								}
 							}
 						?>
@@ -87,10 +87,10 @@
 					<div class="plus-reponse">
 						<h1> Post le plus populaire </h1>
 						<?php
-							foreach ($resuls as $result) {
-								echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_mess'];
+							foreach ($result_P as $result3) {
+								echo $result3['username'].' - '.$result3['titre'].' - '.$result3['contenu'].' - '.$result3['nb_mess'];
 								if(isset($_SESSION['id'])){
-									echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
+									echo '<a style="padding-left:15px;" href="delete.php?id='.$result3['id'].'">delete</a><br>';
 								}
 							}
 						?>
