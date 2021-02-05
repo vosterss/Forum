@@ -66,7 +66,7 @@
 						<h1> Post le plus récent </h1>
 						<?php
 							foreach ($result_R as $result1){
-								echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu'];
+								echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu']. ' - ' .$result1['date_publication'];
 								if(isset($_SESSION['id'])){
 									echo '<a style="padding-left:15px;" href="delete.php?id='.$result1['id'].'">delete</a><br>';
 								}
@@ -77,7 +77,7 @@
 						<h1> Post le plus liké </h1>
 						<?php
 							foreach ($result_L as $result2){
-								echo $result2['username'].' - '.$result2['titre'].' - '.$result2['contenu'].' - '.$result2['nb_like'];
+								echo $result2['username'].' - '.$result2['titre'].' - '.$result2['contenu'].' - '.$result2['nb_like']. ' - ' .$result2['date_publication'];
 								if(isset($_SESSION['id'])){
 									echo '<a style="padding-left:15px;" href="delete.php?id='.$result2['id'].'">delete</a><br>';
 								}
@@ -88,7 +88,7 @@
 						<h1> Post le plus populaire </h1>
 						<?php
 							foreach ($result_P as $result3) {
-								echo $result3['username'].' - '.$result3['titre'].' - '.$result3['contenu'].' - '.$result3['nb_mess'];
+								echo $result3['username'].' - '.$result3['titre'].' - '.$result3['contenu'].' - '.$result3['nb_mess']. ' - ' .$result3['date_publication'];
 								if(isset($_SESSION['id'])){
 									echo '<a style="padding-left:15px;" href="delete.php?id='.$result3['id'].'">delete</a><br>';
 								}
