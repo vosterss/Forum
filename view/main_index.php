@@ -2,7 +2,7 @@
 		if(isset($_GET['q'])){
 		    $q = htmlspecialchars($_GET['q']);
 		    $articles = $bdd->query('select pos.titre, uti.username, pos.contenu FROM post as pos, utilisateur as uti WHERE uti.id = pos.id_utilisateur AND titre LIKE "%'.$q.'%" ORDER BY pos.id DESC');
-			if($articles->rowCount() > 0){ 
+			if($articles->rowCount() > 0){
 	?>
 				<div class="main-container">
 				    <ul>
