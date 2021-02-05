@@ -28,7 +28,7 @@
 					foreach ($results as $result) {
 						echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'];
 						if(isset($_SESSION['id'])){
-						echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
+							echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
 						}
 					}
 				?>
@@ -39,7 +39,7 @@
 					foreach ($res as $results) {
 						echo $results['username'].' - '.$results['titre'].' - '.$results['contenu'].' - '.$results['nb_like'];
 						if(isset($_SESSION['id'])){
-						echo '<a style="padding-left:15px;" href="delete.php?id='.$results['id'].'">delete</a><br>';
+							echo '<a style="padding-left:15px;" href="delete.php?id='.$results['id'].'">delete</a><br>';
 						}
 					}
 				?>
@@ -50,7 +50,7 @@
 					foreach ($resuls as $result) {
 						echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_mess'];
 						if(isset($_SESSION['id'])){
-						echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
+							echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
 						}
 					}
 				?>
@@ -61,5 +61,7 @@
 			}
 			else{
 		?>
-	<?php } ?>
+		<?php 
+			} 
+		?>
 </main>
