@@ -156,6 +156,10 @@ header{
 	display: inline-block;
 }
 
+.avatar{
+	width : 10px;
+}
+
 .dropdown-menu-profil{
 	display: none;
 	position: absolute;

@@ -154,6 +154,9 @@ header{
 	position: relative;
 	display: inline-block;
 }
+.avatar{
+	width : 10px;
+}
 
 .dropdown-menu-profil{
 	display: none;
@@ -180,7 +183,7 @@ header{
 	display: block;
 }
 
-.bouton-profil:hover .bouton-lieux{
+.bouton-profil:hover .bouton-profil{
 	background-color: rgb(219, 219, 219);
 }
 /*Fin Menu Déroulant */
