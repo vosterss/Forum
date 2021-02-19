@@ -39,10 +39,20 @@
 				}
 				else{
 			?>
+					<div class="bouton-profil">
+		        		<button class="bouton-L" type="button">		                		
+		                	<h2> Lieux ▼ </h2>
+		        		</button>
+		        		<div class="dropdown-menu-profil">
+							<a href="">Mon profil</a>
+							<a href="">Mes Post</a>
+							<a href="">Déconnexion</a>
+						</div>
+		        	</div>
 					<div class="bouton-theme">		                	
 						<a id="connect" href="index.php?p=deco">         
 							<button class="bouton-L" type="button">
-								<p class="txt-bouton-connection"> Déconnection </p>
+								<p class="txt-bouton-connection"> Déconnexion </p>
 							</button>
 						</a>
 					</div>		
