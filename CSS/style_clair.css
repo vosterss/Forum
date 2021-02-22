@@ -155,7 +155,8 @@ header{
 	display: inline-block;
 }
 .avatar{
-	width : 10px;
+	width : 10%;
+	clip-path:ellipse(50% 50%);
 }
 
 .dropdown-menu-profil{

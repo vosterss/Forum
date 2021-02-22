@@ -40,13 +40,11 @@
 				else{
 			?>
 					<div class="bouton-profil">
-		        		<button class="bouton-L" type="button">		                		
 		                	<img src="images/avatar1.jpg" class="avatar" alt="">
-		        		</button>
 		        		<div class="dropdown-menu-profil">
 							<a href="">Mon profil</a>
 							<a href="">Mes Post</a>
-							<a href="">Déconnexion</a>
+							<a href="index.php?p=deco">Déconnexion</a>
 						</div>
 		        	</div>	
 			<?php

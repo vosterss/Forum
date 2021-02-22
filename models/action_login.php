@@ -1,7 +1,7 @@
 <?php
     $username = htmlspecialchars($_POST['username']);
     $mdp_hash = sha1(htmlspecialchars($_POST['password']));
-    $req = $bdd->prepare('SELECT id, password, ban FROM utilisateur WHERE username = :username');
+    $req = $bdd->prepare('SELECT id_avatar id, password, ban FROM utilisateur WHERE username = :username');
     $req->execute(array('username' => $username));
     $resultat = $req->fetch();
     if($resultat){
@@ -9,6 +9,7 @@
         if ($mdp_hash == $resultat['password'] && $resultat['ban'] == 0){
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['username'] = $username;
+            $_SESSION['id_avatar'] = $avatar;
             header('Location:index.php');
 
         }
