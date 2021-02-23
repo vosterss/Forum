@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 	require 'models/connect_bdd.php';
 	$page = 'accueil';
 	if(isset($_GET['p'])){
@@ -24,6 +23,9 @@ session_start();
 		$id_avatar = $_SESSION['id_avatar']; 
 		$result = search_avatar($bdd,$id_avatar);
 		$avatar = $result[0][0] ;
+	}
+	if($page == 'avatar' && isset($_GET['id_avatar'])){
+		include 'models/action_avatar.php';
 	}
 	if($page == 'accueil'){
 		include 'controlers/index.php';
@@ -67,8 +69,11 @@ session_start();
 	if($page == 'change-mdp'){
 		include 'controlers/change_mdp.php';
 	}
+	if ($page == 'a_change_mdp') {
+		include 'models/action_change_mdp.php';
+	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);
-	var_dump($avatar);
+	//var_dump($avatar);
 ?>
