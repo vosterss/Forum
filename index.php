@@ -39,4 +39,7 @@ session_start();
 	if($page == 'PUBG'){
 		include 'controlers/PUBG.php';
 	}
+	if($page == 'newpost'){
+		include 'controlers/newpost.php';
+	}
 ?>

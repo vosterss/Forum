@@ -10,7 +10,7 @@
   		<header>
 		  	<div class="titre">
 				<a href="index.php">
-					<img src="images/dessin.svg" class="logo" alt='image logo'>
+					<img src="images/dessin.png" class="logo" alt='image logo'>
 				</a>	
 				<a href="index.php" class="lien-titre">
 					<h1 class="txt-titre"> Forum </h1>
@@ -19,18 +19,18 @@
 		  	<?php 
 		  		if(!isset($_SESSION['id'])){
 		  	?>		                		
-				  	<div class="connection">
+				  	<div class="connexion">
 				  		<div class="bouton-register">
 					  		<a id="connect" href="index.php?p=register">           	
 								<button class="bouton-R" type="button">
-									<p class="txt-bouton-connection"> Register </p>
+									<p class="txt-bouton-connexion"> Register </p>
 								</button>
 							</a>
 						</div>
 						<div class="bouton-login">
 						  	<a id="connect" href="index.php?p=login">         
 								<button class="bouton-L" type="button">
-									<p class="txt-bouton-connection"> Log In </p>
+									<p class="txt-bouton-connexion"> Log In </p>
 								</button>
 							</a>
 						</div>	
@@ -42,9 +42,10 @@
 					<div class="bouton-profil">
 		                	<img src="images/avatar1.jpg" class="avatar" alt="">
 		        		<div class="dropdown-menu-profil">
-							<a href="">Mon profil</a>
-							<a href="">Mes Post</a>
+							<a href="index.php?p=profil">Mon profil</a>
+							<a href="index.php?p=mespost">Mes Post</a>
 							<a href="index.php?p=deco">Déconnexion</a>
+							<a href='index.php?p=newpost'>Créer un Post</a>
 						</div>
 		        	</div>	
 			<?php
