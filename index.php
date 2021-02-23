@@ -45,4 +45,10 @@ session_start();
 	if($page == 'profil'){
 		include 'controlers/profil.php';
 	}
+	if($page == 'avatar'){
+		include 'controlers/avatar.php';
+	}
+	if($page == 'change-mdp'){
+		include 'controlers/change_mdp.php';
+	}
 ?>
