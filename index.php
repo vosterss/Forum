@@ -42,4 +42,7 @@ session_start();
 	if($page == 'newpost'){
 		include 'controlers/newpost.php';
 	}
+	if($page == 'profil'){
+		include 'controlers/profil.php';
+	}
 ?>

@@ -1,5 +1,5 @@
 <?php
-	require 'view/header.php';
-	require 'view/connection.php';
-	require 'view/footer.php';
+	require 'view/header_index.php';
+	require 'view/main_profil.php';
+	require 'view/footer_index.php';
 ?>
