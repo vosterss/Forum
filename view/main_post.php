@@ -1,7 +1,10 @@
 		<script>
-			$(function() {
-			  $("#editor").wysibb();
-			})
+			$(document).ready(function() {
+				var wbbOpt = {
+				buttons: "bold,italic,underline,|,img,link,|,fontsize,fontcolor,quote,justifycenter,justifyright,justifyleft"
+				}
+			$("#editor").wysibb(wbbOpt);
+			});
 		</script>
 
 	<div class='post-container'>
