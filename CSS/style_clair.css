@@ -317,6 +317,23 @@ input[type=date]{
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
 }
+/* main post */
+.post-container{
+	display: flex;
+	background-color: gray;
+	height: 100%;
+	justify-content:center ;
+}
+.box-newpost{
+	display: flex;
+	background-color: red;
+	flex-direction: column;
+}
+.newpost-titre{
+	background-color: red;
+}
+/* Fin main post */ 
+
 /* ************************************FOOTER************************************ */
 
 footer{
