@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 	require 'models/connect_bdd.php';
 	$page = 'accueil';
 	if(isset($_GET['p'])){
@@ -67,8 +66,11 @@ session_start();
 	if($page == 'change-mdp'){
 		include 'controlers/change_mdp.php';
 	}
+	if($page == 'avatar' && isset($_GET['id_avatar'])){
+		include 'models/action_avatar.php';
+	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);
-	var_dump($avatar);
+	//var_dump($avatar);
 ?>
