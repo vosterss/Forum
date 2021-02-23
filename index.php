@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 	require 'models/connect_bdd.php';
 	$page = 'accueil';
 	if(isset($_GET['p'])){
@@ -8,6 +9,21 @@ session_start();
 	$categorie = '';
 	if(isset($_GET['c'])){
 		$categorie = $_GET['c'];
+	}
+	$id_utilisateur = '';
+	if(isset($_SESSION['id'])){
+		$id_utilisateur = $_SESSION['id']; 
+	}
+	$username = '';
+	if(isset($_SESSION['username'])){
+		$username = $_SESSION['username']; 
+	}
+	$id_avatar = '';
+	if(isset($_SESSION['id_avatar'])){
+		include 'models/function_avatar.php';
+		$id_avatar = $_SESSION['id_avatar']; 
+		$result = search_avatar($bdd,$id_avatar);
+		$avatar = $result[0][0] ;
 	}
 	if($page == 'accueil'){
 		include 'controlers/index.php';
@@ -51,4 +67,8 @@ session_start();
 	if($page == 'change-mdp'){
 		include 'controlers/change_mdp.php';
 	}
+	//var_dump($id_avatar);
+	//var_dump($id_utilisateur);
+	//var_dump($username);
+	var_dump($avatar);
 ?>

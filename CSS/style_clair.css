@@ -332,6 +332,11 @@ input[type=date]{
 .newpost-titre{
 	background-color: red;
 }
+.choix-titre{
+	display: flex;
+	align-items: center;
+}
+
 /* Fin main post */ 
 
 /* ************************************FOOTER************************************ */

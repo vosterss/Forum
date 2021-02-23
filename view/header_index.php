@@ -43,7 +43,7 @@
 				else{
 			?>
 					<div class="bouton-profil">
-		                	<img src="images/avatar1.jpg" class="avatar" alt="">
+		                	<img src='<?php echo $avatar ; ?>' class="avatar" alt=""/>
 		        		<div class="dropdown-menu-profil">
 							<a href="index.php?p=profil">Mon profil</a>
 							<a href="index.php?p=mespost">Mes Post</a>
