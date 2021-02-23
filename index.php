@@ -24,6 +24,9 @@ session_start();
 		$result = search_avatar($bdd,$id_avatar);
 		$avatar = $result[0][0] ;
 	}
+	if($page == 'avatar' && isset($_GET['id_avatar'])){
+		include 'models/action_avatar.php';
+	}
 	if($page == 'accueil'){
 		include 'controlers/index.php';
 	}
@@ -66,8 +69,8 @@ session_start();
 	if($page == 'change-mdp'){
 		include 'controlers/change_mdp.php';
 	}
-	if($page == 'avatar' && isset($_GET['id_avatar'])){
-		include 'models/action_avatar.php';
+	if ($page == 'a_change_mdp') {
+		include 'models/action_change_mdp.php';
 	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
