@@ -8,5 +8,5 @@
 	
 	$reponse=$bdd->prepare('INSERT INTO utilisateur(surname,name,username,mail,password,birthday) VALUES (?,?,?,?,?,?)') ;
 	$reponse->execute(array($surname,$name,$username,$mail,$mdp,$birthday));
-	require 'models/action_login.php'
+	require 'models/action_login.php';
 ?>
