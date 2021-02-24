@@ -1,5 +1,5 @@
 <?php
-$id_post = $_GET['id'];
+$id_post = htmlspecialchars($_POST['id']);
 #$id_utilisateur = $_SESSION['id'];
 $message = htmlspecialchars($_POST['contenu']);
 $date = date('d-m-y h:i:s');

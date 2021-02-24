@@ -1,4 +1,5 @@
 <?php
+	$id_post = $_GET['id'];
 	require 'models/function_post.php';
 	#require 'models/action_create_mess.php';
 	require 'view/header_index.php';
