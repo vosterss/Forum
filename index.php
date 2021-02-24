@@ -75,6 +75,10 @@ session_start();
 	if($page == 'a_create_post'){
 		include_once 'models/action_create_post.php';
 	}
+	if($page == 'voirpost' && isset($_GET['id'])){
+		$id_post = $_GET['id'];
+		include_once 'controlers/voirpost.php'
+	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);
