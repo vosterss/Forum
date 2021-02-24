@@ -12,7 +12,7 @@ session_start();
 	$id_utilisateur = '';
 	if(isset($_SESSION['id'])){
 		$id_utilisateur = $_SESSION['id']; 
-		##'''$id_droit = $_SESSION['id_droit'];'''
+		$id_droit = $_SESSION['id_droit'];
 	}
 	$username = '';
 	if(isset($_SESSION['username'])){
@@ -76,14 +76,9 @@ session_start();
 	if($page == 'a_create_post'){
 		include_once 'models/action_create_post.php';
 	}
-<<<<<<< Updated upstream
-	if($page == 'voirpost'){
-		
-=======
 	if($page == 'voirpost' && isset($_GET['id'])){
 		$id_post = $_GET['id'];
 		$id_auteur = $_GET['id_auteur'];
->>>>>>> Stashed changes
 		include_once 'controlers/voirpost.php';
 	}
 	//var_dump($id_avatar);
