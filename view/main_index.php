@@ -27,7 +27,7 @@
 			<div class="main-container">
 				<?php 
 					if(isset($q)){ ?>
-					<h3>Aucun post trouver pour : <?php echo $q; ?> </h3>
+					<h3>Aucun post trouvé pour : <?php echo $q; ?> </h3>
 				<?php } ?>
 				<div class="plus-recent">
 					<h1> Post le plus récent </h1>
@@ -38,7 +38,8 @@
 								echo '<a style="padding-left:15px;" href="delete.php?id='.$result1['id'].'">delete</a><br>';
 							}
 							echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu']. ' - ' .$result1['date_publication'];
-							echo "<button><a href=index.php?p=voirpost&id=" .$result1['id'].">voir le post</a></button>";
+							var_dump($result1);
+							echo "<button><a href=index.php?p=voirpost&id=" .$result1['id']."&id_auteur=" .$result1[0]. ">voir le post</a></button>";
 							
 						}
 					?>

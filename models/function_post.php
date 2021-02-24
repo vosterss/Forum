@@ -40,6 +40,7 @@ function post_populaire_categorie($bdd,$categorie){
 	$result = $reponse->fetchAll();
 	return $result;
 }
+<<<<<<< Updated upstream
 function all_post_user ($bdd,$id_utilisateur){
 	$reponse = $bdd->prepare('SELECT * FROM post where id_utilisateur = ? ');
 	$reponse->execute(array( $id_utilisateur));
@@ -51,5 +52,20 @@ function all_mess_user ($bdd,$id_utilisateur){
 	$reponse->execute(array( $id_utilisateur));
 	$result = $reponse->fetchAll();
 	return $result;
+=======
+
+function affiche_post($bdd,$id_auteur,$id_post){
+	$reponse = $bdd->prepare('SELECT uti.username, uti.id_avatar, po.titre, po.contenu, po.date_publication, po.isclosed from utilisateur as uti INNER JOIN post as po on uti.id = ? AND po.id = ?');
+		$reponse->execute(array($id_auteur,$id_post));
+		$result = $reponse->fetchAll();
+		return $result;
+}
+
+function affiche_comment($bdd,$id_post){
+	$reponse = $bdd->prepare('SELECT mess.message , uti.username FROM message AS mess INNER JOIN utilisateur as uti on mess.id_post = ?');
+		$reponse->execute(array($id_post));
+		$result = $reponse->fetchAll();
+		return $result;
+>>>>>>> Stashed changes
 }
 ?>

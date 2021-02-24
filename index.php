@@ -76,8 +76,14 @@ session_start();
 	if($page == 'a_create_post'){
 		include_once 'models/action_create_post.php';
 	}
+<<<<<<< Updated upstream
 	if($page == 'voirpost'){
 		
+=======
+	if($page == 'voirpost' && isset($_GET['id'])){
+		$id_post = $_GET['id'];
+		$id_auteur = $_GET['id_auteur'];
+>>>>>>> Stashed changes
 		include_once 'controlers/voirpost.php';
 	}
 	//var_dump($id_avatar);
