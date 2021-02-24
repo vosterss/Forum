@@ -61,7 +61,7 @@ function affiche_post($bdd,$id_auteur,$id_post){
 }
 
 function affiche_comment($bdd,$id_post){
-	$reponse = $bdd->prepare('SELECT mess.date, mess.message , uti.username FROM message AS mess INNER JOIN utilisateur as uti on mess.id_utilisateur = uti.id where mess.id_post = ?');
+	$reponse = $bdd->prepare('SELECT mess.date_reponse, mess.message , uti.username FROM message AS mess INNER JOIN utilisateur as uti on mess.id_utilisateur = uti.id where mess.id_post = ?');
 		$reponse->execute(array($id_post));
 		$result = $reponse->fetchAll();
 		return $result;

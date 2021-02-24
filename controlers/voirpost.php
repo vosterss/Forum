@@ -6,4 +6,4 @@
 	$comm = affiche_comment($bdd,$id_post);
 	require 'view/main_post.php';
 	require 'view/footer_index.php';
-?>j
+?>
