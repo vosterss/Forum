@@ -76,6 +76,9 @@ session_start();
 	if($page == 'a_create_post'){
 		include_once 'models/action_create_post.php';
 	}
+	if($page == 'a_create_comm'){
+		include_once 'models/action_create_mess.php';
+	}
 	if($page == 'mespost'){
 		include_once 'controlers/mespost.php';
 	}
