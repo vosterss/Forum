@@ -33,7 +33,7 @@
 					
 							
 							echo $result['titre'].' - '.$result['contenu']. ' - ' .$result['date_publication'].'<br>';
-
+							echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
 							
 						}
 					?>
@@ -45,7 +45,7 @@
 					
 							
 							echo $result['message'].'<br>';
-
+							echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
 							
 						}
 					?>
