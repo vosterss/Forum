@@ -76,6 +76,9 @@ session_start();
 	if($page == 'a_create_post'){
 		include_once 'models/action_create_post.php';
 	}
+	if($page == 'mespost'){
+		include_once 'controlers/mespost.php';
+	}
 	if($page == 'voirpost' && isset($_GET['id'])){
 		$id_post = $_GET['id'];
 		$id_auteur = $_GET['id_auteur'];
