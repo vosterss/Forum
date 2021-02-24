@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/wbbtheme.css">	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="js/jquery.wysibb.min.js"></script>
+		<script src="js/fr.js"></script>
 		<title> Forum </title>
 	</head>
   	<body>

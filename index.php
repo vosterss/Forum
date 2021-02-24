@@ -72,6 +72,9 @@ session_start();
 	if ($page == 'a_change_mdp') {
 		include 'models/action_change_mdp.php';
 	}
+	if($page == 'a_create_post'){
+		include_once 'models/action_create_post.php';
+	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);

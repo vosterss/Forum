@@ -1,8 +1,9 @@
 		<script>
 			$(document).ready(function() {
 				var wbbOpt = {
-				buttons: "bold,italic,underline,|,img,link,|,fontsize,fontcolor,quote,justifycenter,justifyright,justifyleft"
+				lang: "fr"
 				}
+				
 			$("#editor").wysibb(wbbOpt);
 			});
 		</script>
@@ -12,7 +13,7 @@
 			<div class="newpost-titre">
 				<h1> Création d'un nouveau post</h1>
 			</div>
-			<form action="action_create_post.php" method="post">
+			<form action="index.php?p=a_create_post" method="post">
 				<input type="text" name="titre_post" placeholder="Titre">
 				<div class="choix-titre">
 					<div><p>Catégorie : </p></div>
@@ -25,7 +26,7 @@
 						</select>
 					</div>
 				</div>
-				<textarea id="editor"></textarea>
+				<textarea id="editor" name="contenu" minlength="20"></textarea>
 				<input class="form_input" type="submit" id='submit' value='Créer'>
 			</form>
 		</div>
