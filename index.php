@@ -12,7 +12,7 @@ session_start();
 	$id_utilisateur = '';
 	if(isset($_SESSION['id'])){
 		$id_utilisateur = $_SESSION['id']; 
-		$id_droit = $_SESSION['id_droit'];
+		##'''$id_droit = $_SESSION['id_droit'];'''
 	}
 	$username = '';
 	if(isset($_SESSION['username'])){

@@ -22,18 +22,30 @@
 		<?php 
 			}
 		}
-    if (empty($result_m)){
-        $find = 1 ;?>
-        <div class="plus-recent">
-					<h1> Post le plus récent </h1>
+    if ($result_m != 0){
+        $find = 1 ; 
+		?>
+        			<div class="post">
+					<h1> Vos post : </h1>
 					<?php
 						
 						foreach ($result_m as $result){
-							if(isset($_SESSION['id'])){
-								echo '<a style="padding-left:15px;" href="delete.php?id='.$result1['id'].'">delete</a><br>';
-							}
-							echo $result['username'].' - '.$result['titre'].' - '.$result['contenu']. ' - ' .$result['date_publication'];
-							echo "<button><a href=index.php?p=voirpost&id=" .$result1['id'].">voir le post</a></button>";
+					
+							
+							echo $result['titre'].' - '.$result['contenu']. ' - ' .$result['date_publication'].'<br>';
+
+							
+						}
+					?>
+					<div class="post">
+					<h1> Vos message : </h1>
+					<?php
+						
+						foreach ($result_r as $result){
+					
+							
+							echo $result['message'].'<br>';
+
 							
 						}
 					?>

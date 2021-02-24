@@ -46,4 +46,10 @@ function all_post_user ($bdd,$id_utilisateur){
 	$result = $reponse->fetchAll();
 	return $result;
 }
+function all_mess_user ($bdd,$id_utilisateur){
+	$reponse = $bdd->prepare('SELECT * FROM message where id_utilisateur = ? ');
+	$reponse->execute(array( $id_utilisateur));
+	$result = $reponse->fetchAll();
+	return $result;
+}
 ?>
