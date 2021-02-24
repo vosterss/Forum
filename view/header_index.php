@@ -50,6 +50,7 @@
 							<a href="index.php?p=mespost">Mes Post</a>
 							<a href="index.php?p=deco">Déconnexion</a>
 							<a href='index.php?p=newpost'>Créer un Post</a>
+							<?php if($id_droit == 2){?>	<a href='index.php?p=admin'>Espace admin</a>	<?php } ?>
 						</div>
 		        	</div>	
 			<?php

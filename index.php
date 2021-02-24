@@ -12,6 +12,7 @@ session_start();
 	$id_utilisateur = '';
 	if(isset($_SESSION['id'])){
 		$id_utilisateur = $_SESSION['id']; 
+		$id_droit = $_SESSION['id_droit'];
 	}
 	$username = '';
 	if(isset($_SESSION['username'])){
@@ -77,10 +78,11 @@ session_start();
 	}
 	if($page == 'voirpost' && isset($_GET['id'])){
 		$id_post = $_GET['id'];
-		include_once 'controlers/voirpost.php'
+		include_once 'controlers/voirpost.php';
 	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);
 	//var_dump($avatar);
+	//var_dump($id_droit);
 ?>
