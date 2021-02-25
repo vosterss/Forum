@@ -44,7 +44,7 @@
 						foreach ($result_r as $result){
 					
 							
-							echo $result['message']. ' - ' .$result['date'].'<br>';
+							echo $result['message']. ' - ' .$result['date_reponse'].'<br>';
 							echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
 							
 						}

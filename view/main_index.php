@@ -39,7 +39,7 @@
 							}
 							echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu']. ' - ' .$result1['date_publication'];
 							var_dump($result1);
-							echo "<button><a href=index.php?p=voirpost&id=" .$result1['id']."&id_auteur=" .$result1[0]. ">voir le post</a></button>";
+							echo "<button><a href=index.php?p=voirpost&id=" .$result1['id']. ">voir le post</a></button>";
 							
 						}
 					?>
@@ -51,7 +51,7 @@
 						foreach ($result_L as $result2){
 							echo $result2['username'].' - '.$result2['titre'].' - '.$result2['contenu'].' - '.$result2['nb_like']. ' - ' .$result2['date_publication'];
 							if(isset($_SESSION['id'])){
-								echo "<button><a href=index.php?p=voirpost&id=" .$result2['id']."&id_auteur=" .$result2[0].">voir le post</a></button>";
+								echo "<button><a href=index.php?p=voirpost&id=" .$result2['id'].">voir le post</a></button>";
 							}
 						}
 					?>
@@ -61,7 +61,7 @@
 					<?php
 						foreach ($result_P as $result3) {
 							echo $result3['username'].' - '.$result3['titre'].' - '.$result3['contenu'].' - '.$result3['nb_mess']. ' - ' .$result3['date_publication'];
-							echo "<button><a href=index.php?p=voirpost&id=" .$result3['id']."&id_auteur=" .$result3[0].">voir le post</a></button>";
+							echo "<button><a href=index.php?p=voirpost&id=" .$result3['id'].">voir le post</a></button>";
 						}
 					?>
 				</div>	

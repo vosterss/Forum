@@ -18,12 +18,8 @@ session_start();
 	if(isset($_SESSION['username'])){
 		$username = $_SESSION['username']; 
 	}
-	$id_avatar = '';
-	if(isset($_SESSION['id_avatar'])){
-		include 'models/function_avatar.php';
-		$id_avatar = $_SESSION['id_avatar']; 
-		$result = search_avatar($bdd,$id_avatar);
-		$avatar = $result[0][0] ;
+	if(isset($_SESSION['avatar'])){
+		$avatar = $_SESSION['avatar']; 
 	}
 	if($page == 'avatar' && isset($_GET['id_avatar'])){
 		include 'models/action_avatar.php';
@@ -85,6 +81,9 @@ session_start();
 	if($page == 'voirpost' && isset($_GET['id'])){
 		$id_post = $_GET['id'];
 		include_once 'controlers/voirpost.php';
+	}
+	if ($page == 'a_importation') {
+		include_once 'models/action_importation.php';
 	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);

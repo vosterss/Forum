@@ -159,6 +159,10 @@ header{
 	width : 45%;
 	clip-path:ellipse(50% 50%);
 }
+.change_avatar{
+	width : 10%;
+	clip-path:ellipse(50% 50%);
+}
 
 .dropdown-menu-profil{
 	display: none;

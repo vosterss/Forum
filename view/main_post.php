@@ -3,10 +3,7 @@
 	<div>
 
 		<?php
-		if(!isset($post['contenu'])){
-			header('Location:index.php');
-		}
-			var_dump($post);
+			//var_dump($post);
 			foreach ($post as $value) {
 				echo $value['username'], $value['titre'],$value['contenu'],$value['date_publication'].'<br>';
 
