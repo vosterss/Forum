@@ -84,7 +84,6 @@ session_start();
 	}
 	if($page == 'voirpost' && isset($_GET['id'])){
 		$id_post = $_GET['id'];
-		$id_auteur = $_GET['id_auteur'];
 		include_once 'controlers/voirpost.php';
 	}
 	//var_dump($id_avatar);
