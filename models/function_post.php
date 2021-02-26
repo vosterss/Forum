@@ -54,7 +54,7 @@ function all_mess_user ($bdd,$id_utilisateur){
 }
 
 function affiche_post($bdd,$id_post){
-	$reponse = $bdd->prepare('SELECT uti.username, uti.avatar,po.titre, po.contenu, po.date_publication, po.isclosed, po.id, po.id_utilisateur from post as po inner join utilisateur as uti on uti.id = po.id_utilisateur where po.id = ?');
+	$reponse = $bdd->prepare('SELECT uti.username, uti.avatar,po.titre, po.isclosed, po.contenu, po.date_publication, po.isclosed, po.id, po.id_utilisateur from post as po inner join utilisateur as uti on uti.id = po.id_utilisateur where po.id = ?');
 		$reponse->execute(array($id_post));
 		$result = $reponse->fetchAll();
 		return $result;
