@@ -75,6 +75,12 @@ session_start();
 	if($page == 'a_create_comm'){
 		include_once 'models/action_create_mess.php';
 	}
+	if($page == 'delete'){
+		include_once 'models/action_delete.php';
+	}
+	if($page == 'delete_m'){
+		include_once 'models/action_delete_mess.php';
+	}
 	if($page == 'mespost'){
 		include_once 'controlers/mespost.php';
 	}

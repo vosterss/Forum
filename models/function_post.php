@@ -54,14 +54,18 @@ function all_mess_user ($bdd,$id_utilisateur){
 }
 
 function affiche_post($bdd,$id_post){
-	$reponse = $bdd->prepare('SELECT uti.username, uti.avatar,po.titre, po.contenu, po.date_publication, po.isclosed from post as po inner join utilisateur as uti on uti.id = po.id_utilisateur where po.id = ?');
+	$reponse = $bdd->prepare('SELECT uti.username, uti.avatar,po.titre, po.contenu, po.date_publication, po.isclosed, po.id from post as po inner join utilisateur as uti on uti.id = po.id_utilisateur where po.id = ?');
 		$reponse->execute(array($id_post));
 		$result = $reponse->fetchAll();
 		return $result;
 }
 
 function affiche_comment($bdd,$id_post){
+<<<<<<< Updated upstream
 	$reponse = $bdd->prepare('SELECT uti.id, mess.date_reponse, mess.message , uti.username FROM message AS mess INNER JOIN utilisateur as uti on mess.id_utilisateur = uti.id where mess.id_post = ? order by mess.date_reponse ASC ');
+=======
+	$reponse = $bdd->prepare('SELECT mess.date_reponse, mess.message , uti.username, mess.id FROM message AS mess INNER JOIN utilisateur as uti on mess.id_utilisateur = uti.id where mess.id_post = ? order by mess.date_reponse ASC ');
+>>>>>>> Stashed changes
 		$reponse->execute(array($id_post));
 		$result = $reponse->fetchAll();
 		return $result;

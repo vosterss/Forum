@@ -12,7 +12,15 @@
 					   		while($a = $articles->fetch()) { 
 				   		?>
 					      		<li>
-					      			<?php echo $a['username']. '-' .$a['titre']. '-' .$a['contenu']; ?>
+					      			<?php echo $a['username']. '-' .$a['titre']. '-' .$a['contenu'];
+									  	if(isset($_SESSION['id'])){
+									  			if ($_SESSION['id']== $result1['id']){
+													echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete</a><br>';
+												}
+													else if( $_SESSION['id_droit'] == 2 ){
+														echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete admin</a><br>';
+													}
+												} ?>
 					      			<button><a href="index.php?p=voirpost&id=<?php echo $a['id'] ; ?>">voir le post</a></button>
 					      		</li>
 				    	<?php 
@@ -36,7 +44,12 @@
 						
 						foreach ($result_R as $result1){
 							if(isset($_SESSION['id'])){
-								echo '<a style="padding-left:15px;" href="delete.php?id='.$result1['id'].'">delete</a><br>';
+								if ($_SESSION['id']== $result1['id']){
+								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete</a><br>';
+							}
+								if( $_SESSION['id_droit'] == 2 ){
+									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete admin</a><br>';
+								}
 							}
 							echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu']. ' - ' .$result1['date_publication'];
 							//var_dump($result1);
@@ -50,6 +63,14 @@
 					<h1> Post le plus liké </h1>
 					<?php
 						foreach ($result_L as $result2){
+							if(isset($_SESSION['id'])){
+							if ($_SESSION['id']== $result2['id']){
+								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result2['id'].'>delete</a><br>';
+							}
+								if( $_SESSION['id_droit'] == 2 ){
+									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result2['id'].'>delete admin</a><br>';
+								}
+							}
 							echo $result2['username'].' - '.$result2['titre'].' - '.$result2['contenu'].' - '.$result2['nb_like']. ' - ' .$result2['date_publication'];
 							if(isset($_SESSION['id'])){
 								echo "<button><a href=index.php?p=voirpost&id=" .$result2['id'].">voir le post</a></button>";
@@ -61,6 +82,14 @@
 					<h1> Post le plus populaire </h1>
 					<?php
 						foreach ($result_P as $result3) {
+							if(isset($_SESSION['id'])){
+							if ($_SESSION['id']== $result3['id']){
+								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result3['id'].'>delete</a><br>';
+							}
+								if( $_SESSION['id_droit'] == 2 ){
+									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result3['id'].'>delete admin</a><br>';
+								}
+							}
 							echo $result3['username'].' - '.$result3['titre'].' - '.$result3['contenu'].' - '.$result3['nb_mess']. ' - ' .$result3['date_publication'];
 							echo "<button><a href=index.php?p=voirpost&id=" .$result3['id'].">voir le post</a></button>";
 						}
@@ -74,7 +103,19 @@
 				 <div class="post_all">
 					<h1> Post De la catégorie</h1>
 					<?php
+<<<<<<< Updated upstream
+=======
+				
+>>>>>>> Stashed changes
 						foreach ($result_all_post as $result) {
+							if(isset($_SESSION['id'])){
+							if ($_SESSION['id']== $result['id']){
+								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete</a><br>';
+							}
+								if( $_SESSION['id_droit'] == 2 ){
+									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete admin</a><br>';
+								}
+							}
 							echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_like']. " - " .$result['nb_mess']. ' - ' .$result['date_publication'];
 							echo "<button><a href=index.php?p=voirpost&id=" .$result['id'].">voir le post</a></button>";
 						}
