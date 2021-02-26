@@ -82,7 +82,7 @@ session_start();
 		include_once 'models/action_delete_mess.php';
 	}
 	if($page == 'bannir'){
-		include_once 'models/action_dbann_user.php';
+		include_once 'models/action_bann_user.php';
 	}
 	if($page == 'mespost'){
 		include_once 'controlers/mespost.php';
