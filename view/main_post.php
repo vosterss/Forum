@@ -1,4 +1,3 @@
-	<script src="script2.js"></script>
 	<script>
 		$(document).ready(function() {
 				var wbbOpt = {
@@ -12,10 +11,9 @@
 	<div>
 
 		<?php
-			//var_dump($post);
 			foreach ($post as $value) {
 				if(isset($_SESSION['id'])){
-					if ($_SESSION['id']== $value['id_utilisateur']){
+					if ($_SESSION['id']== $value['id']){
 					  echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$value['id'].'>delete</a><br>';
 				  }
 					  else if( $_SESSION['id_droit'] == 2 ){
@@ -34,14 +32,14 @@
 			##var_dump($comm);
 			
 			foreach ($comm as $value) {
-			if(isset($_SESSION['id'])){
-								if ($_SESSION['id']== $value['id_utilisateur']){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete_m&id='.$value['id'].'>delete</a><br>';
-								}
-									if( $_SESSION['id_droit'] == 2 ){
-										echo '<a style="padding-left:15px;" href=index.php?p=delete_m&id='.$value['id'].'>delete admin</a><br>';
-									}
-								} ?>
+				if(isset($_SESSION['id'])){
+					if ($_SESSION['id']== $result['id']){
+						echo '<a style="padding-left:15px;" href=index.php?p=delete_m&id='.$result['id'].'>delete</a><br>';
+					}
+						if( $_SESSION['id_droit'] == 2 ){
+							echo '<a style="padding-left:15px;" href=index.php?p=delete_m&id='.$result['id'].'>delete admin</a><br>';
+						}
+					} ?>
 				<div class="commentaire">
 					<div class="username">
 						<?php echo $value['username'];?>
@@ -58,6 +56,10 @@
 				
 		<?php
 			}
+			if($post['isclosed'] == 1){ ?>
+				
+			<?php } 
+			else{ ?>
 		?>
 	</div>
 	<h2> Répondez : </h2>
