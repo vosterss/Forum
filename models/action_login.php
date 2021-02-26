@@ -11,6 +11,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['avatar'] = $resultat['avatar'];
             $_SESSION['id_droit'] = $resultat['id_droit'];
+            $_SESSION['like'] = 0 ;
             header('Location:index.php');
 
         }
