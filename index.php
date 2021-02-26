@@ -107,6 +107,9 @@ session_start();
 	if($page == 'admin'){
 		include_once 'controlers/admin.php';
 	}
+	if ($page == 'a_statut_post') {
+		include_once 'models/action_statut_post.php';
+	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);

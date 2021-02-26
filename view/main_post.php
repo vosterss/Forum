@@ -63,7 +63,7 @@
 
 		<?php
 			if($id_droit == 2){ ?>
-				<p><a href="models/action_statut_post.php?id_post=<?php echo $post[0]['id'];?>&action=ouvrir">Reouvrir le topic</a></p>
+				<p><a href="index.php?p=a_statut_post&id_post=<?php echo $post[0]['id'];?>&action=ouvrir">Reouvrir le topic</a></p>
 		<?php
 			}
 		} 
@@ -77,6 +77,6 @@
 			</form>
 		<?php
 			if($id_droit == 2){ ?>
-				<p><a href="models/action_statut_post.php?id_post=<?php echo $post[0]['id'];?>&action=fermer">Fermer le topic</a></p>
+				<p><a href="index.php?p=a_statut_post&id_post=<?php echo $post[0]['id'];?>&action=fermer">Fermer le topic</a></p>
 		<?php } } ?>
 </main>
