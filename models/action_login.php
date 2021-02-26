@@ -25,5 +25,4 @@
     else{
         header('Location:index.php?p=login');
     }
-
 ?>
