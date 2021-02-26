@@ -81,6 +81,9 @@ session_start();
 	if($page == 'delete_m'){
 		include_once 'models/action_delete_mess.php';
 	}
+	if($page == 'bannir'){
+		include_once 'models/action_dbann_user.php';
+	}
 	if($page == 'mespost'){
 		include_once 'controlers/mespost.php';
 	}
