@@ -304,7 +304,7 @@ input[type=date]{
 	box-shadow: 0 10px 10px;
 }
 
-.titre-post-plus-recent{
+.titre-post-categorie{
 	margin: 10px;
 }
 
@@ -313,7 +313,7 @@ input[type=date]{
 	justify-content: flex-end;
 }
 
-.plus-recent-container{
+.plus-recent-container, .plus-reponse-container, .plus-like-container{
 	height: 70%;
 }
 
