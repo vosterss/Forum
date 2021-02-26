@@ -68,7 +68,7 @@
 			}
 		} 
 		else{ 
-			if($post['isclosed'] == 1){ ?>
+			if($post[0]['isclosed'] == 1){ ?>
 				
 			<?php } 
 			else{ ?>
