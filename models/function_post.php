@@ -21,7 +21,7 @@ function post_populaire($bdd){
 }
 
 function post_recent_categorie($bdd,$categorie){
-	$reponse = $bdd->prepare('SELECT uti.id, uti.username,po.id po.categorie, po.contenu, po.titre, po.nb_like, po.date_publication from utilisateur as uti inner join post as po on uti.id = po.id_utilisateur AND po.categorie = ? AND po.date_publication = (SELECT MAX(date_publication) from post where post.categorie = ?) LIMIT 1;');
+	$reponse = $bdd->prepare('SELECT uti.id, uti.username,po.id, po.categorie, po.contenu, po.titre, po.nb_like, po.date_publication from utilisateur as uti inner join post as po on uti.id = po.id_utilisateur AND po.categorie = ? AND po.date_publication = (SELECT MAX(date_publication) from post where post.categorie = ?) LIMIT 1;');
 	$reponse->execute(array($categorie, $categorie));
 	$result = $reponse->fetchAll();
 	return $result;
@@ -61,7 +61,7 @@ function affiche_post($bdd,$id_post){
 }
 
 function affiche_comment($bdd,$id_post){
-	$reponse = $bdd->prepare('SELECT mess.date_reponse, mess.message , uti.username FROM message AS mess INNER JOIN utilisateur as uti on mess.id_utilisateur = uti.id where mess.id_post = ?');
+	$reponse = $bdd->prepare('SELECT mess.date_reponse, mess.message , uti.username FROM message AS mess INNER JOIN utilisateur as uti on mess.id_utilisateur = uti.id where mess.id_post = ? order by mess.date_reponse ASC ');
 		$reponse->execute(array($id_post));
 		$result = $reponse->fetchAll();
 		return $result;
