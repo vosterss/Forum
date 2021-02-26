@@ -35,7 +35,7 @@ function post_like_categorie($bdd,$categorie){
 }
 
 function post_populaire_categorie($bdd,$categorie){
-	$reponse = $bdd->prepare('SELECT uti.id, uti.username, po.id, po.categorie, po.contenu, po.titre, po.date_publication, po.nb_mess, po.id_utilisateur FROM utilisateur as uti inner join post as po on uti.id = po.id_utilisateur AND po.categorie = ? And po.nb_mess = (SELECT max(nb_mess) from post where post.categorie = ?) LIMIT 1;');
+	$reponse = $bdd->prepare('SELECT uti.id, uti.username, po.id, po.categorie, po.contenu, po.titre, po.date_publication, po.nb_mess, po.id_utilisateur, po.nb_like FROM utilisateur as uti inner join post as po on uti.id = po.id_utilisateur AND po.categorie = ? And po.nb_mess = (SELECT max(nb_mess) from post where post.categorie = ?) LIMIT 1;');
 	$reponse->execute(array($categorie, $categorie));
 	$result = $reponse->fetchAll();
 	return $result;
@@ -54,7 +54,7 @@ function all_mess_user ($bdd,$id_utilisateur){
 }
 
 function affiche_post($bdd,$id_post){
-	$reponse = $bdd->prepare('SELECT uti.username, uti.avatar,po.titre, po.isclosed, po.contenu, po.date_publication, po.isclosed, po.id, po.id_utilisateur from post as po inner join utilisateur as uti on uti.id = po.id_utilisateur where po.id = ?');
+	$reponse = $bdd->prepare('SELECT uti.username, uti.avatar,po.titre, po.isclosed, po.contenu, po.date_publication, po.isclosed, po.id, po.id_utilisateur, po.nb_like from post as po inner join utilisateur as uti on uti.id = po.id_utilisateur where po.id = ?');
 		$reponse->execute(array($id_post));
 		$result = $reponse->fetchAll();
 		return $result;
