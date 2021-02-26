@@ -85,6 +85,9 @@ session_start();
 	if ($page == 'a_importation') {
 		include_once 'models/action_importation.php';
 	}
+	if($page == 'admin'){
+		include_once 'controlers/admin.php';
+	}
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);
