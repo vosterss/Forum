@@ -10,7 +10,8 @@ $message_bb = htmlspecialchars($_POST['message']);
  	$message = $parser->getAsHtml();
 $reponse = $bdd->prepare('update message set message = ? where id = ?');
 $reponse->execute(array($message ,$_GET['id']));
-echo '<p class="test">  utilisateur bannie.</p>';
+echo $_GET['id'];
+echo '<p class="test">  message modifier.</p>';
 
 header("Refresh:2;  url=index.php?p=accueil");
 ?>

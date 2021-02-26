@@ -51,8 +51,8 @@
 										echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result1['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
 									}
 								}
-								echo "
-									<div class='auteur'>
+								echo 
+									"<div class='auteur'>
 										<div class='utilisateur'>
 											<img src='".$avatar."'class='img-avatar'/>
 											<h3 class='titre-utilisateur'>".$result1['username']."</h3>
