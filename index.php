@@ -91,6 +91,11 @@ session_start();
 	if($page == 'bannir'){
 		include_once 'models/action_bann_user.php';
 	}
+	if($page == 'nblike'){
+		
+		include_once 'models/action_nblike.php';
+		$_SESSION['like']= like($bdd,$id_post);
+	}
 	if($page == 'debannir'){
 		include_once 'models/action_debann_user.php';
 	}
@@ -113,6 +118,7 @@ session_start();
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);
-	var_dump($avatar);
+	//var_dump($avatar);
 	//var_dump($id_droit);
+	var_dump($_SESSION['like']);
 ?>
