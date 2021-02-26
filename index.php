@@ -103,6 +103,6 @@ session_start();
 	//var_dump($id_avatar);
 	//var_dump($id_utilisateur);
 	//var_dump($username);
-	//var_dump($avatar);
+	var_dump($avatar);
 	//var_dump($id_droit);
 ?>
