@@ -66,6 +66,12 @@ function affiche_comment($bdd,$id_post){
 		$result = $reponse->fetchAll();
 		return $result;
 }
+function affiche_comment_user($bdd,$id_mess){
+	$reponse = $bdd->prepare('SELECT mess.date_reponse, mess.message , uti.username, mess.id, mess.id_utilisateur FROM message AS mess INNER JOIN utilisateur as uti on mess.id_utilisateur = uti.id where mess.id = ? order by mess.date_reponse ASC ');
+		$reponse->execute(array($id_mess));
+		$result = $reponse->fetchAll();
+		return $result;
+}
 function all_post ($bdd,$categorie){
 	$reponse = $bdd->prepare('SELECT uti.id, uti.username, po.id, po.titre, po.contenu, po.nb_like, po.nb_mess, po.date_publication, po.id_utilisateur FROM utilisateur AS uti, post AS po WHERE uti.id = po.id_utilisateur and po.categorie = ?');
 	$reponse->execute(array($categorie));
