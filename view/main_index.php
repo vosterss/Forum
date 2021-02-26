@@ -103,10 +103,6 @@
 				 <div class="post_all">
 					<h1> Post De la catégorie</h1>
 					<?php
-<<<<<<< Updated upstream
-=======
-				
->>>>>>> Stashed changes
 						foreach ($result_all_post as $result) {
 							if(isset($_SESSION['id'])){
 							if ($_SESSION['id']== $result['id']){
