@@ -296,12 +296,62 @@ input[type=date]{
 }
 
 .plus-recent{
-	background-color: red;
+	background-color: white;
 	width: 50%;
 	height: 30%;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
+}
+
+.titre-post-plus-recent{
+	margin: 10px;
+}
+
+.bouton-delete{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.plus-recent-container{
+	height: 70%;
+}
+
+.img-avatar{
+	width: 30%;
+	height: auto;
+}
+
+.auteur{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+}
+
+.titre-post{
+	display: flex;
+	justify-content: center;
+	width: 33%;
+}
+
+.vide{
+	width: 33%;
+}
+
+.utilisateur{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 33%;
+}
+
+.post-contenu{
+	height: 50%;
+	border-top: solid 2px gray;
+	border-bottom: solid 2px gray;
 }
 
 .plus-like{
