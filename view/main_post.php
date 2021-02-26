@@ -1,7 +1,11 @@
-	<script> tinymce.init({
-	        selector: '#editor'
-	     	 });
-  		</script>
+	<script>
+		$(document).ready(function() {
+				var wbbOpt = {
+				lang: "fr"
+				}
+			$("#editor").wysibb(wbbOpt);
+			});
+	</script>
 	
 	<h1> Post </h2>
 	<div>
@@ -16,7 +20,8 @@
 						  echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$value['id'].'>delete admin</a><br>';
 					  }
 				  }
-				echo $value['username'], $value['titre'], html_entity_decode($value['contenu']), $value['date_publication'].' - '. $value['nb_like'].'<br>';
+				echo $value['username'], $value['titre'],$value['contenu'],$value['date_publication'].' - '. $value['nb_like'].'<br>';
+				
 				if(isset($_SESSION['like'])){
 					if ($_SESSION['like'] == 0){
 						echo '<a style="padding-left:15px;" href=index.php?p=nblike&id='.$value['id'].'><div class="fa fa-heart-o"></div></a><br>';
@@ -50,7 +55,7 @@
 						<?php echo $value['username'];?>
 					</div> 
 					<div class="contenu">
-						<?php echo html_entity_decode($value['message']); 
+						<?php echo $value['message'];
 						$modif_mess = strip_tags($value['message']); ?>
 					</div>
 					<div class="date">

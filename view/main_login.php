@@ -4,6 +4,15 @@
 			<div class="titre_register">
 				<h1> Connexion </h1>
 			</div>
+			<div class="banni">
+			<?php
+			if (isset($_SESSION['id_droit'])){
+				if ($_SESSION['id_droit'] == 1){
+					echo "<p> Vous avez etait bannie jusqu'au : ".$_SESSION['date_deban'];
+				}
+			}
+			?>
+			</div>
 			<div class="form_login">
 				<form action="index.php?p=a_login" method="post">
 					<p> 

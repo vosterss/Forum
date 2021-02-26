@@ -1,5 +1,11 @@
 <?php
-    $reponse = $bdd->prepare('update utilisateur set id_droit = ? where id = ?');
-    $reponse->execute(array(0 ,$_GET['id']));
+    $date = date('Y-m-d H:i:s', time());
+    $reponse = $bdd->prepare('update utilisateur set id_droit = ?, date_deban= ? where id = ?');
+    $reponse->execute(array(0 ,$date,$_GET['id']));
     echo '<p class="test">  utilisateur débannie.</p>';
-    header("Refresh:2 url=index.php?p=admin");
+    if($_SESSION['id_droit'] == 2 ){
+        header("Refresh:2 url=index.php?p=admin");
+    }
+    else{
+        header('Refresh:2 url=index.php?p=login_b');
+    }
