@@ -1,3 +1,11 @@
+	<script>
+		$(document).ready(function() {
+				var wbbOpt = {
+				lang: "fr"
+				}
+			$("#editor").wysibb(wbbOpt);
+			});
+	</script>
 	
 	<h1> Post </h2>
 	<div>
@@ -30,6 +38,7 @@
 				
 		<?php
 			}
+			//strip_tags();
 		?>
 	</div>
 	<h2> Répondez : </h2>

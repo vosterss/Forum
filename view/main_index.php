@@ -2,7 +2,7 @@
 	$find = 0;
 		if(isset($_GET['q'])){
 		    $q = htmlspecialchars($_GET['q']);
-		    $articles = $bdd->query('select pos.titre, uti.username, pos.contenu FROM post as pos, utilisateur as uti WHERE uti.id = pos.id_utilisateur AND titre LIKE "%'.$q.'%" ORDER BY pos.id DESC');
+		    $articles = $bdd->query('select pos.id, pos.titre, uti.username, pos.contenu FROM post as pos, utilisateur as uti WHERE uti.id = pos.id_utilisateur AND titre LIKE "%'.$q.'%" ORDER BY pos.id DESC');
 			if($articles->rowCount() > 0){
 				$find = 1;
 	?>
@@ -12,7 +12,8 @@
 					   		while($a = $articles->fetch()) { 
 				   		?>
 					      		<li>
-					      			<?='<h2>' .$a['titre']. ' - ' .$a['username'].'<br><br>' .$a['contenu']. '</h2>' ?>
+					      			<?php echo $a['username']. '-' .$a['titre']. '-' .$a['contenu']; ?>
+					      			<button><a href="index.php?p=voirpost&id=<?php echo $a['id'] ; ?>">voir le post</a></button>
 					      		</li>
 				    	<?php 
 				    		} 
@@ -38,7 +39,7 @@
 								echo '<a style="padding-left:15px;" href="delete.php?id='.$result1['id'].'">delete</a><br>';
 							}
 							echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu']. ' - ' .$result1['date_publication'];
-							var_dump($result1);
+							//var_dump($result1);
 							echo "<button><a href=index.php?p=voirpost&id=" .$result1['id']. ">voir le post</a></button>";
 							
 						}

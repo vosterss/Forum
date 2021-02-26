@@ -62,7 +62,7 @@
 			<div class="header-bot">
 				<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					<a href="#">Topics</a>
+					<h3>Topics :</h3>
 					<a href="index.php?p=warzone&c=0">Warzone</a>
 					<a href="index.php?p=fortnite&c=1">Fortnite</a>
 					<a href="index.php?p=APEX&c=2">Apex Legends</a>
