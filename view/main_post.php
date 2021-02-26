@@ -58,7 +58,17 @@
 				
 		<?php
 			}
-			if($post['isclosed'] == 1){ ?>
+		if($post[0]['isclosed'] == 1){ ?>
+			<p>Le Post est clos</p>
+
+		<?php
+			if($id_droit == 2){ ?>
+				<p><a href="index.php?p=a_statut_post&id_post=<?php echo $post[0]['id'];?>&action=ouvrir">Reouvrir le topic</a></p>
+		<?php
+			}
+		} 
+		else{ 
+			if($post[0]['isclosed'] == 1){ ?>
 				
 			<?php } 
 			else{ ?>
@@ -70,7 +80,8 @@
 				</textarea>
 				<input class="form_input" type="submit" id='submit' value='envoyer réponse'>
 			</form>
-			<?php
-			}
-			?>
+		<?php
+			if($id_droit == 2){ ?>
+				<p><a href="index.php?p=a_statut_post&id_post=<?php echo $post[0]['id'];?>&action=fermer">Fermer le topic</a></p>
+		<?php } } } ?>
 </main>

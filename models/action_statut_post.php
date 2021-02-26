@@ -8,8 +8,7 @@ $id_post = $_GET['id_post'];
 	}
 	if($id_droit == 2){
 		$reponse = $bdd->prepare('UPDATE post SET isclosed = ? WHERE post.id = ? ; ');
-		$reponse->execute(array($id_post));
-		$result = $reponse->fetchAll($action,$id_post);
+		$reponse->execute(array($action,$id_post));
 	}
-	header('Location:index.php?p=voirpost&id='echo $id_post ;)
+	header('Location:index.php?p=voirpost&id=' .$id_post);
 ?>
