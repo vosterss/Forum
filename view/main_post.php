@@ -24,7 +24,6 @@
 				echo $value['username'], $value['titre'],$value['contenu'],$value['date_publication'].'<br>';
 				strip_tags($value['contenu']);
 				echo $value['contenu'];
-										var_dump($post);
 			}
 		?>
 	</div>
