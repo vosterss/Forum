@@ -1,3 +1,4 @@
+	<script src="script2.js"></script>
 	<script>
 		$(document).ready(function() {
 				var wbbOpt = {
