@@ -1,11 +1,7 @@
-	<script>
-		$(document).ready(function() {
-				var wbbOpt = {
-				lang: "fr"
-				}
-			$("#editor").wysibb(wbbOpt);
-			});
-	</script>
+	<script> tinymce.init({
+	        selector: '#editor'
+	     	 });
+  		</script>
 	
 	<h1> Post </h2>
 	<div>
@@ -20,7 +16,7 @@
 						  echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$value['id'].'>delete admin</a><br>';
 					  }
 				  }
-				echo $value['username'], $value['titre'],$value['contenu'],$value['date_publication'].'<br>';
+				echo $value['username'], $value['titre'], html_entity_decode($value['contenu']), $value['date_publication'].'<br>';
 				
 				$modif_post = (strip_tags($value['contenu']));
 			
@@ -47,7 +43,7 @@
 						<?php echo $value['username'];?>
 					</div> 
 					<div class="contenu">
-						<?php echo $value['message'];
+						<?php echo html_entity_decode($value['message']); 
 						$modif_mess = strip_tags($value['message']); ?>
 					</div>
 					<div class="date">

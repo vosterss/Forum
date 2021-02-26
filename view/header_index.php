@@ -2,13 +2,10 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="CSS/style_clair.css" media="all" id="theme-link" >
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-		<link rel="stylesheet" href="font/font-awesome.css">
-		<link rel="stylesheet" href="css/wbbtheme.css">	
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="js/jquery.wysibb.min.js"></script>
-		<script src="js/fr.js"></script>
+		<script src="js/tinymce.js" referrerpolicy="origin"></script>
 		<title> Forum </title>
 	</head>
   	<body>

@@ -1,18 +1,14 @@
 <?php
-	require_once 'jbbcode/Parser.php';
 	$titre = htmlspecialchars($_POST['titre_post']);
 	$categorie = $_POST['categorie'];
-	$contenu_bb = htmlspecialchars($_POST['contenu']);
+	$contenu = htmlspecialchars($_POST['contenu']);
+	//$contenu = $contenu->getAsHtml();
+	//echo $contenu;
 	$date = date('d-m-y h:i:s');
-	$parser = new JBBCode\Parser();
-    $parser->addCodeDefinitionSet(new JBBCode\DefaultCodeDefinitionSet());
-    $parser->addBBCode("quote", '<blockquote>{param}</blockquote>');
-    $parser->addBBCode("center", '<div align="center">{param}</div>');
- 	$parser->parse($contenu_bb);
- 	$contenu = $parser->getAsHtml();
+	die();
 	$reponse=$bdd->prepare('INSERT INTO post(titre,id_utilisateur,categorie, contenu,date_publication) VALUES (?,?,?,?,?)') ;
 	$reponse->execute(array($titre,$id_utilisateur,$categorie,$contenu,$date));
 	echo '<p class="test">Votre Post : '.$titre. ' à été publié.</p>';
-	header("Refresh:3; url=index.php");
+	//header("Refresh:3; url=index.php");
 
 ?>

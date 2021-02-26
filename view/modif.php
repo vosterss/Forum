@@ -1,11 +1,7 @@
-<script>
-	$(document).ready(function() {
-		var wbbOpt = {
-		lang: "fr"
-		}
-		$("#editor").wysibb(wbbOpt);
-	});
-</script>
+<script> tinymce.init({
+	        selector: '#editor'
+	     	 });
+  		</script>
 <form method="POST" action="">
 	<p>modifier votre message :</p>
 	<textarea id="editor" name="message" minlength="20"></textarea>

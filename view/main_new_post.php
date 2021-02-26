@@ -1,12 +1,7 @@
-		<script>
-			$(document).ready(function() {
-				var wbbOpt = {
-				lang: "fr"
-				}
-				
-			$("#editor").wysibb(wbbOpt);
-			});
-		</script>
+  		<script> tinymce.init({
+	        selector: '#editor'
+	     	 });
+  		</script>
 
 	<div class='post-container'>
 		<div class="box-newpost">
@@ -31,4 +26,4 @@
 			</form>
 		</div>
 	</div>
-</main>c
+</main>
