@@ -84,6 +84,9 @@ session_start();
 	if($page == 'bannir'){
 		include_once 'models/action_bann_user.php';
 	}
+	if($page == 'debannir'){
+		include_once 'models/action_debann_user.php';
+	}
 	if($page == 'mespost'){
 		include_once 'controlers/mespost.php';
 	}
