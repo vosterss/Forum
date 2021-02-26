@@ -14,7 +14,7 @@
 					      		<li>
 					      			<?php echo $a['username']. '-' .$a['titre']. '-' .$a['contenu'];
 									  	if(isset($_SESSION['id'])){
-									  			if ($_SESSION['id']== $result1['id']){
+									  			if ($_SESSION['id']== $result1['id_utilisateur']){
 													echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete</a><br>';
 												}
 													else if( $_SESSION['id_droit'] == 2 ){
@@ -44,10 +44,10 @@
 						
 						foreach ($result_R as $result1){
 							if(isset($_SESSION['id'])){
-								if ($_SESSION['id']== $result1['id']){
+								if ($id_utilisateur== $result1['id_utilisateur']){
 								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete</a><br>';
 							}
-								if( $_SESSION['id_droit'] == 2 ){
+								elseif( $_SESSION['id_droit'] == 2 ){
 									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete admin</a><br>';
 								}
 							}
@@ -64,7 +64,7 @@
 					<?php
 						foreach ($result_L as $result2){
 							if(isset($_SESSION['id'])){
-							if ($_SESSION['id']== $result2['id']){
+							if ($_SESSION['id']== $result2['id_utilisateur']){
 								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result2['id'].'>delete</a><br>';
 							}
 								if( $_SESSION['id_droit'] == 2 ){
@@ -83,7 +83,7 @@
 					<?php
 						foreach ($result_P as $result3) {
 							if(isset($_SESSION['id'])){
-							if ($_SESSION['id']== $result3['id']){
+							if ($_SESSION['id']== $result3['id_utilisateur']){
 								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result3['id'].'>delete</a><br>';
 							}
 								if( $_SESSION['id_droit'] == 2 ){
@@ -105,10 +105,12 @@
 					<?php
 						foreach ($result_all_post as $result) {
 							if(isset($_SESSION['id'])){
-							if ($_SESSION['id']== $result['id']){
-								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete</a><br>';
-							}
-								if( $_SESSION['id_droit'] == 2 ){
+								if ($_SESSION['id'] == $result['id_utilisateur'])
+								{
+									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete</a><br>';
+								}
+								elseif( $_SESSION['id_droit'] == 2 )
+								{
 									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete admin</a><br>';
 								}
 							}
