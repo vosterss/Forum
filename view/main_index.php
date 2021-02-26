@@ -74,7 +74,6 @@
 				 <div class="post_all">
 					<h1> Post De la catégorie</h1>
 					<?php
-					var_dump($result_all_post);
 						foreach ($result_all_post as $result) {
 							echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_like']. " - " .$result['nb_mess']. ' - ' .$result['date_publication'];
 							echo "<button><a href=index.php?p=voirpost&id=" .$result['id'].">voir le post</a></button>";
@@ -83,4 +82,4 @@
 				</div>
 			<?php }  ?>
 			</div>
-</main>s
+</main>
