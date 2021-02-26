@@ -8,5 +8,5 @@
 	$resultat=$reponse2->fetch();
 	$_SESSION['avatar'] = $resultat['avatar'];
 	$avatar = $_SESSION['avatar'];
-	//header('Location:index.php?p=profil');
+	header('Location:index.php?p=avatar');
 ?>
