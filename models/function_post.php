@@ -67,7 +67,7 @@ function affiche_comment($bdd,$id_post){
 		return $result;
 }
 function all_post ($bdd,$categorie){
-	$reponse = $bdd->prepare('SELECT uti.id, uti.username, po.id, po.titre, po.contenu, po.nb_like, po.date_publication FROM utilisateur AS uti, post AS po WHERE uti.id = po.id_utilisateur and po.categorie = ?');
+	$reponse = $bdd->prepare('SELECT uti.id, uti.username, po.id, po.titre, po.contenu, po.nb_like, po.nb_mess, po.date_publication FROM utilisateur AS uti, post AS po WHERE uti.id = po.id_utilisateur and po.categorie = ?');
 	$reponse->execute(array($categorie));
 	$result = $reponse->fetchAll();
 	return $result;
