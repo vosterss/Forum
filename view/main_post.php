@@ -27,6 +27,7 @@
 						echo '<a style="padding-left:15px;" href=index.php?p=nblike&id='.$value['id'].'><div class="fa fa-heart-o"></div></a><br>';
 						$modif_post = (strip_tags($value['contenu']));
 					}
+					$_SESSION['like']=0;
 				}
 				
 				
