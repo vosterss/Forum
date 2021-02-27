@@ -42,7 +42,7 @@
 			
 			foreach ($comm as $value) {
 				if(isset($_SESSION['id'])){
-					if ($_SESSION['id']== $value['id_utilisateur']){
+					if ($_SESSION['id']== $value['id_utilisateur'] && $post[0]['isclosed'] != 1){
 						echo '<a style="padding-left:15px;" href=index.php?p=delete_m&id='.$value['id'].'>delete</a><br>';
 						echo '<a style="padding-left:15px;" href=index.php?p=modif&id='.$value['id'].'>modifier</a><br>';
 					}
