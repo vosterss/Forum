@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 26 fév. 2021 à 23:48
+-- Généré le : sam. 27 fév. 2021 à 20:58
 -- Version du serveur :  10.4.16-MariaDB
 -- Version de PHP : 7.4.12
 
@@ -43,7 +43,7 @@ CREATE TABLE `message` (
   `id_post` bigint(20) NOT NULL,
   `message` varchar(1000) NOT NULL,
   `id_utilisateur` bigint(20) NOT NULL,
-  `date_reponse` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `date_reponse` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -51,30 +51,31 @@ CREATE TABLE `message` (
 --
 
 INSERT INTO `message` (`id`, `id_post`, `message`, `id_utilisateur`, `date_reponse`) VALUES
-(1, 1, 'voici mon message ', 10, '2021-02-24 20:26:42'),
-(2, 2, 'dsqdflksqn,nfd,n  dks,qkdkjQLKSJDLKQSJLDKJ SKQDLKJlksjdlklqsk', 4, '2021-02-24 20:26:42'),
-(3, 5, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 5, '2021-02-24 20:26:42'),
-(4, 2, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 1, '2021-02-24 20:26:42'),
-(5, 1, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 3, '2021-02-24 20:26:42'),
-(6, 2, 'dsqdflksqn,nfd,n  dks,qkdkjQLKSJDLKQSJLDKJ SKQDLKJlksjdlklqsk', 4, '2021-02-24 20:26:42'),
-(7, 5, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 5, '2021-02-24 20:26:42'),
-(8, 2, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 1, '2021-02-24 20:26:42'),
-(9, 1, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 3, '2021-02-24 20:26:42'),
-(10, 2, 'JE SUIS BIEN L4AUTEUR DE CETTE R2PONSE', 13, '2021-02-24 20:39:15'),
-(11, 2, 'je trouve se post pas tres pertinent lol', 13, '2021-02-24 20:44:05'),
-(12, 2, '', 14, '2021-02-24 21:04:33'),
-(13, 2, '', 14, '2021-02-24 21:06:07'),
-(14, 2, 'htrzhzthzthtrvfqgfdg', 14, '2021-02-24 21:07:38'),
-(15, 2, 'Cette fois cela va marcher, enfin jespere ahah', 14, '2021-02-24 21:15:26'),
-(16, 2, 'gedbgrengjrengrargagraaaa', 14, '2021-02-25 08:10:35'),
-(17, 2, '', 14, '2021-02-25 08:13:44'),
-(18, 1, 'htrrzhtjtrjztzjrrjzthztrzh', 14, '2021-02-25 09:20:37'),
-(19, 1, 'rhehrheherherhrehrebhrthtr', 14, '2021-02-25 09:21:54'),
-(20, 6, '            fdgdfgfdgfdgfd', 10, '2021-02-26 12:12:09'),
-(21, 6, '            jdhksjdfhksjhdsfkjdh\r\n', 10, '2021-02-26 12:12:46'),
-(23, 3, 'je tes modifier', 10, '2021-02-26 14:17:27'),
-(24, 3, 'tu fais quoi ', 10, '2021-02-26 14:17:51'),
-(25, 3, 'je tes modifier', 10, '2021-02-26 14:10:13');
+(1, 1, 'voici mon message ', 10, '2021-02-27 19:42:21'),
+(2, 2, 'dsqdflksqn,nfd,n  dks,qkdkjQLKSJDLKQSJLDKJ SKQDLKJlksjdlklqsk', 4, '2021-02-27 19:42:21'),
+(3, 5, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 5, '2021-02-27 19:42:21'),
+(4, 2, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 1, '2021-02-27 19:42:21'),
+(5, 1, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 3, '2021-02-27 19:42:21'),
+(6, 2, 'dsqdflksqn,nfd,n  dks,qkdkjQLKSJDLKQSJLDKJ SKQDLKJlksjdlklqsk', 4, '2021-02-27 19:42:21'),
+(7, 5, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 5, '2021-02-27 19:42:21'),
+(8, 2, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 1, '2021-02-27 19:42:21'),
+(9, 1, 'SQDqsdsqDSQdsqDSQDSQdsqDSQDQSdsqdsqdqsdqsdqsdqsdqDQSDqdssdsqdsqdqSDDSQdqsDQSDQDdsqdQDqsdqsdqsdsqDD', 3, '2021-02-27 19:42:21'),
+(10, 2, 'JE SUIS BIEN L4AUTEUR DE CETTE R2PONSE', 13, '2021-02-27 19:42:21'),
+(11, 2, 'je trouve se post pas tres pertinent lol', 13, '2021-02-27 19:42:21'),
+(12, 2, '', 14, '2021-02-27 19:42:21'),
+(13, 2, '', 14, '2021-02-27 19:42:21'),
+(14, 2, 'htrzhzthzthtrvfqgfdg', 14, '2021-02-27 19:42:21'),
+(15, 2, 'Cette fois cela va marcher, enfin jespere ahah', 14, '2021-02-27 19:42:21'),
+(16, 2, 'gedbgrengjrengrargagraaaa', 14, '2021-02-27 19:42:21'),
+(17, 2, '', 14, '2021-02-27 19:42:21'),
+(18, 1, 'htrrzhtjtrjztzjrrjzthztrzh', 14, '2021-02-27 19:42:21'),
+(19, 1, 'rhehrheherherhrehrebhrthtr', 14, '2021-02-27 19:42:21'),
+(20, 6, '            fdgdfgfdgfdgfd', 10, '2021-02-27 19:42:21'),
+(21, 6, '            jdhksjdfhksjhdsfkjdh\r\n', 10, '2021-02-27 19:42:21'),
+(23, 3, 'je te modif sans changer date', 10, '2021-02-27 19:43:02'),
+(24, 3, 'je tes modifier sans changer la date ?\r\n', 10, '2021-02-27 19:42:21'),
+(25, 3, 'je te modifi mais la date reste', 10, '2021-02-27 19:42:21'),
+(26, 3, '				la sa vas pas fonctionner', 10, '2021-02-27 19:45:04');
 
 -- --------------------------------------------------------
 
@@ -121,9 +122,9 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `titre`, `contenu`, `id_utilisateur`, `date_publication`, `isclosed`, `categorie`, `nb_mess`, `nb_like`) VALUES
-(3, '(yg\'arhétrh', 'htzhthzrthrtzhtrzhzr', 13, '2024-02-21 03:10:31', 0, 0, 0, 21),
+(3, '(yg\'arhétrh', 'htzhthzrthrtzhtrzhzr', 13, '2024-02-21 03:10:31', 0, 0, 0, 30),
 (4, 'je fais plein ', 'dfsdfsdfsdfsdfsdfsd', 10, '2026-02-21 10:55:18', 0, 0, 0, 0),
-(5, 'bvhfghgh', 'gfhfghgfhfghfghgf', 12, '2026-02-21 10:57:42', 0, 0, 0, 3),
+(5, 'bvhfghgh', 'gfhfghgfhfghfghgf', 12, '2026-02-21 10:57:42', 0, 0, 0, 4),
 (7, 'je fais plein', 'dfssdfgfdfgfdgfdg', 10, '2026-02-21 02:52:24', 0, 0, 0, 0),
 (8, 'fdgfdgfdgfdg', 'dfgdfgfdgfdgfdgdfdgfdg', 10, '2026-02-21 02:52:38', 0, 2, 0, 0);
 
@@ -151,10 +152,10 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id`, `surname`, `name`, `username`, `mail`, `password`, `birthday`, `avatar`, `id_droit`, `date_deban`) VALUES
-(10, 'atmo', 'atmokk', 'assos1', 'gael.giraudet@laposte.net', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '2021-01-26', 'images/avatar5.jpg', 2, '2021-03-06 23:00:00'),
-(11, 'lkklk', 'hyghghgh', 'hjhjh', 'gaael.giraudet@laposte.net', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '2021-01-21', 'images/avatar1.jpg', 0, '2021-02-26 22:46:17'),
-(12, 'admin', 'admin', 'giraudet', 'gael.giraudet@laposte.net', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '2031-01-19', 'images/avatar1.jpg', 0, '2021-02-26 22:46:22'),
-(13, 'Loris', 'Terry', 'LorisTrr', 'loristerry63430@gmail.com', 'a8d2436eb1e79db3aabb4d46e814d4f34436cb03', '2001-08-09', 'images/avatar4.jpg', 2, '2021-02-25 23:00:00'),
+(10, 'atmo', 'atmokk', 'assos1', 'gael.giraudet@laposte.net', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '2021-01-26', 'images/avatar5.jpg', 2, '2021-02-27 19:20:23'),
+(11, 'lkklk', 'hyghghgh', 'hjhjh', 'gaael.giraudet@laposte.net', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '2021-01-21', 'images/avatar1.jpg', 0, '2021-02-27 17:39:21'),
+(12, 'admin', 'admin', 'giraudet', 'gael.giraudet@laposte.net', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '2031-01-19', 'images/avatar1.jpg', 0, '2021-02-27 19:17:23'),
+(13, 'Loris', 'Terry', 'LorisTrr', 'loristerry63430@gmail.com', 'a8d2436eb1e79db3aabb4d46e814d4f34436cb03', '2001-08-09', 'images/avatar4.jpg', 2, '2021-02-27 17:16:28'),
 (14, 'Thomas', 'Veira', 'Vosters', 'thomasvieira@gmail.com', '5a10593e262f95659897db18592f1bcfe3aa0bc9', '2001-08-09', 'images/avatar1.jpg', 2, '2021-02-25 23:00:00'),
 (15, 'Ken', 'Kanecki', 'kenkaneck', 'minefragpe@gmail.com', '85e124a2a62b64553de5bf4b49695a85fab92f9c', '2001-08-09', 'images/avatar1.jpg', 0, '2021-02-25 23:00:00');
 
@@ -197,7 +198,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT pour la table `pht_profil`
