@@ -35,7 +35,7 @@
         
 		?>
         			<div class="post">
-					<h1> Vos post : </h1>
+					<h1> Vos posts : </h1>
 					<?php
 					
 						foreach ($result_m as $result){
@@ -55,7 +55,7 @@
 						}
 					?>
 					<div class="post">
-					<h1> Vos message : </h1>
+					<h1> Vos messages : </h1>
 					<?php
 						
 						foreach ($result_r as $result){

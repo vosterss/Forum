@@ -8,7 +8,7 @@
 	die();
 	$reponse=$bdd->prepare('INSERT INTO post(titre,id_utilisateur,categorie, contenu,date_publication) VALUES (?,?,?,?,?)') ;
 	$reponse->execute(array($titre,$id_utilisateur,$categorie,$contenu,$date));
-	echo '<p class="test">Votre Post : '.$titre. ' à été publié.</p>';
+	echo '<p class="test">Votre Post : '.$titre. ' a été publié.</p>';
 	header("Refresh:3; url=index.php");
 
 ?>

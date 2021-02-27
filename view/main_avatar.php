@@ -17,7 +17,7 @@
 		<a href="index.php?p=avatar&id_avatar=4">
 			<img src="images/avatar5.jpg" class="change_avatar" alt=""/>
 		</a>
-		<p>OU importez le votre</p>
+		<p>OU importez le vôtre</p>
 		<form method="POST" action="index.php?p=a_importation" enctype="multipart/form-data">	
 			 <input type="hidden" name="MAX_FILE_SIZE" value="400000">
 			<input type="file" name="importation" accept="images/jpg,images/png">

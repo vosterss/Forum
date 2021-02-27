@@ -8,9 +8,9 @@
 			<?php
 			if (isset($_SESSION['id_droit'])){
 				if ($_SESSION['id_droit'] == 1  ){
-					echo "<p> Vous avez etait bannie jusqu'au : ".$_SESSION['date_deban'];
+					echo "<p> Vous avez été banni jusqu'au : ".$_SESSION['date_deban'];
 				}else if ($_SESSION['id_droit'] == 3  ){
-						echo "<p> Vous avez etait bannie definitivement</p>";
+						echo "<p> Vous avez été banni definitivement</p>";
 				}
 			}
 			?>

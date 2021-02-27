@@ -6,7 +6,7 @@
         $def = htmlspecialchars($_POST['ban_def']);
         if ($def == true){
             $reponse->execute(array(3 ,$date, $_GET['id']));
-            echo '<p class="test"> utilisateur bannie definitivement.</p>';
+            echo '<p class="test"> utilisateur banni définitivement.</p>';
             header("Refresh:2 url=index.php?p=admin");
         }
     }
@@ -14,7 +14,7 @@
     else{
     $date= htmlspecialchars($_POST['date_ban']).' ' .htmlspecialchars($_POST['heur_ban']).':00';
     $reponse->execute(array(1 ,$date, $_GET['id']));
-    echo '<p class="test">  utilisateur bannie.</p>';
+    echo '<p class="test">  utilisateur banni.</p>';
     header("Refresh:2 url=index.php?p=admin");
     }
     
