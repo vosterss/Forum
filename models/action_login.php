@@ -5,6 +5,7 @@
     $req->execute(array('username' => $username));
     $resultat = $req->fetch();
     if($resultat){
+        $time=strtotime($_SESSION['date_deban']);
     // Comparaison du pass envoyé via le formulaire avec la base
         if ($mdp_hash == $resultat['password'] && $resultat['id_droit'] != 1 ){
             $_SESSION['id'] = $resultat['id'];
@@ -18,16 +19,21 @@
 
         }
         
-
-        else if ($time >= time()){
-            include_once 'models/action_debann_user.php';
-        }
-        else if ($resultat['id_droit'] == 1){
+        else if($resultat['id_droit'] == 1 && $time >= time() ){
+            $_SESSION['id'] = $resultat['id'];
+            $_SESSION['id_droit'] = $resultat['id_droit'];
+            $_SESSION['date_deban'] = $resultat['date_deban'];
+            echo $_SESSION['date_deban'] ;
             // Si la personne est bannie :
-            header('Location:index.php?p=login');
+            header('Location:index.php?p=log');
+        }  else if ($time <= time()){
+            $_SESSION['id'] = $resultat['id'];
+            $_SESSION['id_droit'] = $resultat['id_droit'];
+            $_SESSION['date_deban'] = $resultat['date_deban'];
+            include 'models/action_debann_user.php';
         }
         else {
-            header('Location:index.php?p=login');
+            header('Location:index.php?p=log1');
         }
     }
     else{
