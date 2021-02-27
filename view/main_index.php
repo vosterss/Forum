@@ -64,7 +64,7 @@
 								echo 
 									"<div class='auteur'>
 										<div class='utilisateur'>
-											<img src='".$avatar."'class='img-avatar'/>
+											<img src='".$result1['avatar']."'class='img-avatar'/>
 											<h3 class='titre-utilisateur'>".$result1['username']."</h3>
 										</div>"."
 										<div class='titre-post'>
@@ -101,7 +101,7 @@
 							echo 
 								"<div class='auteur'>
 									<div class='utilisateur'>
-										<img src='".$avatar."'class='img-avatar'/>
+										<img src='".$result2['avatar']."'class='img-avatar'/>
 										<h3 class='titre-utilisateur'>".$result2['username']."</h3>
 									</div>"."
 									<div class='titre-post'>
@@ -140,7 +140,7 @@
 							echo 
 								"<div class='auteur'>
 									<div class='utilisateur'>
-										<img src='".$avatar."'class='img-avatar'/>
+										<img src='".$result3['avatar']."'class='img-avatar'/>
 										<h3 class='titre-utilisateur'>".$result3['username']."</h3>
 									</div>"."
 									<div class='titre-post'>
