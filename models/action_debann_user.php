@@ -1,5 +1,5 @@
 <?php
-    $date = date('Y-m-d H:i:s', time());
+    $date = date('Y-m-d H:i:s', time();
     $reponse = $bdd->prepare('update utilisateur set id_droit =?, date_deban=? where id =?');
     if($_SESSION['id_droit'] == 2 ){
         $reponse->execute(array(0 ,$date, $_GET['id']));
