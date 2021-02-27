@@ -7,8 +7,10 @@
 			<div class="banni">
 			<?php
 			if (isset($_SESSION['id_droit'])){
-				if ($_SESSION['id_droit'] == 1){
+				if ($_SESSION['id_droit'] == 1  ){
 					echo "<p> Vous avez etait bannie jusqu'au : ".$_SESSION['date_deban'];
+				}else if ($_SESSION['id_droit'] == 3  ){
+						echo "<p> Vous avez etait bannie definitivement</p>";
 				}
 			}
 			?>

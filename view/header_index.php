@@ -19,6 +19,11 @@
 				</a>	
 		  	</div>
 		  	<?php 
+			  if (isset($_SESSION['id_droit'])){
+				if ($_SESSION['id_droit'] == 1 || $_SESSION['id_droit'] == 3){
+					unset($_SESSION['id']);
+				}
+			}
 		  		if(!isset($_SESSION['id'])){
 		  	?>		                		
 				  	<div class="connexion">

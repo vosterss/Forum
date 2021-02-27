@@ -5,9 +5,9 @@
     $req->execute(array('username' => $username));
     $resultat = $req->fetch();
     if($resultat){
-        $time=strtotime($_SESSION['date_deban']);
+        $time=strtotime($resultat['date_deban']);
     // Comparaison du pass envoyé via le formulaire avec la base
-        if ($mdp_hash == $resultat['password'] && $resultat['id_droit'] != 1 ){
+        if ($mdp_hash == $resultat['password'] && $resultat['id_droit'] != 1 && $resultat['id_droit'] != 3 ){
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['username'] = $username;
             $_SESSION['avatar'] = $resultat['avatar'];
@@ -19,14 +19,14 @@
 
         }
         
-        else if($resultat['id_droit'] == 1 && $time >= time() ){
+        else if($resultat['id_droit'] == 1 && $time >= time() || $resultat['id_droit'] == 3 ){
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['id_droit'] = $resultat['id_droit'];
             $_SESSION['date_deban'] = $resultat['date_deban'];
             echo $_SESSION['date_deban'] ;
             // Si la personne est bannie :
-            header('Location:index.php?p=log');
-        }  else if ($time <= time()){
+            header('Location:index.php?p=login');
+        }  else if ($time <= time() && $resultat['id_droit'] == 1){
             $_SESSION['id'] = $resultat['id'];
             $_SESSION['id_droit'] = $resultat['id_droit'];
             $_SESSION['date_deban'] = $resultat['date_deban'];

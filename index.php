@@ -33,9 +33,7 @@ session_start();
 	if($page == 'login'){
 		include 'controlers/login.php';
 	}
-	if($page == 'login_b'){
-		include 'controlers/login_b.php';
-	}
+
 	if($page == 'a_login'){
 		include 'models/action_login.php';
 	}
