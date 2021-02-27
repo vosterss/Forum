@@ -44,23 +44,22 @@
 						<?php
 							foreach ($result_R as $result1){
 								if(isset($_SESSION['id'])){
-									if ($id_utilisateur == $result1['id_utilisateur']){
-										echo '
-											<div class="bouton-delete">
-												<button href=index.php?p=delete&id='.$result1['id'].'>
-													<div class="fa fa-trash">
-													</div>
-												</button>
-											</div>';
-									}		
-									elseif($_SESSION['id_droit'] == 2 ){
+									if($_SESSION['id_droit'] == 2 ){
 										echo '
 											<div class="bouton-delete">
 												<a href=index.php?p=delete&id='.$result1['id'].'>
-													<img class="logo-delete" src="delete-logo.png"/>
+													&times;
 												</a>
 											</div>';
 									}
+									elseif($id_utilisateur == $result1['id_utilisateur']){
+										echo '
+											<div class="bouton-delete">
+												<button href=index.php?p=delete&id='.$result1['id'].'>
+													&times;
+												</button>
+											</div>';
+									}		
 								}
 								echo 
 									"<div class='auteur'>
@@ -68,8 +67,8 @@
 											<img src='".$avatar."'class='img-avatar'/>
 											<h3 class='titre-utilisateur'>".$result1['username']."</h3>
 										</div>"."
-										<div class='titre-post'>".
-											$result1['titre'].'
+										<div class='titre-post'>
+											<h4>".$result1['titre'].'</h4>
 										</div>
 										<div class="vide">
 										</div>
@@ -91,12 +90,13 @@
 					<?php
 						foreach ($result_L as $result2){
 							if(isset($_SESSION['id'])){
-								if ($_SESSION['id']== $result2['id_utilisateur']){
-									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result2['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
-								}
 								if( $_SESSION['id_droit'] == 2 ){
 									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result2['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
 								}
+								elseif ($_SESSION['id']== $result2['id_utilisateur']){
+									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result2['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+								}
+								
 							}
 							echo 
 								"<div class='auteur'>
@@ -104,8 +104,8 @@
 										<img src='".$avatar."'class='img-avatar'/>
 										<h3 class='titre-utilisateur'>".$result2['username']."</h3>
 									</div>"."
-									<div class='titre-post'>".
-										$result2['titre'].'
+									<div class='titre-post'>
+										<h4>".$result2['titre'].'</h4>
 									</div>
 									<div class="vide">
 									</div>
@@ -129,12 +129,13 @@
 					<?php
 						foreach ($result_P as $result3){
 							if(isset($_SESSION['id'])){
-								if ($_SESSION['id']== $result3['id_utilisateur']){
-									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result3['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
-								}
 								if( $_SESSION['id_droit'] == 2 ){
 									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result3['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
 								}
+								elseif ($_SESSION['id']== $result3['id_utilisateur']){
+									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result3['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+								}
+								
 							}
 							echo 
 								"<div class='auteur'>
@@ -142,8 +143,8 @@
 										<img src='".$avatar."'class='img-avatar'/>
 										<h3 class='titre-utilisateur'>".$result3['username']."</h3>
 									</div>"."
-									<div class='titre-post'>".
-										$result3['titre'].'
+									<div class='titre-post'>
+										<h4>".$result1['titre'].'</h4>
 									</div>
 									<div class="vide">
 									</div>
