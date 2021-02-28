@@ -428,6 +428,19 @@ input[type=date]{
 .commentaire{
 	display: flex;
 }
+/* ************************************ALL_USER********************************** */
+
+.main-cont{
+	background-color: aqua;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
 
 /* ************************************FOOTER************************************ */
 

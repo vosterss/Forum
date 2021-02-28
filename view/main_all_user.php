@@ -1,9 +1,28 @@
-<div class="post">
+<div class="main-cont">
 					<h1> Les utilisateurs : </h1>
 					<?php
 						foreach ($result_m as $result){
-							echo $result['id'].' - '.$result['surname']. ' - ' .$result['name']. ' - ' .$result['username']. ' - ' .$result['mail'];
-                            echo $result['date_deban'] ;
+							
+                            echo 
+								"<div class='plus-like'>
+                                <div class='plus-like-container'>
+                                <div class='auteur'>
+									<div class='utilisateur'>
+										<img src='".$result['avatar']."'class='img-avatar'/>
+										<h3 class='titre-utilisateur'>".$result['username']."</h3>
+									</div>"."
+									<div class='titre-post'>
+										<h4>".$result['name'].' - '.$result['surname'].'</h4>
+									</div>
+									<div class="vide">
+									</div>
+								</div>'."
+								<div class='post-contenu'>".
+									$result['mail']."
+								</div>"."
+								<div class='date-publication'>".
+									$result['date_deban']."
+								</div>";
                             if($result['id_droit'] == 1){
                                 echo ' utilisateur banni ';
                                 echo '<a style="padding-left:15px;" href=index.php?p=debannir&id='.$result['id'].'>débannir</a><br>';
@@ -24,7 +43,10 @@
                             <p> ban définitif<input type="checkbox" name="ban_def" ></p>
                             <input type="submit" id="submit" value="bannir">
                             </form>';
+                            echo '</div>';
+                            echo '</div>';
                             }
+                           
 						}
 					?>
 </div>
