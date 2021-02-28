@@ -459,6 +459,16 @@ input[type=date]{
 	overflow: auto;	
 }
 
+/* ************************************MY_POST********************************** */
+.mespost{
+	background-color: white;
+	width: 50%;
+	height: 30%;
+	text-align: center;
+	margin: 3%;
+	border-radius: 4px;
+	box-shadow: 0 10px 10px;
+}
 
 /* ************************************FOOTER************************************ */
 

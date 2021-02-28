@@ -34,116 +34,45 @@
     if ($result_m != 0){
         
 		?>
-        			<div class="post">
+		<div class="main-cont">
+		<div class="cont">
+        			
 					<h1> Vos posts : </h1>
 					<?php
-					
 						foreach ($result_m as $result){
-							if(isset($_SESSION['id'])){
-								if ($_SESSION['id']== $result['id_utilisateur']){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete</a><br>';
-								}
-									if( $_SESSION['id_droit'] == 2 ){
-										echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete admin</a><br>';
-									}
-								}
-					
-							
-							echo $result['titre'].' - '.$result['contenu']. ' - ' .$result['date_publication'].'<br>';
-							echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
-							
-						}
-					?>
-					<div class="post">
+                            echo 
+								"<div class='mespost'>
+                                <div class='plus-like-container'>
+									<div class='post-contenu'>
+										<h4>Titre : ".$result['titre']."</h4>
+									</div>"."
+								<div class='post-contenu'>Contenu : ".$result['contenu']."
+								</div>"."
+								<div class='date-publication'>Date : ".$result['date_publication']."
+								</div>";
+								echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+								echo "<a href=index.php?p=voirpost&id=" .$result['id']. ">voir le post</a>";
+								echo '</div>';
+								echo '</div>';
+
+                            } ?>
 					<h1> Vos messages : </h1>
-					<?php
-						
+				
+							<?php
 						foreach ($result_r as $result){
-							if(isset($_SESSION['id'])){
-								if ($_SESSION['id']== $result['id_utilisateur']){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete_m&id='.$result['id'].'>delete</a><br>';
-								}
-									if( $_SESSION['id_droit'] == 2 ){
-										echo '<a style="padding-left:15px;" href=index.php?p=delete_m&id='.$result['id'].'>delete admin</a><br>';
-									}
-								}
-					
-							
-							echo $result['message']. ' - ' .$result['date_reponse'].'<br>';
-							echo '<a style="padding-left:15px;" href="delete.php?id='.$result['id'].'">delete</a><br>';
-							
-						}
-					
-					?>
+                            echo 
+								"<div class='mespost'>
+                                <div class='plus-like-container'>
+								<div class='post-contenu'>Contenu : ".$result['message']."
+								</div>"."
+								<div class='date-publication'>Date : ".$result['date_reponse']."
+								</div>";
+								echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+								echo '</div>';
+								echo '</div>';
 
-				</div>
-    <php?
-    	}
-		if($find == 0){
-	?>
-			<div class="main-container">
-				<?php 
-					if(isset($q)){ ?>
-					<h3>Aucun post trouvé pour : <?php echo $q; ?> </h3>
-				<?php } ?>
-				<div class="plus-recent">
-					<h1> Post le plus récent </h1>
-					<?php
-						
-						foreach ($result_R as $result1){
-							if(isset($_SESSION['id'])){
-								if ($_SESSION['id']== $result1['id_utilisateur']){
-								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete</a><br>';
-							}
-								if( $_SESSION['id_droit'] == 2 ){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete admin</a><br>';
-								}
-							}
-							echo $result1['username'].' - '.$result1['titre'].' - '.$result1['contenu']. ' - ' .$result1['date_publication'];
-							//var_dump($result1);
-							echo "<button><a href=index.php?p=voirpost&id=" .$result1['id']. ">voir le post</a></button>";
-							
-						}
-					?>
-
-				</div>
-				<div class="plus-like">
-					<h1> Post le plus liké </h1>
-					<?php
-						foreach ($result_L as $result2){
-							if(isset($_SESSION['id'])){
-							if ($_SESSION['id']== $result2['id_utilisateur']){
-								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result2['id'].'>delete</a><br>';
-							}
-								if( $_SESSION['id_droit'] == 2 ){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result2['id'].'>delete admin</a><br>';
-								}
-							}
-							echo $result2['username'].' - '.$result2['titre'].' - '.$result2['contenu'].' - '.$result2['nb_like']. ' - ' .$result2['date_publication'];
-							if(isset($_SESSION['id'])){
-								echo "<button><a href=index.php?p=voirpost&id=" .$result2['id'].">voir le post</a></button>";
-							}
-						}
-					?>
-				</div>
-				<div class="plus-reponse">
-					<h1> Post le plus populaire </h1>
-					<?php
-						foreach ($result_P as $result3) {
-							if(isset($_SESSION['id'])){
-							if ($_SESSION['id']== $result3['id_utilisateur']){
-								echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result3['id'].'>delete</a><br>';
-							}
-								if( $_SESSION['id_droit'] == 2 ){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result3['id'].'>delete admin</a><br>';
-								}
-							}
-							echo $result3['username'].' - '.$result3['titre'].' - '.$result3['contenu'].' - '.$result3['nb_mess']. ' - ' .$result3['date_publication'];
-							echo "<button><a href=index.php?p=voirpost&id=" .$result3['id'].">voir le post</a></button>";
-						}
-					?>
-				</div>	
-	<?php 
-		 }
-	?>
+                            } ?>	
+					</div>	
+					</div>	
+					<?php } ?>
 </main>
