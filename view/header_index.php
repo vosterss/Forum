@@ -66,8 +66,8 @@
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<a href="index.php?p=warzone&c=0">Warzone</a>
 					<a href="index.php?p=fortnite&c=1">Fortnite</a>
-					<a href="index.php?p=APEX&c=2">Apex Legends</a>
-					<a href="index.php?p=PUBG&c=3">PUBG</a>
+					<a href="index.php?p=apex&c=2">Apex Legends</a>
+					<a href="index.php?p=pubg&c=3">PUBG</a>
 				</div>
 				<div id="main">
 					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>

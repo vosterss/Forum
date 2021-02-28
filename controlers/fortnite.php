@@ -5,6 +5,6 @@
 	$result_R = post_recent_categorie($bdd, $categorie);
 	$result_P = post_populaire_categorie($bdd, $categorie);
 	$result_all_post = all_post($bdd,$categorie);
-	require 'view/main_index.php';
+	require 'view/main_index_cat.php';
 	require 'view/footer_index.php';
 ?>

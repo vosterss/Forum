@@ -49,10 +49,10 @@ session_start();
 	if($page == 'fortnite'){
 		include 'controlers/fortnite.php';
 	}
-	if($page == 'APEX'){
+	if($page == 'apex'){
 		include 'controlers/APEX.php';
 	}
-	if($page == 'PUBG'){
+	if($page == 'pubg'){
 		include 'controlers/PUBG.php';
 	}
 	if($page == 'newpost'){

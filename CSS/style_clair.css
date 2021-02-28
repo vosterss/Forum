@@ -470,6 +470,54 @@ input[type=date]{
 	box-shadow: 0 10px 10px;
 }
 
+/* *******************************POST_PAR_CAT*********************************** */
+
++@font-face {
+	font-family: Edelsans;
+	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/edelsans_regular-webfont.woff);
+  }
+  body { 
+	margin: 0;
+
+  }
+  section { 
+	height: 1200px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center; 
+	flex-direction: column;
+	padding: 2vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-size: 1.1em; 
+  }
+  section:first-of-type { 
+	font-size: 1.1em;
+  }
+  section:first-of-type, section.pop { 
+	color: #fff;
+	text-shadow: 0 0 5px rgba(0,0,0,0.4); 
+  }
+  section:first-of-type, section.pop  { 
+	background: #fff;
+  }
+  section:first-of-type, section.warzone { 
+	background-image: url(../images/warzone.jpg); 
+  }
+  section:first-of-type, section.fortnite  { 
+	background-image: url(../images/fortnite.jpg); 
+  }
+  section:first-of-type, section.pubg  { 
+	background-image: url(../images/pubg.jpg); 
+  }
+  section:first-of-type, section.apex  { 
+	background-image: url(../images/apex.jpg); 
+  }
+
+
 /* ************************************FOOTER************************************ */
 
 footer{
