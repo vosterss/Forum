@@ -136,9 +136,7 @@
 										<p> Like : </p>".
 										$result2['nb_like']."
 									</div>";
-								if(isset($_SESSION['id'])){
 									echo "<a href=index.php?p=voirpost&id=" .$result2['id']. ">voir le post</a>";
-								}
 							}
 						?>
 						</div>

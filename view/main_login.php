@@ -29,7 +29,7 @@
 				</form>
 			</div>
 			<div class="form_login">
-				<p> Vous n'avez pas encore de compte ?  <a class="lien_form_login" href="register.php"> Inscrivez-vous gratuitement </a> </p>
+				<p> Vous n'avez pas encore de compte ?  <a class="lien_form_login" href="index.php?p=register"> Inscrivez-vous gratuitement </a> </p>
 			</div>	
 		</div>
 	</div>	
