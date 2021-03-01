@@ -12,7 +12,26 @@
 					   		while($a = $articles->fetch()) { 
 				   		?>
 					      		<li>
+					      			<div class="plus-recent">
 					      			<?php 
+						      			if(isset($_SESSION['id'])){
+											if($_SESSION['id_droit'] == 2 ){
+												echo '
+													<div class="bouton-delete">
+														<a href=index.php?p=delete&id='.$a['id'].'>
+															&times;
+														</a>
+													</div>';
+											}
+											elseif($id_utilisateur == $a['id_utilisateur']){
+												echo '
+													<div class="bouton-delete">
+														<button href=index.php?p=delete&id='.$a['id'].'>
+															&times;
+														</button>
+													</div>';
+											}		
+										}
 					      				echo "
 					      					<div class='auteur'>
 												<div class='utilisateur'>
@@ -31,26 +50,10 @@
 											<div class='date-publication'>".
 												$a['date_publication']."
 											</div>";
-									  	if(isset($_SESSION['id'])){
-											if($_SESSION['id_droit'] == 2 ){
-												echo '
-													<div class="bouton-delete">
-														<a href=index.php?p=delete&id='.$result1['id'].'>
-															&times;
-														</a>
-													</div>';
-											}
-											elseif($id_utilisateur == $result1['id_utilisateur']){
-												echo '
-													<div class="bouton-delete">
-														<button href=index.php?p=delete&id='.$result1['id'].'>
-															&times;
-														</button>
-													</div>';
-											}		
-										}	
-					      				echo "<a href=index.php?p=voirpost&id=" .$result1['id']. ">voir le post</a>";
+									  		
+					      				echo "<a href=index.php?p=voirpost&id=" .$a['id']. ">voir le post</a>";
 					      			?>
+					      			</div>
 					      		</li>
 				    	<?php 
 				    		} 
