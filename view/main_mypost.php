@@ -28,9 +28,9 @@
 												elseif($id_utilisateur == $a['id_utilisateur']){
 													echo '
 														<div class="bouton-delete">
-															<button href=index.php?p=delete&id='.$a['id'].'>
+															<a href=index.php?p=delete&id='.$a['id'].'>
 																&times;
-															</button>
+															</a>
 														</div>';
 												}		
 											}
@@ -79,9 +79,9 @@
 						echo "
 						<div class='mypost'>
 							<div class='bouton-delete'>
-								<button href=index.php?p=delete&id=".$result['id'].">
+								<a href=index.php?p=delete_m&id=".$result['id'].">
 									&times;
-								</button>
+								</a>
 							</div>
 		                	<div class='auteur'>
 								<div class='utilisateur'>
@@ -103,13 +103,13 @@
 						</div>";
 
 					}
-					elseif($id_utilisateur == $a['id_utilisateur']){
+					elseif($id_utilisateur == $result['id_utilisateur']){
 						echo "
 						<div class='mypost'>
 							<div class='bouton-delete'>
-								<button href=index.php?p=delete&id=".$result['id'].">
+								<a href=index.php?p=delete_m&id=".$result['id'].">
 									&times;
-								</button>
+								</a>
 							</div>
 		                	<div class='auteur'>
 								<div class='utilisateur'>
@@ -168,7 +168,6 @@
 									&times;
 								</a>
 							</div>
-
 	                    	<div class='auteur'>
 								<div class='utilisateur'>
 									<img src='".$avatar."'class='img-avatar'/>
@@ -185,13 +184,13 @@
 							</div>
 						</div>";
 					}
-					elseif($id_utilisateur == $a['id_utilisateur']){
+					elseif($id_utilisateur == $result['id_utilisateur']){
 						echo "
 						<div class='mymess'>
 							<div class='bouton-delete'>
-								<button href=index.php?p=delete_m&id=".$result['id'].">
+								<a href=index.php?p=delete_m&id=".$result['id'].">
 									&times;
-								</button>
+								</a>
 							</div>
 	                    	<div class='auteur'>
 								<div class='utilisateur'>
