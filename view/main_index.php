@@ -11,7 +11,6 @@
 					   	<?php 
 					   		while($a = $articles->fetch()) { 
 				   		?>
-				   		
 					      		<li>
 					      			<div class="resultat-recherche">
 						      			<div class="recherche">
@@ -96,8 +95,8 @@
 											</div>';
 									}		
 								}
-								echo 
-									"<div class='auteur'>
+								echo "
+									<div class='auteur'>
 										<div class='utilisateur'>
 											<img src='".$result1['avatar']."'class='img-avatar'/>
 											<h3 class='titre-utilisateur'>".$result1['username']."</h3>

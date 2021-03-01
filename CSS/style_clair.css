@@ -336,9 +336,19 @@ input[type=date]{
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
+	overflow-x: scroll;
 }
 
 .plus-recent{
+	background-color: white;
+	width: 50%;
+	height: 30%;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 10px 10px;
+}
+
+.mypost{
 	background-color: white;
 	width: 50%;
 	height: 30%;
