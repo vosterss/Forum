@@ -417,11 +417,21 @@ input[type=date]{
 .mymess{
 	background-color: white;
 	width: 50%;
-	height: 350px;
+	height: 200px;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
 	margin-bottom: 10px;
+}
+
+.mymess2{
+	background-color: white;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	margin-bottom: 10px;
+	border-bottom: 2px solid rgb(93, 173, 226);
+
 }
 
 .resultat-recherche{
@@ -438,6 +448,20 @@ input[type=date]{
 	box-shadow: 0 10px 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.nb-like{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 25px;
+}
+
+.reponse{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .titre-post-categorie{
@@ -486,11 +510,19 @@ input[type=date]{
 }
 
 .post-contenu{
-	height: 60%;
+	height: 55%;
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
 }
+
+.mess-contenu{
+	height: 30%;
+	border-top: solid 2px rgb(93, 173, 226);
+	border-bottom: solid 2px rgb(93, 173, 226);
+	word-wrap: break-word;
+}
+
 
 .plus-like{
 	background-color: white;

@@ -45,9 +45,10 @@
 							<div class='date-publication'>".
 								$value['date_publication']."
 							</div>
-							<div class='nb-like'>".
+							<div class='nb-like'>
+								<p> Like : </p>".
 								$value['nb_like']."
-							</div>"	;
+							</div>";
 						
 						if(isset($_SESSION['like'])){
 							if ($_SESSION['like'] == 0){
@@ -60,7 +61,7 @@
 				?>
 			</div>
 			<h1> Réponse </h1>
-			<div>
+			<div class="reponse">
 				<?php
 					foreach ($comm as $value){
 						if(isset($_SESSION['id'])){
@@ -87,19 +88,25 @@
 										</a>
 									</div>';
 							}
-							} ?>
-						<div class="commentaire">
-							<div class="username">
-								<?php echo $value['username'];?>
-							</div> 
-							<div class="contenu">
-								<?php echo html_entity_decode($value['message']);
-								$modif_mess = strip_tags($value['message']); ?>
-							</div>
-							<div class="date">
-								<?php echo $value['date_reponse'];?>
-							</div>
-						</div>
+							}
+							echo "
+							<div class='mymess2'>
+								<div class='auteur'>
+									<div class='utilisateur'>
+										<img src='".$value['avatar']."'class='img-avatar'/>
+										<h3 class='titre-utilisateur'>".$value['username']."</h3>
+									</div>
+									<div class='vide'>
+									</div>
+								</div>
+								<div class='mess-contenu'>".
+									html_entity_decode($value['message'])."
+								</div>"."
+								<div class='date-publication'>".
+									$value['date_reponse']."
+								</div>
+							</div>";
+						?>	
 						
 				<?php
 					}

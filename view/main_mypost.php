@@ -176,7 +176,7 @@
 								<div class='vide'>
 								</div>
 							</div>"."
-							<div class='post-contenu'>".
+							<div class='mess-contenu'>".
 								$result['message']."
 							</div>"."
 							<div class='date-publication'>".
@@ -200,7 +200,7 @@
 								<div class='vide'>
 								</div>
 							</div>"."
-							<div class='post-contenu'>".
+							<div class='mess-contenu'>".
 								$result['message']."
 							</div>"."
 							<div class='date-publication'>".
@@ -219,7 +219,7 @@
 								<div class='vide'>
 								</div>
 							</div>"."
-							<div class='post-contenu'>".
+							<div class='mess-contenu'>".
 								$result['message']."
 							</div>"."
 							<div class='date-publication'>".
