@@ -18,12 +18,12 @@
 										</a>
 									</div>';
 							}
-							elseif($id_utilisateur == $result1['id_utilisateur']){
+							elseif($id_utilisateur == $value['id_utilisateur']){
 								echo '
 									<div class="bouton-delete">
-										<button href=index.php?p=delete&id='.$value['id'].'>
+										<a href=index.php?p=delete&id='.$value['id'].'>
 											&times;
-										</button>
+										</a>
 									</div>';
 							}		
 						}
@@ -40,7 +40,7 @@
 								</div>
 							</div>'."
 							<div class='post-contenu2'>".
-								$value['contenu']."
+								html_entity_decode($value['contenu'])."
 							</div>"."
 							<div class='date-publication'>".
 								$value['date_publication']."
