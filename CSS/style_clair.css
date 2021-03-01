@@ -23,7 +23,9 @@ li{
 } 
 
 /* ************************************HEADER************************************ */
-
+.allpost{
+	border:1px dotted black;
+}
 header{
 	height: 10%;
 	width: 100%;

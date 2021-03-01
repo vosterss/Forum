@@ -204,7 +204,7 @@
 					<div class='lien-post-cat'>
 					<?php
 						foreach ($result_all_post as $result){
-							echo "<a href=index.php?p=voirpost&id=" .$result['id'].">". $result['titre']. "</a>";
+							echo "<a class='allpost' href=index.php?p=voirpost&id=" .$result['id'].">". $result['titre']. "</a>";
 						}
 					?>
 					</div>
