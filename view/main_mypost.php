@@ -71,10 +71,10 @@
 	?>
 		<div class="main-container">
 			<h1> Vos posts : </h1>
-			<div class="mypost">
 			<?php
 				foreach ($result_m as $result){
                     echo "
+                    <div class='mypost'>
                     	<div class='auteur'>
 							<div class='utilisateur'>
 								<img src='".$avatar."'class='img-avatar'/>
@@ -91,10 +91,10 @@
 						</div>"."
 						<div class='date-publication'>".
 							$result['date_publication']."
-						</div>";
+						</div>
+					</div>";
                 } 
             ?>
-        	</div>
         	<div class="mymess">
 				<h1> Vos messages : </h1>
 			<?php
