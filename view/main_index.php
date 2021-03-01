@@ -12,48 +12,50 @@
 					   		while($a = $articles->fetch()) { 
 				   		?>
 					      		<li>
-					      			<div class="plus-recent">
-					      			<?php 
-						      			if(isset($_SESSION['id'])){
-											if($_SESSION['id_droit'] == 2 ){
-												echo '
-													<div class="bouton-delete">
-														<a href=index.php?p=delete&id='.$a['id'].'>
-															&times;
-														</a>
-													</div>';
+					      			<div class="resultat-recherche">
+						      			<div class="recherche">
+						      			<?php 
+							      			if(isset($_SESSION['id'])){
+												if($_SESSION['id_droit'] == 2 ){
+													echo '
+														<div class="bouton-delete">
+															<a href=index.php?p=delete&id='.$a['id'].'>
+																&times;
+															</a>
+														</div>';
+												}
+												elseif($id_utilisateur == $a['id_utilisateur']){
+													echo '
+														<div class="bouton-delete">
+															<button href=index.php?p=delete&id='.$a['id'].'>
+																&times;
+															</button>
+														</div>';
+												}		
 											}
-											elseif($id_utilisateur == $a['id_utilisateur']){
-												echo '
-													<div class="bouton-delete">
-														<button href=index.php?p=delete&id='.$a['id'].'>
-															&times;
-														</button>
-													</div>';
-											}		
-										}
-					      				echo "
-					      					<div class='auteur'>
-												<div class='utilisateur'>
-													<img src='".$a['avatar']."'class='img-avatar'/>
-													<h3 class='titre-utilisateur'>".$a['username']."</h3>
+						      				echo "
+						      					<div class='auteur'>
+													<div class='utilisateur'>
+														<img src='".$a['avatar']."'class='img-avatar'/>
+														<h3 class='titre-utilisateur'>".$a['username']."</h3>
+													</div>"."
+													<div class='titre-post'>
+														<h4>".$a['titre'].'</h4>
+													</div>
+													<div class="vide">
+													</div>
+												</div>'."
+												<div class='post-contenu'>".
+													$a['contenu']."
 												</div>"."
-												<div class='titre-post'>
-													<h4>".$a['titre'].'</h4>
-												</div>
-												<div class="vide">
-												</div>
-											</div>'."
-											<div class='post-contenu'>".
-												$a['contenu']."
-											</div>"."
-											<div class='date-publication'>".
-												$a['date_publication']."
-											</div>";
-									  		
-					      				echo "<a href=index.php?p=voirpost&id=" .$a['id']. ">voir le post</a>";
-					      			?>
-					      			</div>
+												<div class='date-publication'>".
+													$a['date_publication']."
+												</div>";
+										  		
+						      				echo "<a href=index.php?p=voirpost&id=" .$a['id']. ">voir le post</a>";
+						      			?>
+						      			</div>
+						      		</div>
 					      		</li>
 				    	<?php 
 				    		} 
