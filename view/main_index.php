@@ -46,7 +46,7 @@
 													</div>
 												</div>'."
 												<div class='post-contenu'>".
-													$a['contenu']."
+													html_entity_decode($a['contenu'])."
 												</div>"."
 												<div class='date-publication'>".
 													$a['date_publication']."
@@ -108,7 +108,7 @@
 										</div>
 									</div>'."
 									<div class='post-contenu'>".
-										$result1['contenu']."
+										html_entity_decode($result1['contenu'])."
 									</div>"."
 									<div class='date-publication'>".
 										$result1['date_publication']."
@@ -145,7 +145,7 @@
 									</div>
 								</div>'."
 								<div class='post-contenu'>".
-									$result2['contenu']."
+									html_entity_decode($result2['contenu'])."
 								</div>"."
 								<div class='date-publication'>".
 									$result2['date_publication']."
@@ -184,7 +184,7 @@
 									</div>
 								</div>'."
 								<div class='post-contenu'>".
-									$result3['contenu']."
+									html_entity_decode($result3['contenu'])."
 								</div>"."
 								<div class='date-publication'>".
 									$result3['date_publication']."
@@ -210,7 +210,7 @@
 									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete admin</a><br>';
 								}
 							}
-							echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_like']. " - " .$result['nb_mess']. ' - ' .$result['date_publication'];
+							echo $result['username'].' - '.$result['titre'].' - '.html_entity_decode($result['contenu']).' - '.$result['nb_like']. " - " .$result['nb_mess']. ' - ' .$result['date_publication'];
 							echo "<button><a href=index.php?p=voirpost&id=" .$result['id'].">voir le post</a></button>";
 						}
 					?>
