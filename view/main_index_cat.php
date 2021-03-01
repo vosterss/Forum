@@ -170,7 +170,7 @@
 					<h1> Post De la catégorie</h1>
 					<?php
 						foreach ($result_all_post as $result){
-							echo "<a href=index.php?p=voirpost&id=" .$result['id'].">. "$result['titre']"</a>"
+							echo "<a href=index.php?p=voirpost&id=" .$result['id'].">". $result['titre']. "</a>";
 						}
 					?>
 				</div>
