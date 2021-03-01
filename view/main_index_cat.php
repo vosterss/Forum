@@ -93,13 +93,22 @@
 						<?php
 							foreach ($result_L as $result2){
 								if(isset($_SESSION['id'])){
-									if( $_SESSION['id_droit'] == 2 ){
-										echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result2['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+									if($_SESSION['id_droit'] == 2 ){
+										echo '
+											<div class="bouton-delete">
+												<a href=index.php?p=delete&id='.$result1['id'].'>
+													&times;
+												</a>
+											</div>';
 									}
-									elseif ($_SESSION['id']== $result2['id_utilisateur']){
-										echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result2['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
-									}
-									
+									elseif($id_utilisateur == $result1['id_utilisateur']){
+										echo '
+											<div class="bouton-delete">
+												<button href=index.php?p=delete&id='.$result1['id'].'>
+													&times;
+												</button>
+											</div>';
+									}		
 								}
 								echo 
 									"<div class='auteur'>
@@ -132,12 +141,22 @@
 						<?php
 							foreach ($result_P as $result3){
 								if(isset($_SESSION['id'])){
-									if( $_SESSION['id_droit'] == 2 ){
-										echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result3['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+									if($_SESSION['id_droit'] == 2 ){
+										echo '
+											<div class="bouton-delete">
+												<a href=index.php?p=delete&id='.$result1['id'].'>
+													&times;
+												</a>
+											</div>';
 									}
-									elseif ($_SESSION['id']== $result3['id_utilisateur']){
-										echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result3['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
-									}
+									elseif($id_utilisateur == $result1['id_utilisateur']){
+										echo '
+											<div class="bouton-delete">
+												<button href=index.php?p=delete&id='.$result1['id'].'>
+													&times;
+												</button>
+											</div>';
+									}		
 								}
 								echo 
 									"<div class='auteur'>
@@ -146,7 +165,7 @@
 											<h3 class='titre-utilisateur'>".$result3['username']."</h3>
 										</div>"."
 										<div class='titre-post'>
-											<h4>".$result1['titre'].'</h4>
+											<h4>".$result3['titre'].'</h4>
 										</div>
 										<div class="vide">
 										</div>
