@@ -35,7 +35,7 @@
 				</form>
 			</div>
 			<div class="form_login">
-				<p> Vous avez déjà un compte ? <a class="lien_form_login" href="login.php"> Connectez-vous </a> </p>
+				<p> Vous avez déjà un compte ? <a class="lien_form_login" href="index.php?p=login"> Connectez-vous </a> </p>
 			</div>	
 		</div>
 	</div>	
