@@ -351,7 +351,7 @@ input[type=date]{
 .mypost{
 	background-color: white;
 	width: 50%;
-	height: 30%;
+	height: 350px;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
@@ -361,7 +361,7 @@ input[type=date]{
 .mymess{
 	background-color: white;
 	width: 50%;
-	height: 30%;
+	height: 350px;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
