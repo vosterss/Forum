@@ -17,6 +17,6 @@ if(isset($_FILES['importation'])){
      {
           echo 'Echec de l\'upload !';
      }
-
+     header('Refresh:2; url=index.php?p=avatar');
 }
 ?>

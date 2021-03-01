@@ -7,7 +7,7 @@
 		<h1> Création d'un nouveau post</h1>
 		<div class="box-newpost">
 			<form action="index.php?p=a_create_post" method="post">
-				<input type="text" name="titre_post" placeholder="Titre">
+				<input type="text" name="titre_post" placeholder="Titre" required minlength="5">
 				<div class="choix-titre">
 					<div><p>Catégorie : </p></div>
 					<div>
