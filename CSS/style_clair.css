@@ -649,6 +649,17 @@ input[type=date]{
 	margin-top: 10px;
 }
 
+.modif{
+	background-color: white;
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 10px 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
 .avatar-mdp{
 	background-color: white;
 	width: 50%;
