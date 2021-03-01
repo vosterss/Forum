@@ -27,9 +27,9 @@
 												elseif($id_utilisateur == $a['id_utilisateur']){
 													echo '
 														<div class="bouton-delete">
-															<button href=index.php?p=delete&id='.$a['id'].'>
+															<a href=index.php?p=delete&id='.$a['id'].'>
 																&times;
-															</button>
+															</a>
 														</div>';
 												}		
 											}
@@ -93,9 +93,9 @@
 									elseif($id_utilisateur == $result1['id_utilisateur']){
 										echo '
 											<div class="bouton-delete">
-												<button href=index.php?p=delete&id='.$result1['id'].'>
+												<a href=index.php?p=delete&id='.$result1['id'].'>
 													&times;
-												</button>
+												</a>
 											</div>';
 									}		
 								}
