@@ -39,7 +39,7 @@
 								<div class="vide">
 								</div>
 							</div>'."
-							<div class='post-contenu'>".
+							<div class='post-contenu2'>".
 								$value['contenu']."
 							</div>"."
 							<div class='date-publication'>".
