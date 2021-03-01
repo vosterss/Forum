@@ -73,6 +73,9 @@
 			<h1> Vos posts : </h1>
 			<?php
 				foreach ($result_m as $result){
+			?>
+					<div class='mypost'>
+				<?php
 					if($_SESSION['id_droit'] == 2 ){
 						echo '
 							<div class="bouton-delete">
@@ -90,7 +93,6 @@
 							</div>';
 					}		
 	                echo "
-	                <div class='mypost'>
 	                	<div class='auteur'>
 							<div class='utilisateur'>
 								<img src='".$avatar."'class='img-avatar'/>
@@ -107,14 +109,17 @@
 						</div>"."
 						<div class='date-publication'>".
 							$result['date_publication']."
-						</div>
-					</div>";
+						</div>";
                 } 
             ?>
-        	<div class="mymess">
+        	</div>
+        	
 				<h1> Vos messages : </h1>
 			<?php
 				foreach ($result_r as $result){
+			?>		
+					<div class="mymess">
+				<?php		
 					if($_SESSION['id_droit'] == 2 ){
 						echo '
 							<div class="bouton-delete">
@@ -132,7 +137,6 @@
 							</div>';
 					}		
                     echo "
-                    <div class='mypost'>
                     	<div class='auteur'>
 							<div class='utilisateur'>
 								<img src='".$avatar."'class='img-avatar'/>
@@ -146,8 +150,7 @@
 						</div>"."
 						<div class='date-publication'>".
 							$result['date_reponse']."
-						</div>
-					</div>";
+						</div>";
 				}
  			?>
 			</div>	

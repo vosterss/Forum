@@ -357,6 +357,15 @@ input[type=date]{
 	box-shadow: 0 10px 10px;
 }
 
+.mymess{
+	background-color: white;
+	width: 50%;
+	height: 30%;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 10px 10px;
+}
+
 .resultat-recherche{
 	display: flex;
 	justify-content: center;
