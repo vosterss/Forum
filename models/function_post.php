@@ -14,7 +14,7 @@ function post_like($bdd){
 }
 
 function post_populaire($bdd){
-	$reponse = $bdd->prepare('SELECT uti.id, uti.username, po.id, po.categorie, po.contenu, po.titre, po.date_publication, po.nb_mess, po.id_utilisateur, uti.avatar FROM utilisateur as uti inner join post as po on uti.id = po.id_utilisateur And po.nb_mess = (SELECT max(nb_mess) from post) LIMIT 1;');
+	$reponse = $bdd->prepare('SELECT uti.id, uti.username, po.id, po.categorie, po.contenu, po.titre, po.date_publication, po.nb_mess, po.id_utilisateur , po.nb_like, uti.avatar FROM utilisateur as uti inner join post as po on uti.id = po.id_utilisateur And po.nb_mess = (SELECT max(nb_mess) from post) LIMIT 1;');
 	$reponse->execute(array());
 	$result = $reponse->fetchAll();
 	return $result;

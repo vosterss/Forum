@@ -51,7 +51,8 @@
 												<div class='date-publication'>".
 													$a['date_publication']."
 												</div>
-												<div class='nb-like'>".
+												<div class='nb-like'>
+													<p> Like : </p>".
 													$a['nb_like']."
 												</div>";
 										  		
@@ -116,7 +117,8 @@
 									<div class='date-publication'>".
 										$result1['date_publication']."
 									</div>
-									<div class='nb-like'>".
+									<div class='nb-like'>
+										<p> Like : </p>".
 										$result1['nb_like']."
 									</div>";
 								echo "<a href=index.php?p=voirpost&id=" .$result1['id']. ">voir le post</a>";
@@ -166,7 +168,8 @@
 								<div class='date-publication'>".
 									$result2['date_publication']."
 								</div>
-								<div class='nb-like'>".
+								<div class='nb-like'>
+									<p> Like : </p>".
 									$result2['nb_like']."
 								</div>";
 							if(isset($_SESSION['id'])){
@@ -218,7 +221,8 @@
 								<div class='date-publication'>".
 									$result3['date_publication']."
 								</div>
-								<div class='nb-like'>".
+								<div class='nb-like'>
+									<p> Like : </p>".
 									$result3['nb_like']."
 								</div>";
 							echo "<a href=index.php?p=voirpost&id=" .$result3['id']. ">voir le post</a>";
