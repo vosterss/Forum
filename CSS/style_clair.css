@@ -355,6 +355,7 @@ input[type=date]{
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
+	margin-bottom: 10px;
 }
 
 .mymess{
@@ -364,6 +365,7 @@ input[type=date]{
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
+	margin-bottom: 10px;
 }
 
 .resultat-recherche{
