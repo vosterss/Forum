@@ -1,4 +1,5 @@
 	<div class="main-profil">
+		
 		<div class="avatar-mdp">
 			<h2><p> <?php echo $username ;?><p></h2>
 			<div class="profil-avatar">

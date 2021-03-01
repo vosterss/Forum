@@ -436,6 +436,8 @@ input[type=date]{
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .titre-post-categorie{
@@ -528,6 +530,16 @@ input[type=date]{
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
 	margin-bottom: 10px;
+}
+
+.view-post{
+	background-color: white;
+	width: 70%;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 10px 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 .profil-avatar-img{

@@ -1,6 +1,6 @@
 <div class="main-cont">
     <div class='cont'>
-					<h1> Les utilisateurs : </h1>
+					<h1> Les utilisateurs </h1>
 					<?php
 						foreach ($result_m as $result){
 							
