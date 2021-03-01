@@ -1,16 +1,12 @@
-<script>
-	$(document).ready(function() {
-		var wbbOpt = {
-		lang: "fr"
-		}
-		$("#editor").wysibb(wbbOpt);
-	});
+<script> 
+		tinymce.init({
+	        selector: '#editor'
+	     	 });
 </script>
 <?php
 foreach($comm as $value){
-	echo $value['message'];
+	echo html_entity_decode($value['message']);
 }
-echo $_GET['id'];
 ?>
 <form method="POST" action="index.php?p=a_modif&id=<?php echo $_GET['id'];?>">
 

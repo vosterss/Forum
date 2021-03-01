@@ -2,7 +2,7 @@
 	$find = 0;
 		if(isset($_GET['q'])){
 		    $q = htmlspecialchars($_GET['q']);
-		    $articles = $bdd->query('select pos.id, pos.titre, uti.username, pos.contenu FROM post as pos, utilisateur as uti WHERE uti.id = pos.id_utilisateur AND titre LIKE "%'.$q.'%" ORDER BY pos.id DESC');
+		    $articles = $bdd->query('select pos.id, pos.titre, uti.username, pos.contenu, uti.avatar, pos.date_publication FROM post as pos, utilisateur as uti WHERE uti.id = pos.id_utilisateur AND titre LIKE "%'.$q.'%" ORDER BY pos.id DESC');
 			if($articles->rowCount() > 0){
 				$find = 1;
 	?>
@@ -12,16 +12,48 @@
 					   		while($a = $articles->fetch()) { 
 				   		?>
 					      		<li>
-					      			<?php echo $a['username']. '-' .$a['titre']. '-' .$a['contenu'];
-									  	if(isset($_SESSION['id'])){
-									  			if ($_SESSION['id']== $result1['id_utilisateur']){
-													echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete</a><br>';
-												}
-													else if( $_SESSION['id_droit'] == 2 ){
-														echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result1['id'].'>delete admin</a><br>';
-													}
-												} ?>
-					      			<button><a href="index.php?p=voirpost&id=<?php echo $a['id'] ; ?>">voir le post</a></button>
+					      			<div class="plus-recent">
+					      			<?php 
+						      			if(isset($_SESSION['id'])){
+											if($_SESSION['id_droit'] == 2 ){
+												echo '
+													<div class="bouton-delete">
+														<a href=index.php?p=delete&id='.$a['id'].'>
+															&times;
+														</a>
+													</div>';
+											}
+											elseif($id_utilisateur == $a['id_utilisateur']){
+												echo '
+													<div class="bouton-delete">
+														<button href=index.php?p=delete&id='.$a['id'].'>
+															&times;
+														</button>
+													</div>';
+											}		
+										}
+					      				echo "
+					      					<div class='auteur'>
+												<div class='utilisateur'>
+													<img src='".$a['avatar']."'class='img-avatar'/>
+													<h3 class='titre-utilisateur'>".$a['username']."</h3>
+												</div>"."
+												<div class='titre-post'>
+													<h4>".$a['titre'].'</h4>
+												</div>
+												<div class="vide">
+												</div>
+											</div>'."
+											<div class='post-contenu'>".
+												$a['contenu']."
+											</div>"."
+											<div class='date-publication'>".
+												$a['date_publication']."
+											</div>";
+									  		
+					      				echo "<a href=index.php?p=voirpost&id=" .$a['id']. ">voir le post</a>";
+					      			?>
+					      			</div>
 					      		</li>
 				    	<?php 
 				    		} 
