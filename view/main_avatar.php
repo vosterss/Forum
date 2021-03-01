@@ -1,5 +1,6 @@
 	<div class="main-container">
 		<div class="main-avatar">
+		<h2><p> <?php echo $username ;?><p></h2>
 			<p> Votre avatar </p>
 			<img src='<?php echo $avatar ; ?>' class="change_avatar" alt=""/>
 			<p> choix avatar </p>

@@ -393,13 +393,6 @@ input[type=date]{
 .post-liste{
 	width: 50%;
 	height: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.post-liste-titre{
-	text-align: center;
 }
 
 .plus-recent{
@@ -535,7 +528,6 @@ input[type=date]{
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
-	overflow: scroll;
 }
 
 .post-contenu2{
@@ -543,7 +535,6 @@ input[type=date]{
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
-	overflow: scroll;
 }
 
 .mess-contenu{
@@ -551,7 +542,6 @@ input[type=date]{
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
-	overflow: scroll;
 }
 
 .plus-like{
@@ -784,17 +774,7 @@ input[type=date]{
 	flex-direction: column;
 }
 
-/* ************************************PROFIL************************************ */
-aside {
-    width: 50%;
-    padding-left: .5rem;
-    margin-left: .5rem;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-    font-style: italic;
-    color: #29627e;
-}
-/* ************************************FOOTER************************************ */
+/* *******ggg*****************************FOOTER************************************ */
 
 footer{
 	padding: 20px 0 10px 0;
