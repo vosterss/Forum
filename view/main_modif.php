@@ -17,5 +17,4 @@ foreach($comm as $value){
 			</form>
 		</div>	
 	</div>
-
 </main>
