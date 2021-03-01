@@ -437,7 +437,7 @@ input[type=date]{
 .mymess{
 	background-color: white;
 	width: 50%;
-	height: 200px;
+	height: 300px;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
@@ -447,7 +447,7 @@ input[type=date]{
 .mymess2{
 	background-color: white;
 	width: 100%;
-	height: 200px;
+	height: 300px;
 	text-align: center;
 	margin-bottom: 10px;
 	border-bottom: 2px solid rgb(93, 173, 226);
@@ -547,7 +547,7 @@ input[type=date]{
 }
 
 .mess-contenu{
-	height: 30%;
+	height: 50%;
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
@@ -615,6 +615,25 @@ input[type=date]{
 	align-items: center;
 	justify-content: flex-start;
 	width: 20%;
+	padding: 10px;
+}
+
+.profil-container{
+	width: 100%;
+	display: flex;
+	margin-bottom: 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+.profil-mdp{
+	border-left: solid 2px rgb(93, 173, 226);
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 20%;
 }
 
 /* main post */
