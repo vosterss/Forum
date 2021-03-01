@@ -36,8 +36,11 @@
 			<div class="main-container-cat">
 				<div class="vide2">
 				</div>
-				<div class="post-liste">	
-					<?php 
+				<div class="post-liste">
+					<div class="post-liste-titre">
+						<?php echo "<h1>".$_GET['p']."</h1>"; ?>
+					</div>	
+					<?php
 						if(isset($q)){ ?>
 						<h3>Aucun post trouvé pour : <?php echo $q; ?> </h3>
 					<?php } ?>

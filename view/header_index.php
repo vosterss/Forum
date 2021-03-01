@@ -95,14 +95,6 @@
 							</p>
 						</form>			
 					</div>
-					<div class="bouton-theme">
-						<span id="theme">		                	
-							<button class="bouton-T" type="button">
-								<div class="fa fa-moon-o">
-								</div>	
-							</button>
-						</span>
-					</div>
 				</div>		
 			</div>	
 			

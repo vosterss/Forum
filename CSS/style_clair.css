@@ -393,6 +393,13 @@ input[type=date]{
 .post-liste{
 	width: 50%;
 	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.post-liste-titre{
+	text-align: center;
 }
 
 .plus-recent{

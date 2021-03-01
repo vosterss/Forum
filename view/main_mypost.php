@@ -70,7 +70,7 @@
 	if ($result_m != 0){
 	?>
 		<div class="main-container">
-			<h1> Vos posts : </h1>
+			<h1> Vos posts</h1>
 			<?php
 				foreach ($result_m as $result){
 			?>
@@ -105,8 +105,8 @@
 							<div class='date-publication'>".
 								$result['date_publication']."
 							</div>
+							<a href=index.php?p=voirpost&id=" .$result['id']. ">voir le post</a>
 						</div>";
-
 					}
 					elseif($id_utilisateur == $result['id_utilisateur']){
 						echo "
@@ -138,6 +138,7 @@
 							<div class='date-publication'>".
 								$result['date_publication']."
 							</div>
+							<a href=index.php?p=voirpost&id=" .$result['id']. ">voir le post</a>
 						</div>";
 					}		
 	                else{
@@ -160,6 +161,7 @@
 							<div class='date-publication'>".
 								$result['date_publication']."
 							</div>
+							<a href=index.php?p=voirpost&id=" .$result['id']. ">voir le post</a>
 						</div>";
 					}	
                 } 
