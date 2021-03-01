@@ -11,6 +11,7 @@
 					   	<?php 
 					   		while($a = $articles->fetch()) { 
 				   		?>
+				   		
 					      		<li>
 					      			<div class="resultat-recherche">
 						      			<div class="recherche">
