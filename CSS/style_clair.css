@@ -331,21 +331,23 @@ input[type=date]{
 	background-size: cover;
 	background-attachment: fixed;
 	width: 100%;
-	height: 1200px;
+	height: auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
-	overflow-x: scroll;
+	overflow-x: auto;
 }
 
 .plus-recent{
 	background-color: white;
 	width: 50%;
-	height: 30%;
+	height: 350px;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 .mypost{
@@ -436,19 +438,21 @@ input[type=date]{
 .plus-like{
 	background-color: white;
 	width: 50%;
-	height: 30%;
+	height: 350px;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
+	margin-bottom: 10px;
 }
 
 .plus-reponse{
 	background-color: white;
 	width: 50%;
-	height: 30%;
+	height: 350px;
 	text-align: center;
 	border-radius: 4px;
 	box-shadow: 0 10px 10px;
+	margin-bottom: 10px;
 }
 /* main post */
 .post-container{
@@ -479,8 +483,9 @@ input[type=date]{
 	width: 100%;
 	height: 500px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
+	flex-direction: column;
 }
 
 .avatar-mdp{

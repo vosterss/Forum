@@ -125,10 +125,20 @@
 						foreach ($result_L as $result2){
 							if(isset($_SESSION['id'])){
 								if( $_SESSION['id_droit'] == 2 ){
-									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result2['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+									echo '
+										<div class="bouton-delete">
+											<a href=index.php?p=delete&id='.$result2['id'].'>
+												&times;
+											</a>
+										</div>';
 								}
 								elseif ($_SESSION['id']== $result2['id_utilisateur']){
-									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result2['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+									echo '
+										<div class="bouton-delete">
+											<a href=index.php?p=delete&id='.$result2['id'].'>
+												&times;
+											</a>
+										</div>';
 								}
 								
 							}
@@ -164,10 +174,20 @@
 						foreach ($result_P as $result3){
 							if(isset($_SESSION['id'])){
 								if( $_SESSION['id_droit'] == 2 ){
-									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result3['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+									echo '
+									<div class="bouton-delete">
+										<a href=index.php?p=delete&id='.$result3['id'].'>
+											&times;
+										</a>
+									</div>';
 								}
 								elseif ($_SESSION['id']== $result3['id_utilisateur']){
-									echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result3['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
+									echo '
+										<div class="bouton-delete">
+											<a href=index.php?p=delete&id='.$result3['id'].'>
+												&times;
+											</a>
+										</div>';
 								}
 								
 							}
