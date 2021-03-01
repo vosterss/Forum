@@ -47,7 +47,7 @@
 													</div>
 												</div>'."
 												<div class='post-contenu'>".
-													$a['contenu']."
+													html_entity_decode($a['contenu'])."
 												</div>"."
 												<div class='date-publication'>".
 													$a['date_publication']."
@@ -100,7 +100,7 @@
 								</div>
 							</div>'."
 							<div class='post-contenu'>".
-								$result['contenu']."
+								html_entity_decode($result['contenu'])."
 							</div>"."
 							<div class='date-publication'>".
 								$result['date_publication']."
@@ -133,7 +133,7 @@
 								</div>
 							</div>'."
 							<div class='post-contenu'>".
-								$result['contenu']."
+								html_entity_decode($result['contenu'])."
 							</div>"."
 							<div class='date-publication'>".
 								$result['date_publication']."
@@ -156,7 +156,7 @@
 								</div>
 							</div>'."
 							<div class='post-contenu'>".
-								$result['contenu']."
+								html_entity_decode($result['contenu'])."
 							</div>"."
 							<div class='date-publication'>".
 								$result['date_publication']."
@@ -194,7 +194,7 @@
 								</div>
 							</div>"."
 							<div class='mess-contenu'>".
-								$result['message']."
+								html_entity_decode($result['message'])."
 							</div>"."
 							<div class='date-publication'>".
 								$result['date_reponse']."
@@ -223,7 +223,7 @@
 								</div>
 							</div>"."
 							<div class='mess-contenu'>".
-								$result['message']."
+								html_entity_decode($result['message'])."
 							</div>"."
 							<div class='date-publication'>".
 								$result['date_reponse']."
@@ -242,7 +242,7 @@
 								</div>
 							</div>"."
 							<div class='mess-contenu'>".
-								$result['message']."
+								html_entity_decode($result['message'])."
 							</div>"."
 							<div class='date-publication'>".
 								$result['date_reponse']."
