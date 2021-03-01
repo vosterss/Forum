@@ -83,6 +83,11 @@
 									&times;
 								</a>
 							</div>
+							<div class='bouton-delete'>
+								<a href=index.php?p=modif&id=".$result['id'].">
+									Modifier
+								</a>
+							</div>
 		                	<div class='auteur'>
 								<div class='utilisateur'>
 									<img src='".$avatar."'class='img-avatar'/>
@@ -109,6 +114,11 @@
 							<div class='bouton-delete'>
 								<a href=index.php?p=delete_m&id=".$result['id'].">
 									&times;
+								</a>
+							</div>
+							<div class='bouton-delete'>
+								<a href=index.php?p=modif&id=".$result['id'].">
+									Modifier
 								</a>
 							</div>
 		                	<div class='auteur'>
@@ -168,6 +178,11 @@
 									&times;
 								</a>
 							</div>
+							<div class='bouton-delete'>
+								<a href=index.php?p=modif&id=".$result['id'].">
+									Modifier
+								</a>
+							</div>
 	                    	<div class='auteur'>
 								<div class='utilisateur'>
 									<img src='".$avatar."'class='img-avatar'/>
@@ -190,6 +205,11 @@
 							<div class='bouton-delete'>
 								<a href=index.php?p=delete_m&id=".$result['id'].">
 									&times;
+								</a>
+							</div>
+							<div class='bouton-delete'>
+								<a href=index.php?p=modif&id=".$result['id'].">
+									Modifier
 								</a>
 							</div>
 	                    	<div class='auteur'>
