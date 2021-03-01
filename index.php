@@ -33,7 +33,6 @@ session_start();
 	if($page == 'login'){
 		include 'controlers/login.php';
 	}
-
 	if($page == 'a_login'){
 		include 'models/action_login.php';
 	}
@@ -82,7 +81,6 @@ session_start();
 	if($page == 'a_modif'){
 		include_once 'models/action_modif.php';
 	}
-
 	if($page == 'delete'){
 		include_once 'models/action_delete.php';
 	}
@@ -93,7 +91,6 @@ session_start();
 		include_once 'models/action_bann_user.php';
 	}
 	if($page == 'nblike'){
-		
 		include_once 'models/action_nblike.php';
 		$_SESSION['like']= like($bdd,$id_post);
 	}

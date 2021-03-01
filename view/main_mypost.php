@@ -74,86 +74,162 @@
 			<?php
 				foreach ($result_m as $result){
 			?>
-					<div class='mypost'>
 				<?php
 					if($_SESSION['id_droit'] == 2 ){
-						echo '
-							<div class="bouton-delete">
-								<a href=index.php?p=delete&id='.$result['id'].'>
-									&times;
-								</a>
-							</div>';
-					}
-					elseif($id_utilisateur == $a['id_utilisateur']){
-						echo '
-							<div class="bouton-delete">
-								<button href=index.php?p=delete&id='.$result['id'].'>
+						echo "
+						<div class='mypost'>
+							<div class='bouton-delete'>
+								<button href=index.php?p=delete&id=".$result['id'].">
 									&times;
 								</button>
-							</div>';
-					}		
-	                echo "
-	                	<div class='auteur'>
-							<div class='utilisateur'>
-								<img src='".$avatar."'class='img-avatar'/>
-								<h3 class='titre-utilisateur'>".$username."</h3>
+							</div>
+		                	<div class='auteur'>
+								<div class='utilisateur'>
+									<img src='".$avatar."'class='img-avatar'/>
+									<h3 class='titre-utilisateur'>".$username."</h3>
+								</div>"."
+								<div class='titre-post'>
+									<h4>".$result['titre'].'</h4>
+								</div>
+								<div class="vide">
+								</div>
+							</div>'."
+							<div class='post-contenu'>".
+								$result['contenu']."
 							</div>"."
-							<div class='titre-post'>
-								<h4>".$result['titre'].'</h4>
+							<div class='date-publication'>".
+								$result['date_publication']."
 							</div>
-							<div class="vide">
-							</div>
-						</div>'."
-						<div class='post-contenu'>".
-							$result['contenu']."
-						</div>"."
-						<div class='date-publication'>".
-							$result['date_publication']."
 						</div>";
+
+					}
+					elseif($id_utilisateur == $a['id_utilisateur']){
+						echo "
+						<div class='mypost'>
+							<div class='bouton-delete'>
+								<button href=index.php?p=delete&id=".$result['id'].">
+									&times;
+								</button>
+							</div>
+		                	<div class='auteur'>
+								<div class='utilisateur'>
+									<img src='".$avatar."'class='img-avatar'/>
+									<h3 class='titre-utilisateur'>".$username."</h3>
+								</div>"."
+								<div class='titre-post'>
+									<h4>".$result['titre'].'</h4>
+								</div>
+								<div class="vide">
+								</div>
+							</div>'."
+							<div class='post-contenu'>".
+								$result['contenu']."
+							</div>"."
+							<div class='date-publication'>".
+								$result['date_publication']."
+							</div>
+						</div>";
+					}		
+	                else{
+	                	echo "
+		                <div class='mypost'>
+		                	<div class='auteur'>
+								<div class='utilisateur'>
+									<img src='".$avatar."'class='img-avatar'/>
+									<h3 class='titre-utilisateur'>".$username."</h3>
+								</div>"."
+								<div class='titre-post'>
+									<h4>".$result['titre'].'</h4>
+								</div>
+								<div class="vide">
+								</div>
+							</div>'."
+							<div class='post-contenu'>".
+								$result['contenu']."
+							</div>"."
+							<div class='date-publication'>".
+								$result['date_publication']."
+							</div>
+						</div>";
+					}	
                 } 
             ?>
-        	</div>
-        	
 				<h1> Vos messages : </h1>
+				
 			<?php
 				foreach ($result_r as $result){
-			?>		
-					<div class="mymess">
+			?>	
 				<?php		
 					if($_SESSION['id_droit'] == 2 ){
-						echo '
-							<div class="bouton-delete">
-								<a href=index.php?p=delete_m&id='.$result['id'].'>
+						echo "
+						<div class='mymess'>
+							<div class='bouton-delete'>
+								<a href=index.php?p=delete_m&id=".$result['id'].">
 									&times;
 								</a>
-							</div>';
+							</div>
+
+	                    	<div class='auteur'>
+								<div class='utilisateur'>
+									<img src='".$avatar."'class='img-avatar'/>
+									<h3 class='titre-utilisateur'>".$username."</h3>
+								</div>"."
+								<div class='vide'>
+								</div>
+							</div>"."
+							<div class='post-contenu'>".
+								$result['message']."
+							</div>"."
+							<div class='date-publication'>".
+								$result['date_reponse']."
+							</div>
+						</div>";
 					}
 					elseif($id_utilisateur == $a['id_utilisateur']){
-						echo '
-							<div class="bouton-delete">
-								<button href=index.php?p=delete_m&id='.$result['id'].'>
+						echo "
+						<div class='mymess'>
+							<div class='bouton-delete'>
+								<button href=index.php?p=delete_m&id=".$result['id'].">
 									&times;
 								</button>
-							</div>';
-					}		
-                    echo "
-                    	<div class='auteur'>
-							<div class='utilisateur'>
-								<img src='".$avatar."'class='img-avatar'/>
-								<h3 class='titre-utilisateur'>".$username."</h3>
-							</div>"."
-							<div class='vide'>
 							</div>
-						</div>"."
-						<div class='post-contenu'>".
-							$result['message']."
-						</div>"."
-						<div class='date-publication'>".
-							$result['date_reponse']."
+	                    	<div class='auteur'>
+								<div class='utilisateur'>
+									<img src='".$avatar."'class='img-avatar'/>
+									<h3 class='titre-utilisateur'>".$username."</h3>
+								</div>"."
+								<div class='vide'>
+								</div>
+							</div>"."
+							<div class='post-contenu'>".
+								$result['message']."
+							</div>"."
+							<div class='date-publication'>".
+								$result['date_reponse']."
+							</div>
 						</div>";
+					}		
+                    else{
+                    	echo "
+	                    <div class='mymess'>
+	                    	<div class='auteur'>
+								<div class='utilisateur'>
+									<img src='".$avatar."'class='img-avatar'/>
+									<h3 class='titre-utilisateur'>".$username."</h3>
+								</div>"."
+								<div class='vide'>
+								</div>
+							</div>"."
+							<div class='post-contenu'>".
+								$result['message']."
+							</div>"."
+							<div class='date-publication'>".
+								$result['date_reponse']."
+							</div>
+						</div>";
+					}
 				}
- 			?>
-			</div>	
+ 				?>	
 		</div>	
 <?php 
 	} 
