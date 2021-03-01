@@ -73,9 +73,25 @@
 			<h1> Vos posts : </h1>
 			<?php
 				foreach ($result_m as $result){
-                    echo "
-                    <div class='mypost'>
-                    	<div class='auteur'>
+					if($_SESSION['id_droit'] == 2 ){
+						echo '
+							<div class="bouton-delete">
+								<a href=index.php?p=delete&id='.$a['id'].'>
+									&times;
+								</a>
+							</div>';
+					}
+					elseif($id_utilisateur == $a['id_utilisateur']){
+						echo '
+							<div class="bouton-delete">
+								<button href=index.php?p=delete&id='.$a['id'].'>
+									&times;
+								</button>
+							</div>';
+					}		
+	                echo "
+	                <div class='mypost'>
+	                	<div class='auteur'>
 							<div class='utilisateur'>
 								<img src='".$avatar."'class='img-avatar'/>
 								<h3 class='titre-utilisateur'>".$username."</h3>
@@ -99,16 +115,39 @@
 				<h1> Vos messages : </h1>
 			<?php
 				foreach ($result_r as $result){
-                    echo 
-						"<div class='mespost'>
-                        <div class='plus-like-container'>
-						<div class='post-contenu'>Contenu : ".$result['message']."
+					if($_SESSION['id_droit'] == 2 ){
+						echo '
+							<div class="bouton-delete">
+								<a href=index.php?p=delete_m&id='.$result['id'].'>
+									&times;
+								</a>
+							</div>';
+					}
+					elseif($id_utilisateur == $a['id_utilisateur']){
+						echo '
+							<div class="bouton-delete">
+								<button href=index.php?p=delete_m&id='.$result['id'].'>
+									&times;
+								</button>
+							</div>';
+					}		
+                    echo "
+                    <div class='mypost'>
+                    	<div class='auteur'>
+							<div class='utilisateur'>
+								<img src='".$avatar."'class='img-avatar'/>
+								<h3 class='titre-utilisateur'>".$username."</h3>
+							</div>"."
+							<div class='vide'>
+							</div>
 						</div>"."
-						<div class='date-publication'>Date : ".$result['date_reponse']."
-						</div>";
-						echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
-						echo '</div>';
-						echo '</div>';
+						<div class='post-contenu'>".
+							$result['message']."
+						</div>"."
+						<div class='date-publication'>".
+							$result['date_reponse']."
+						</div>
+					</div>";
 				}
  			?>
 			</div>	
