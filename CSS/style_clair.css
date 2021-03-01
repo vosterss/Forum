@@ -12,8 +12,15 @@ body{
 }
 
 ul {
-  list-style-type: none;
-}  
+  	list-style-type: none;
+  	margin-block-start: 0;
+	margin-block-end: 0;
+	padding-inline-start: 0;
+} 
+
+li{
+	list-style-type: none;
+} 
 
 /* ************************************HEADER************************************ */
 
@@ -340,6 +347,20 @@ input[type=date]{
 	box-shadow: 0 10px 10px;
 }
 
+.resultat-recherche{
+	display: flex;
+	justify-content: center;
+}
+
+.recherche{
+	background-color: white;
+	width: 50%;
+	height: 30%;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 10px 10px;
+}
+
 .titre-post-categorie{
 	margin: 10px;
 }
@@ -388,6 +409,7 @@ input[type=date]{
 	height: 60%;
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
+	word-wrap: break-word;
 }
 
 .plus-like{
@@ -506,7 +528,7 @@ input[type=date]{
 
   }
   section { 
-	height: 1200px;
+	height: auto;
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
@@ -528,18 +550,6 @@ input[type=date]{
   }
   section:first-of-type, section.pop  { 
 	background: #fff;
-  }
-  section:first-of-type, section.warzone { 
-	background-image: url(../images/warzone.jpg); 
-  }
-  section:first-of-type, section.fortnite  { 
-	background-image: url(../images/fortnite.jpg); 
-  }
-  section:first-of-type, section.pubg  { 
-	background-image: url(../images/pubg.jpg); 
-  }
-  section:first-of-type, section.apex  { 
-	background-image: url(../images/apex.jpg); 
   }
 
 

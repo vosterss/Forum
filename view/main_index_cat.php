@@ -1,4 +1,4 @@
-	<?php
+<?php
 	$find = 0;
 		if(isset($_GET['q'])){
 		    $q = htmlspecialchars($_GET['q']);
@@ -6,7 +6,7 @@
 			if($articles->rowCount() > 0){
 				$find = 1;
 	?>
-					<section class = "<?php echo $page; ?>">
+				<div class="main-container">
 				    <ul>
 					   	<?php 
 					   		while($a = $articles->fetch()) { 
@@ -33,12 +33,11 @@
 		}
 	if($find == 0){
 	?>
-				<section class = "<?php echo $page; ?>">
+			<div class="main-container">
 				<?php 
 					if(isset($q)){ ?>
 					<h3>Aucun post trouvé pour : <?php echo $q; ?> </h3>
 				<?php } ?>
-		
 				<div class="plus-recent">
 					<h2 class="titre-post-categorie"> Post le plus récent </h2>
 					<div class="plus-recent-container">
@@ -161,12 +160,12 @@
 					?>
 					</div>
 				</div>
-			</section>	
+				</div>
+				<section class = "pop">	
 				<?php 
 					}
 		 		if(isset($result_all_post)){
 			 	?>
-			<section class = "pop">
 				 <div class="post_all">
 					<h1> Post De la catégorie</h1>
 					<?php
@@ -184,7 +183,7 @@
 						}
 					?>
 				</div>
-			</section>
+					</section>
 			<?php 
 				}  
 			?>

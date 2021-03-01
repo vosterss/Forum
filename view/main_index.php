@@ -11,48 +11,52 @@
 					   	<?php 
 					   		while($a = $articles->fetch()) { 
 				   		?>
+				   		
 					      		<li>
-					      			<div class="plus-recent">
-					      			<?php 
-						      			if(isset($_SESSION['id'])){
-											if($_SESSION['id_droit'] == 2 ){
-												echo '
-													<div class="bouton-delete">
-														<a href=index.php?p=delete&id='.$a['id'].'>
-															&times;
-														</a>
-													</div>';
+					      			<div class="resultat-recherche">
+						      			<div class="recherche">
+						      			<?php 
+							      			if(isset($_SESSION['id'])){
+												if($_SESSION['id_droit'] == 2 ){
+													echo '
+														<div class="bouton-delete">
+															<a href=index.php?p=delete&id='.$a['id'].'>
+																&times;
+															</a>
+														</div>';
+												}
+												elseif($id_utilisateur == $a['id_utilisateur']){
+													echo '
+														<div class="bouton-delete">
+															<button href=index.php?p=delete&id='.$a['id'].'>
+																&times;
+															</button>
+														</div>';
+												}		
 											}
-											elseif($id_utilisateur == $a['id_utilisateur']){
-												echo '
-													<div class="bouton-delete">
-														<button href=index.php?p=delete&id='.$a['id'].'>
-															&times;
-														</button>
-													</div>';
-											}		
-										}
-					      				echo "
-					      					<div class='auteur'>
-												<div class='utilisateur'>
-													<img src='".$a['avatar']."'class='img-avatar'/>
-													<h3 class='titre-utilisateur'>".$a['username']."</h3>
+						      				echo "
+						      					<div class='auteur'>
+													<div class='utilisateur'>
+														<img src='".$a['avatar']."'class='img-avatar'/>
+														<h3 class='titre-utilisateur'>".$a['username']."</h3>
+													</div>"."
+													<div class='titre-post'>
+														<h4>".$a['titre'].'</h4>
+													</div>
+													<div class="vide">
+													</div>
+												</div>'."
+												<div class='post-contenu'>".
+													$a['contenu']."
 												</div>"."
-												<div class='titre-post'>
-													<h4>".$a['titre'].'</h4>
-												</div>
-												<div class="vide">
-												</div>
-											</div>'."
-											<div class='post-contenu'>".
-												html_entity_decode($a['contenu'])."
-											</div>"."
-											<div class='date-publication'>".
-												$a['date_publication']."
-											</div>";
-					      				echo "<a href=index.php?p=voirpost&id=" .$a['id']. ">voir le post</a>";
-					      			?>
-					      			</div>
+												<div class='date-publication'>".
+													$a['date_publication']."
+												</div>";
+										  		
+						      				echo "<a href=index.php?p=voirpost&id=" .$a['id']. ">voir le post</a>";
+						      			?>
+						      			</div>
+						      		</div>
 					      		</li>
 				    	<?php 
 				    		} 
@@ -105,7 +109,7 @@
 										</div>
 									</div>'."
 									<div class='post-contenu'>".
-										html_entity_decode($result1['contenu'])."
+										$result1['contenu']."
 									</div>"."
 									<div class='date-publication'>".
 										$result1['date_publication']."
@@ -142,7 +146,7 @@
 									</div>
 								</div>'."
 								<div class='post-contenu'>".
-									html_entity_decode($result2['contenu'])."
+									$result2['contenu']."
 								</div>"."
 								<div class='date-publication'>".
 									$result2['date_publication']."
@@ -181,7 +185,7 @@
 									</div>
 								</div>'."
 								<div class='post-contenu'>".
-									html_entity_decode($result3['contenu'])."
+									$result3['contenu']."
 								</div>"."
 								<div class='date-publication'>".
 									$result3['date_publication']."
@@ -207,7 +211,7 @@
 									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete admin</a><br>';
 								}
 							}
-							echo $result['username'].' - '.$result['titre'].' - '.html_entity_decode($result['contenu']).' - '.$result['nb_like']. " - " .$result['nb_mess']. ' - ' .$result['date_publication'];
+							echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_like']. " - " .$result['nb_mess']. ' - ' .$result['date_publication'];
 							echo "<button><a href=index.php?p=voirpost&id=" .$result['id'].">voir le post</a></button>";
 						}
 					?>

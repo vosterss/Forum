@@ -1,4 +1,5 @@
 <?php
+	$images = $page ;
 	require 'view/header_index.php';
 	require 'models/function_post.php';
 	$result_L = post_like_categorie($bdd, $categorie);
