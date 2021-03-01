@@ -121,4 +121,6 @@ session_start();
 	//var_dump($avatar);
 	//var_dump($id_droit);
 	//var_dump($_SESSION['like']);
+	var_dump($_SESSION['mail']);
+
 ?>
