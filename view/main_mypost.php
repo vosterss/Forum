@@ -70,15 +70,15 @@
 	if ($result_m != 0){
 	?>
 		<div class="main-container">
+			<h1> Vos posts : </h1>
 			<div class="mypost">
-				<h1> Vos posts : </h1>
 			<?php
 				foreach ($result_m as $result){
                     echo "
                     	<div class='auteur'>
 							<div class='utilisateur'>
-								<img src='".$result['avatar']."'class='img-avatar'/>
-								<h3 class='titre-utilisateur'>".$result['username']."</h3>
+								<img src='".$avatar."'class='img-avatar'/>
+								<h3 class='titre-utilisateur'>".$username."</h3>
 							</div>"."
 							<div class='titre-post'>
 								<h4>".$result['titre'].'</h4>
