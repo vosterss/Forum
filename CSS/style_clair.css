@@ -535,6 +535,7 @@ input[type=date]{
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
+	overflow: scroll;
 }
 
 .post-contenu2{
@@ -542,6 +543,7 @@ input[type=date]{
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
+	overflow: scroll;
 }
 
 .mess-contenu{
@@ -549,6 +551,7 @@ input[type=date]{
 	border-top: solid 2px rgb(93, 173, 226);
 	border-bottom: solid 2px rgb(93, 173, 226);
 	word-wrap: break-word;
+	overflow: scroll;
 }
 
 .plus-like{
