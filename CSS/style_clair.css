@@ -528,7 +528,7 @@ input[type=date]{
 
   }
   section { 
-	height: 1200px;
+	height: auto;
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
@@ -550,18 +550,6 @@ input[type=date]{
   }
   section:first-of-type, section.pop  { 
 	background: #fff;
-  }
-  section:first-of-type, section.warzone { 
-	background-image: url(../images/warzone.jpg); 
-  }
-  section:first-of-type, section.fortnite  { 
-	background-image: url(../images/fortnite.jpg); 
-  }
-  section:first-of-type, section.pubg  { 
-	background-image: url(../images/pubg.jpg); 
-  }
-  section:first-of-type, section.apex  { 
-	background-image: url(../images/apex.jpg); 
   }
 
 
