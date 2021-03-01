@@ -84,7 +84,7 @@
 										</div>
 										<div class='nb-like'>
 											<p> Like : </p>".
-											$result3['nb_like']."
+											$result1['nb_like']."
 										</div>";
 									echo "<a href=index.php?p=voirpost&id=" .$result1['id']. ">voir le post</a>";
 								}
@@ -134,7 +134,7 @@
 									</div>
 									<div class='nb-like'>
 										<p> Like : </p>".
-										$result3['nb_like']."
+										$result2['nb_like']."
 									</div>";
 								if(isset($_SESSION['id'])){
 									echo "<a href=index.php?p=voirpost&id=" .$result2['id']. ">voir le post</a>";
