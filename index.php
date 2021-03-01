@@ -115,12 +115,4 @@ session_start();
 	if ($page == 'a_statut_post') {
 		include_once 'models/action_statut_post.php';
 	}
-	//var_dump($id_avatar);
-	//var_dump($id_utilisateur);
-	//var_dump($username);
-	//var_dump($avatar);
-	//var_dump($id_droit);
-	//var_dump($_SESSION['like']);
-	var_dump($_SESSION['mail']);
-
 ?>
