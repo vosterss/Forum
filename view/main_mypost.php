@@ -109,6 +109,7 @@
 						echo '<div class="bouton-delete"><a href=index.php?p=delete&id='.$result['id'].'><img class="logo-delete" src="delete-logo.png"/></a></div>';
 						echo '</div>';
 						echo '</div>';
+				}
  			?>
 			</div>	
 		</div>	
