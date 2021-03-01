@@ -170,16 +170,7 @@
 					<h1> Post De la catégorie</h1>
 					<?php
 						foreach ($result_all_post as $result){
-							if(isset($_SESSION['id'])){
-								if ($_SESSION['id'] == $result['id_utilisateur']){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete</a><br>';
-								}
-								elseif( $_SESSION['id_droit'] == 2 ){
-									echo '<a style="padding-left:15px;" href=index.php?p=delete&id='.$result['id'].'>delete admin</a><br>';
-								}
-							}
-							echo $result['username'].' - '.$result['titre'].' - '.$result['contenu'].' - '.$result['nb_like']. " - " .$result['nb_mess']. ' - ' .$result['date_publication'];
-							echo "<button><a href=index.php?p=voirpost&id=" .$result['id'].">voir le post</a></button>";
+							echo "<a href=index.php?p=voirpost&id=" .$result['id'].">. "$result['titre']"</a>"
 						}
 					?>
 				</div>

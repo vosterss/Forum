@@ -70,7 +70,7 @@
 					<a href="index.php?p=pubg&c=3">PUBG</a>
 				</div>
 				<div id="main">
-					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Topics</span>
 				</div>		
 				<script>
 					function openNav(){

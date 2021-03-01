@@ -12,7 +12,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['avatar'] = $resultat['avatar'];
             $_SESSION['id_droit'] = $resultat['id_droit'];
-            $_SESSION['like'] = 0 ;
+            $_SESSION['like'] = 0;
             $_SESSION['date_deban'] = $resultat['date_deban'];
             $time=strtotime($_SESSION['date_deban']);
             header('Location:index.php');

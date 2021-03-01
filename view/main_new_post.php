@@ -3,11 +3,9 @@
 	     	 });
   		</script>
 
-	<div class='post-container'>
+	<div class='main-container'>
+		<h1> Création d'un nouveau post</h1>
 		<div class="box-newpost">
-			<div class="newpost-titre">
-				<h1> Création d'un nouveau post</h1>
-			</div>
 			<form action="index.php?p=a_create_post" method="post">
 				<input type="text" name="titre_post" placeholder="Titre">
 				<div class="choix-titre">
