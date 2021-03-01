@@ -15,7 +15,7 @@ if(isset($_FILES['importation'])){
      }
      else //Sinon (la fonction renvoie FALSE).
      {
-          echo 'Echec de l\'upload !';
+          echo "Echec de l'upload !(fichier trop volumineux)";
      }
      header('Refresh:2; url=index.php?p=avatar');
 }
