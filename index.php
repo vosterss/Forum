@@ -98,10 +98,12 @@ session_start();
 		include_once 'models/action_debann_user.php';
 	}
 	if($page == 'mespost'){
+		$space = 'mespost';
 		include_once 'controlers/mespost.php';
 	}
 	if($page == 'voirpost' && isset($_GET['id'])){
 		$id_post = $_GET['id'];
+		$space = 'voirpost';
 		include_once 'controlers/voirpost.php';
 	}
 	if ($page == 'a_importation') {

@@ -7,9 +7,6 @@
 				$find = 1;
 	?>
 				<div class="main-container">
-					<div class="vide2">
-						<p>colonne de gauche</p>
-					</div>
 				    <ul>
 					   	<?php 
 					   		while($a = $articles->fetch()) { 
