@@ -11,6 +11,10 @@ body{
   	transition: background-color .5s;
 }
 
+ul {
+  list-style-type: none;
+}  
+
 /* ************************************HEADER************************************ */
 
 header{
