@@ -46,7 +46,7 @@
 									<div class='post-contenu'>
 										<h4>Titre : ".$result['titre']."</h4>
 									</div>"."
-								<div class='post-contenu'>Contenu : ".$result['contenu']."
+								<div class='post-contenu'>Contenu : ".html_entity_decode($result['contenu'])."
 								</div>"."
 								<div class='date-publication'>Date : ".$result['date_publication']."
 								</div>";
@@ -63,7 +63,7 @@
                             echo 
 								"<div class='mespost'>
                                 <div class='plus-like-container'>
-								<div class='post-contenu'>Contenu : ".$result['message']."
+								<div class='post-contenu'>Contenu : ".html_entity_decode($result['message'])."
 								</div>"."
 								<div class='date-publication'>Date : ".$result['date_reponse']."
 								</div>";
