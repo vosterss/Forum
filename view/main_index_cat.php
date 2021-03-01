@@ -77,7 +77,7 @@
 											</div>
 										</div>'."
 										<div class='post-contenu'>".
-											$result1['contenu']."
+											html_entity_decode($result1['contenu'])."
 										</div>"."
 										<div class='date-publication'>".
 											$result1['date_publication']."
@@ -127,7 +127,7 @@
 										</div>
 									</div>'."
 									<div class='post-contenu'>".
-										$result2['contenu']."
+										html_entity_decode($result2['contenu'])."
 									</div>"."
 									<div class='date-publication'>".
 										$result2['date_publication']."
@@ -179,7 +179,7 @@
 										</div>
 									</div>'."
 									<div class='post-contenu'>".
-										$result3['contenu']."
+										html_entity_decode($result3['contenu'])."
 									</div>"."
 									<div class='date-publication'>".
 										$result3['date_publication']."
