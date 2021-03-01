@@ -68,7 +68,7 @@
 							if ($_SESSION['id'] == $value['id_utilisateur'] && $post[0]['isclosed'] != 1){
 								echo '
 									<div class="bouton-delete">
-										<a href=index.php?p=delete&id='.$value['id'].'>
+										<a href=index.php?p=delete_m&id='.$value['id'].'>
 											&times;
 										</a>
 									</div>';
@@ -83,7 +83,7 @@
 							else if( $_SESSION['id_droit'] == 2 ){
 								echo '
 									<div class="bouton-delete">
-										<a href=index.php?p=delete&id='.$value['id'].'>
+										<a href=index.php?p=delete_m&id='.$value['id'].'>
 											&times;
 										</a>
 									</div>';
