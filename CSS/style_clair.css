@@ -242,7 +242,9 @@ header{
 main{
 	width: 100%;
 }
-
+#editor{
+	height:350px;
+}
 .post-container{
 	align-items: center;
 }
